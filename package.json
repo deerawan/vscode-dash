@@ -11,14 +11,20 @@
 		"Other"
 	],
 	"activationEvents": [
-		"onCommand:extension.sayHello"
+		"onCommand:extension.dash"
 	],
 	"main": "./out/src/extension",
 	"contributes": {
 		"commands": [{
-			"command": "extension.sayHello",
-			"title": "Hello World"
-		}]
+			"command": "extension.dash",
+			"title": "Open in Dash"
+		}],
+        "keybindings": [{
+            "command": "extension.dash",
+            "key": "ctrl+h",
+            "mac": "cmd+h",
+            "when": "editorTextFocus"
+        }]
 	},
 	"scripts": {
 		"vscode:prepublish": "node ./node_modules/vscode/bin/compile",
