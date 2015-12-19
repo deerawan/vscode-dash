@@ -24,7 +24,27 @@
             "key": "ctrl+h",
             "mac": "cmd+h",
             "when": "editorTextFocus"
-        }]
+        }],
+        "configuration": {
+            "type": "object",
+            "title": "Dash Configuration",
+            "properties": {
+                "dash.javascript": {
+                    "type": "array",
+                    "items": {
+                        "type": "string"
+                    },
+                    "default": [
+                        "javascript", "jquery", "jqueryui", "jquerym", "angularjs", "backbone",
+                        "marionette", "meteor", "sproutcore", "moo", "prototype", "bootstrap",
+                        "foundation", "lodash", "underscore", "ember", "sencha", "extjs", "titanium",
+                        "knockout", "zepto", "yui", "d3", "svg", "dojo", "coffee", "nodejs", "express",
+                        "grunt", "mongoose", "moment", "require", "awsjs", "jasmine", "sails", "sinon",
+                        "chai", "html", "css", "cordova", "phonegap", "unity3d"
+                    ]
+                }
+            }
+        }
 	},
 	"scripts": {
 		"vscode:prepublish": "node ./node_modules/vscode/bin/compile",
