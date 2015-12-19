@@ -2,7 +2,7 @@
 	"name": "vscode-dash",
 	"displayName": "vscode-dash",
 	"description": "Dash integration in Visual Studio Code",
-	"version": "0.0.1",
+	"version": "1.0.0",
 	"publisher": "deerawan",
 	"engines": {
 		"vscode": "^0.10.1"
@@ -57,12 +57,32 @@
                     },
                     "default": ["coffee"]
                 },
+                "docset.dart": {
+                    "type": "array",
+                    "items": {
+                        "type": "string"
+                    },
+                    "default": ["dartlang", "polymerdart", "angulardart"]
+                },
                 "docset.go": {
                     "type": "array",
                     "items": {
                         "type": "string"
                     },
                     "default": ["go", "godoc"]
+                },
+                "docset.html": {
+                    "type": "array",
+                    "items": {
+                        "type": "string"
+                    },
+                    "default": [
+                        "html", "svg", "css", "bootstrap", "foundation", "awesome",
+                        "statamic", "javascript", "jquery", "jqueryui", "jquerym",
+                        "angularjs", "backbone", "marionette", "meteor", "moo",
+                        "prototype", "ember", "lodash", "underscore", "sencha",
+                        "extjs", "knockout", "zepto", "cordova", "phonegap", "yui"
+                    ]
                 },
                 "docset.jade": {
                     "type": "array",
@@ -91,6 +111,13 @@
                         "grunt", "mongoose", "moment", "require", "awsjs", "jasmine", "sails", "sinon",
                         "chai", "html", "css", "cordova", "phonegap", "unity3d"
                     ]
+                },
+                "docset.less": {
+                    "type": "array",
+                    "items": {
+                        "type": "string"
+                    },
+                    "default": ["less"]
                 },
                 "docset.lua": {
                     "type": "array",
@@ -135,12 +162,65 @@
                         "mongodb", "psql", "redis"
                     ]
                 },
+                "docset.python": {
+                    "type": "array",
+                    "items": {
+                        "type": "string"
+                    },
+                    "default": [
+                        "python", "django", "twisted", "sphinx", "flask", "tornado",
+                        "sqlalchemy", "numpy", "scipy", "salt", "pandas", "matplotlib",
+                        "cvp"
+                    ]
+                },
+                "docset.r": {
+                    "type": "array",
+                    "items": {
+                        "type": "string"
+                    },
+                    "default": ["r"]
+                },
                 "docset.ruby": {
                     "type": "array",
                     "items": {
                         "type": "string"
                     },
                     "default": ["ruby", "rubygems", "rails"]
+                },
+                "docset.rust": {
+                    "type": "array",
+                    "items": {
+                        "type": "string"
+                    },
+                    "default": ["rust"]
+                },
+                "docset.sass": {
+                    "type": "array",
+                    "items": {
+                        "type": "string"
+                    },
+                    "default": ["sass", "compass", "bourbon", "neat", "susy", "css"]
+                },
+                "docset.sql": {
+                    "type": "array",
+                    "items": {
+                        "type": "string"
+                    },
+                    "default": ["mysql", "sqlite", "psql"]
+                },
+                "docset.swift": {
+                    "type": "array",
+                    "items": {
+                        "type": "string"
+                    },
+                    "default": ["swift", "iphoneos", "macosx", "watchos", "tvos", "appledoc"]
+                },
+                "docset.typescript": {
+                    "type": "array",
+                    "items": {
+                        "type": "string"
+                    },
+                    "default": ["typescript"]
                 }
             }
         }
