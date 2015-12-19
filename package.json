@@ -29,7 +29,42 @@
             "type": "object",
             "title": "Dash Configuration",
             "properties": {
-                "dash.javascript": {
+                "docset.css": {
+                    "type": "array",
+                    "items": {
+                        "type": "string"
+                    },
+                    "default": ["css", "bootstrap", "foundation", "less", "awesome", "cordova", "phonegap"]
+                },
+                "docset.clojure": {
+                    "type": "array",
+                    "items": {
+                        "type": "string"
+                    },
+                    "default": ["clojure"]
+                },
+                "docset.cpp": {
+                    "type": "array",
+                    "items": {
+                        "type": "string"
+                    },
+                    "default": ["cpp","net","boost","qt","cvcpp","cocos2dx","c","manpages"]
+                },
+                "docset.coffee": {
+                    "type": "array",
+                    "items": {
+                        "type": "string"
+                    },
+                    "default": ["coffee"]
+                },
+                "docset.go": {
+                    "type": "array",
+                    "items": {
+                        "type": "string"
+                    },
+                    "default": ["go", "godoc"]
+                },
+                "docset.javascript": {
                     "type": "array",
                     "items": {
                         "type": "string"
@@ -42,6 +77,13 @@
                         "grunt", "mongoose", "moment", "require", "awsjs", "jasmine", "sails", "sinon",
                         "chai", "html", "css", "cordova", "phonegap", "unity3d"
                     ]
+                },
+                "docset.ruby": {
+                    "type": "array",
+                    "items": {
+                        "type": "string"
+                    },
+                    "default": ["ruby", "rubygems", "rails"]
                 }
             }
         }
