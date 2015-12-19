@@ -64,6 +64,20 @@
                     },
                     "default": ["go", "godoc"]
                 },
+                "docset.jade": {
+                    "type": "array",
+                    "items": {
+                        "type": "string"
+                    },
+                    "default": ["jade"]
+                },
+                "docset.java": {
+                    "type": "array",
+                    "items": {
+                        "type": "string"
+                    },
+                    "default": ["java", "javafx", "grails", "groovy", "playjava", "spring", "cvj", "processing"]
+                },
                 "docset.javascript": {
                     "type": "array",
                     "items": {
@@ -76,6 +90,49 @@
                         "knockout", "zepto", "yui", "d3", "svg", "dojo", "coffee", "nodejs", "express",
                         "grunt", "mongoose", "moment", "require", "awsjs", "jasmine", "sails", "sinon",
                         "chai", "html", "css", "cordova", "phonegap", "unity3d"
+                    ]
+                },
+                "docset.lua": {
+                    "type": "array",
+                    "items": {
+                        "type": "string"
+                    },
+                    "default": ["lua", "corona"]
+                },
+                "docset.markdown": {
+                    "type": "array",
+                    "items": {
+                        "type": "string"
+                    },
+                    "default": ["markdown"]
+                },
+                "docset.objective-c": {
+                    "type": "array",
+                    "items": {
+                        "type": "string"
+                    },
+                    "default": [
+                        "iphoneos", "macosx", "watchos", "tvos", "appledoc", "cocos2d", "cocos3d",
+                        "kobold2d", "sparrow", "c", "manpages"
+                    ]
+                },
+                "docset.perl": {
+                    "type": "array",
+                    "items": {
+                        "type": "string"
+                    },
+                    "default": ["perl", "manpages"]
+                },
+                "docset.php": {
+                    "type": "array",
+                    "items": {
+                        "type": "string"
+                    },
+                    "default": [
+                        "php", "wordpress", "drupal", "zend", "laravel", "yii", "joomla",
+                        "ee", "codeigniter", "cakephp", "phpunit", "symfony", "typo3", "twig",
+                        "smarty", "craft", "phpp", "html", "statamic", "mysql", "sqlite",
+                        "mongodb", "psql", "redis"
                     ]
                 },
                 "docset.ruby": {
