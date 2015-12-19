@@ -21,7 +21,6 @@
 		}],
         "keybindings": [{
             "command": "extension.dash",
-            "key": "ctrl+h",
             "mac": "cmd+h",
             "when": "editorTextFocus"
         }],
@@ -43,6 +42,13 @@
                     },
                     "default": ["clojure"]
                 },
+                "docset.coffee": {
+                    "type": "array",
+                    "items": {
+                        "type": "string"
+                    },
+                    "default": ["coffee"]
+                },
                 "docset.cpp": {
                     "type": "array",
                     "items": {
@@ -50,12 +56,12 @@
                     },
                     "default": ["cpp","net","boost","qt","cvcpp","cocos2dx","c","manpages"]
                 },
-                "docset.coffee": {
+                "docset.csharp": {
                     "type": "array",
                     "items": {
                         "type": "string"
                     },
-                    "default": ["coffee"]
+                    "default": ["net", "mono", "unity3d"]
                 },
                 "docset.dart": {
                     "type": "array",
@@ -64,12 +70,33 @@
                     },
                     "default": ["dartlang", "polymerdart", "angulardart"]
                 },
+                "docset.elixir": {
+                    "type": "array",
+                    "items": {
+                        "type": "string"
+                    },
+                    "default": ["elixir"]
+                },
+                "docset.erlang": {
+                    "type": "array",
+                    "items": {
+                        "type": "string"
+                    },
+                    "default": ["erlang"]
+                },
                 "docset.go": {
                     "type": "array",
                     "items": {
                         "type": "string"
                     },
                     "default": ["go", "godoc"]
+                },
+                "docset.haskell": {
+                    "type": "array",
+                    "items": {
+                        "type": "string"
+                    },
+                    "default": ["haskell"]
                 },
                 "docset.html": {
                     "type": "array",
@@ -162,6 +189,13 @@
                         "mongodb", "psql", "redis"
                     ]
                 },
+                "docset.puppet": {
+                    "type": "array",
+                    "items": {
+                        "type": "string"
+                    },
+                    "default": ["puppet"]
+                },
                 "docset.python": {
                     "type": "array",
                     "items": {
@@ -201,6 +235,13 @@
                     },
                     "default": ["sass", "compass", "bourbon", "neat", "susy", "css"]
                 },
+                "docset.scala": {
+                    "type": "array",
+                    "items": {
+                        "type": "string"
+                    },
+                    "default": ["scala", "akka", "playscala"]
+                },
                 "docset.sql": {
                     "type": "array",
                     "items": {
@@ -221,6 +262,13 @@
                         "type": "string"
                     },
                     "default": ["typescript"]
+                },
+                "docset.yaml": {
+                    "type": "array",
+                    "items": {
+                        "type": "string"
+                    },
+                    "default": ["chef", "ansible"]
                 }
             }
         }
