@@ -1,0 +1,494 @@
+{
+  "name": "vscode-dash",
+  "displayName": "vscode-dash",
+  "description": "Dash integration in Visual Studio Code",
+  "version": "1.0.0",
+  "publisher": "deerawan",
+  "engines": {
+    "vscode": "^0.10.1"
+  },
+  "categories": [
+    "Other"
+  ],
+  "activationEvents": [
+    "onCommand:extension.dash.specific",
+    "onCommand:extension.dash.all"
+  ],
+  "main": "./out/src/extension",
+  "contributes": {
+    "commands": [
+      {
+        "command": "extension.dash.specific",
+        "title": "Search in Dash for current syntax"
+      },
+      {
+        "command": "extension.dash.all",
+        "title": "Search in Dash for all documentation"
+      }
+    ],
+    "keybindings": [
+      {
+        "command": "extension.dash.specific",
+        "key": "ctrl+h",
+        "mac": "cmd+h",
+        "when": "editorTextFocus"
+      },
+      {
+        "command": "extension.dash.all",
+        "key": "shift+ctrl+h",
+        "mac": "shift+cmd+h",
+        "when": "editorTextFocus"
+      }
+    ],
+    "configuration": {
+      "type": "object",
+      "title": "Dash Configuration",
+      "properties": {
+        "docset.css": {
+          "type": "array",
+          "items": {
+            "type": "string"
+          },
+          "default": [
+            "css",
+            "bootstrap",
+            "foundation",
+            "less",
+            "awesome",
+            "cordova",
+            "phonegap"
+          ]
+        },
+        "docset.clojure": {
+          "type": "array",
+          "items": {
+            "type": "string"
+          },
+          "default": [
+            "clojure"
+          ]
+        },
+        "docset.coffee": {
+          "type": "array",
+          "items": {
+            "type": "string"
+          },
+          "default": [
+            "coffee"
+          ]
+        },
+        "docset.cpp": {
+          "type": "array",
+          "items": {
+            "type": "string"
+          },
+          "default": [
+            "cpp",
+            "net",
+            "boost",
+            "qt",
+            "cvcpp",
+            "cocos2dx",
+            "c",
+            "manpages"
+          ]
+        },
+        "docset.csharp": {
+          "type": "array",
+          "items": {
+            "type": "string"
+          },
+          "default": [
+            "net",
+            "mono",
+            "unity3d"
+          ]
+        },
+        "docset.dart": {
+          "type": "array",
+          "items": {
+            "type": "string"
+          },
+          "default": [
+            "dartlang",
+            "polymerdart",
+            "angulardart"
+          ]
+        },
+        "docset.elixir": {
+          "type": "array",
+          "items": {
+            "type": "string"
+          },
+          "default": [
+            "elixir"
+          ]
+        },
+        "docset.erlang": {
+          "type": "array",
+          "items": {
+            "type": "string"
+          },
+          "default": [
+            "erlang"
+          ]
+        },
+        "docset.go": {
+          "type": "array",
+          "items": {
+            "type": "string"
+          },
+          "default": [
+            "go",
+            "godoc"
+          ]
+        },
+        "docset.haskell": {
+          "type": "array",
+          "items": {
+            "type": "string"
+          },
+          "default": [
+            "haskell"
+          ]
+        },
+        "docset.html": {
+          "type": "array",
+          "items": {
+            "type": "string"
+          },
+          "default": [
+            "html",
+            "svg",
+            "css",
+            "bootstrap",
+            "foundation",
+            "awesome",
+            "statamic",
+            "javascript",
+            "jquery",
+            "jqueryui",
+            "jquerym",
+            "angularjs",
+            "backbone",
+            "marionette",
+            "meteor",
+            "moo",
+            "prototype",
+            "ember",
+            "lodash",
+            "underscore",
+            "sencha",
+            "extjs",
+            "knockout",
+            "zepto",
+            "cordova",
+            "phonegap",
+            "yui"
+          ]
+        },
+        "docset.jade": {
+          "type": "array",
+          "items": {
+            "type": "string"
+          },
+          "default": [
+            "jade"
+          ]
+        },
+        "docset.java": {
+          "type": "array",
+          "items": {
+            "type": "string"
+          },
+          "default": [
+            "java",
+            "javafx",
+            "grails",
+            "groovy",
+            "playjava",
+            "spring",
+            "cvj",
+            "processing"
+          ]
+        },
+        "docset.javascript": {
+          "type": "array",
+          "items": {
+            "type": "string"
+          },
+          "default": [
+            "javascript",
+            "jquery",
+            "jqueryui",
+            "jquerym",
+            "angularjs",
+            "backbone",
+            "marionette",
+            "meteor",
+            "sproutcore",
+            "moo",
+            "prototype",
+            "bootstrap",
+            "foundation",
+            "lodash",
+            "underscore",
+            "ember",
+            "sencha",
+            "extjs",
+            "titanium",
+            "knockout",
+            "zepto",
+            "yui",
+            "d3",
+            "svg",
+            "dojo",
+            "coffee",
+            "nodejs",
+            "express",
+            "grunt",
+            "mongoose",
+            "moment",
+            "require",
+            "awsjs",
+            "jasmine",
+            "sails",
+            "sinon",
+            "chai",
+            "html",
+            "css",
+            "cordova",
+            "phonegap",
+            "unity3d"
+          ]
+        },
+        "docset.less": {
+          "type": "array",
+          "items": {
+            "type": "string"
+          },
+          "default": [
+            "less"
+          ]
+        },
+        "docset.lua": {
+          "type": "array",
+          "items": {
+            "type": "string"
+          },
+          "default": [
+            "lua",
+            "corona"
+          ]
+        },
+        "docset.markdown": {
+          "type": "array",
+          "items": {
+            "type": "string"
+          },
+          "default": [
+            "markdown"
+          ]
+        },
+        "docset.objective-c": {
+          "type": "array",
+          "items": {
+            "type": "string"
+          },
+          "default": [
+            "iphoneos",
+            "macosx",
+            "watchos",
+            "tvos",
+            "appledoc",
+            "cocos2d",
+            "cocos3d",
+            "kobold2d",
+            "sparrow",
+            "c",
+            "manpages"
+          ]
+        },
+        "docset.perl": {
+          "type": "array",
+          "items": {
+            "type": "string"
+          },
+          "default": [
+            "perl",
+            "manpages"
+          ]
+        },
+        "docset.php": {
+          "type": "array",
+          "items": {
+            "type": "string"
+          },
+          "default": [
+            "php",
+            "wordpress",
+            "drupal",
+            "zend",
+            "laravel",
+            "yii",
+            "joomla",
+            "ee",
+            "codeigniter",
+            "cakephp",
+            "phpunit",
+            "symfony",
+            "typo3",
+            "twig",
+            "smarty",
+            "craft",
+            "phpp",
+            "html",
+            "statamic",
+            "mysql",
+            "sqlite",
+            "mongodb",
+            "psql",
+            "redis"
+          ]
+        },
+        "docset.puppet": {
+          "type": "array",
+          "items": {
+            "type": "string"
+          },
+          "default": [
+            "puppet"
+          ]
+        },
+        "docset.python": {
+          "type": "array",
+          "items": {
+            "type": "string"
+          },
+          "default": [
+            "python",
+            "django",
+            "twisted",
+            "sphinx",
+            "flask",
+            "tornado",
+            "sqlalchemy",
+            "numpy",
+            "scipy",
+            "salt",
+            "pandas",
+            "matplotlib",
+            "cvp"
+          ]
+        },
+        "docset.r": {
+          "type": "array",
+          "items": {
+            "type": "string"
+          },
+          "default": [
+            "r"
+          ]
+        },
+        "docset.ruby": {
+          "type": "array",
+          "items": {
+            "type": "string"
+          },
+          "default": [
+            "ruby",
+            "rubygems",
+            "rails"
+          ]
+        },
+        "docset.rust": {
+          "type": "array",
+          "items": {
+            "type": "string"
+          },
+          "default": [
+            "rust"
+          ]
+        },
+        "docset.sass": {
+          "type": "array",
+          "items": {
+            "type": "string"
+          },
+          "default": [
+            "sass",
+            "compass",
+            "bourbon",
+            "neat",
+            "susy",
+            "css"
+          ]
+        },
+        "docset.scala": {
+          "type": "array",
+          "items": {
+            "type": "string"
+          },
+          "default": [
+            "scala",
+            "akka",
+            "playscala"
+          ]
+        },
+        "docset.sql": {
+          "type": "array",
+          "items": {
+            "type": "string"
+          },
+          "default": [
+            "mysql",
+            "sqlite",
+            "psql"
+          ]
+        },
+        "docset.swift": {
+          "type": "array",
+          "items": {
+            "type": "string"
+          },
+          "default": [
+            "swift",
+            "iphoneos",
+            "macosx",
+            "watchos",
+            "tvos",
+            "appledoc"
+          ]
+        },
+        "docset.typescript": {
+          "type": "array",
+          "items": {
+            "type": "string"
+          },
+          "default": [
+            "typescript"
+          ]
+        },
+        "docset.yaml": {
+          "type": "array",
+          "items": {
+            "type": "string"
+          },
+          "default": [
+            "chef",
+            "ansible"
+          ]
+        }
+      }
+    }
+  },
+  "scripts": {
+    "vscode:prepublish": "node ./node_modules/vscode/bin/compile",
+    "compile": "node ./node_modules/vscode/bin/compile -watch -p ./",
+    "test": "node ./node_modules/vscode/bin/test"
+  },
+  "devDependencies": {
+    "typescript": "^1.6.2",
+    "vscode": "0.10.x"
+  }
+}
