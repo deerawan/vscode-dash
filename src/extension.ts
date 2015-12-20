@@ -1,4 +1,4 @@
-import {window, workspace, commands, ExtensionContext, TextEditor} from 'vscode';
+import {window, workspace, commands, ExtensionContext, TextEditor, Selection} from 'vscode';
 import {exec} from 'child_process';
 
 export function activate(context: ExtensionContext) {
@@ -50,7 +50,7 @@ export class Dash {
     }
 
     /**
-     * Get query (selected text) for dash
+     * Get query (by selected text or by cursor) for dash
      *
      * @param {TextEditor} editor
      * @return {string} query (selected text)
@@ -58,6 +58,11 @@ export class Dash {
     private _getQuery(editor: TextEditor) {
         var selection = editor.selection;
         var query = editor.document.getText(selection);
+
+        if (!query) {
+            var range = editor.document.getWordRangeAtPosition(selection.active);
+            query = editor.document.getText(range);
+        }
 
         return query;
     }
@@ -107,8 +112,7 @@ export class Dash {
      * @return {array} array of docset for keys parameter
      */
     public _getKeys(languageId: string): string {
-        let config = workspace.getConfiguration('docset');
-        console.log(config);
+        let config = workspace.getConfiguration('dash.docset');
 
         return config[languageId].join(',');
     }

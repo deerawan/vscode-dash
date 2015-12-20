@@ -1,11 +1,25 @@
 {
   "name": "vscode-dash",
-  "displayName": "vscode-dash",
+  "displayName": "Dash",
   "description": "Dash integration in Visual Studio Code",
   "version": "1.0.0",
   "publisher": "deerawan",
+  "icon": "images/dash.png",
+  "galleryBanner": {
+    "color": "#0000FF",
+    "theme": "dark"
+  },
   "engines": {
     "vscode": "^0.10.1"
+  },
+  "bugs": {
+    "url": "https://github.com/deerawan/vscode-dash/issues",
+    "email": "deerawan@gmail.com"
+  },
+  "homepage": "https://github.com/deerawan/vscode-dash",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/deerawan/vscode-dash"
   },
   "categories": [
     "Other"
@@ -44,7 +58,7 @@
       "type": "object",
       "title": "Dash Configuration",
       "properties": {
-        "docset.css": {
+        "dash.docset.css": {
           "type": "array",
           "items": {
             "type": "string"
@@ -59,7 +73,7 @@
             "phonegap"
           ]
         },
-        "docset.clojure": {
+        "dash.docset.clojure": {
           "type": "array",
           "items": {
             "type": "string"
@@ -68,7 +82,7 @@
             "clojure"
           ]
         },
-        "docset.coffee": {
+        "dash.docset.coffee": {
           "type": "array",
           "items": {
             "type": "string"
@@ -77,7 +91,7 @@
             "coffee"
           ]
         },
-        "docset.cpp": {
+        "dash.docset.cpp": {
           "type": "array",
           "items": {
             "type": "string"
@@ -93,7 +107,7 @@
             "manpages"
           ]
         },
-        "docset.csharp": {
+        "dash.docset.csharp": {
           "type": "array",
           "items": {
             "type": "string"
@@ -104,7 +118,7 @@
             "unity3d"
           ]
         },
-        "docset.dart": {
+        "dash.docset.dart": {
           "type": "array",
           "items": {
             "type": "string"
@@ -115,7 +129,7 @@
             "angulardart"
           ]
         },
-        "docset.elixir": {
+        "dash.docset.elixir": {
           "type": "array",
           "items": {
             "type": "string"
@@ -124,7 +138,7 @@
             "elixir"
           ]
         },
-        "docset.erlang": {
+        "dash.docset.erlang": {
           "type": "array",
           "items": {
             "type": "string"
@@ -133,7 +147,7 @@
             "erlang"
           ]
         },
-        "docset.go": {
+        "dash.docset.go": {
           "type": "array",
           "items": {
             "type": "string"
@@ -143,7 +157,7 @@
             "godoc"
           ]
         },
-        "docset.haskell": {
+        "dash.docset.haskell": {
           "type": "array",
           "items": {
             "type": "string"
@@ -152,7 +166,7 @@
             "haskell"
           ]
         },
-        "docset.html": {
+        "dash.docset.html": {
           "type": "array",
           "items": {
             "type": "string"
@@ -187,7 +201,7 @@
             "yui"
           ]
         },
-        "docset.jade": {
+        "dash.docset.jade": {
           "type": "array",
           "items": {
             "type": "string"
@@ -196,7 +210,7 @@
             "jade"
           ]
         },
-        "docset.java": {
+        "dash.docset.java": {
           "type": "array",
           "items": {
             "type": "string"
@@ -212,7 +226,7 @@
             "processing"
           ]
         },
-        "docset.javascript": {
+        "dash.docset.javascript": {
           "type": "array",
           "items": {
             "type": "string"
@@ -262,7 +276,7 @@
             "unity3d"
           ]
         },
-        "docset.less": {
+        "dash.docset.less": {
           "type": "array",
           "items": {
             "type": "string"
@@ -271,7 +285,7 @@
             "less"
           ]
         },
-        "docset.lua": {
+        "dash.docset.lua": {
           "type": "array",
           "items": {
             "type": "string"
@@ -281,7 +295,7 @@
             "corona"
           ]
         },
-        "docset.markdown": {
+        "dash.docset.markdown": {
           "type": "array",
           "items": {
             "type": "string"
@@ -290,7 +304,7 @@
             "markdown"
           ]
         },
-        "docset.objective-c": {
+        "dash.docset.objective-c": {
           "type": "array",
           "items": {
             "type": "string"
@@ -309,7 +323,7 @@
             "manpages"
           ]
         },
-        "docset.perl": {
+        "dash.docset.perl": {
           "type": "array",
           "items": {
             "type": "string"
@@ -319,7 +333,7 @@
             "manpages"
           ]
         },
-        "docset.php": {
+        "dash.docset.php": {
           "type": "array",
           "items": {
             "type": "string"
@@ -351,7 +365,7 @@
             "redis"
           ]
         },
-        "docset.puppet": {
+        "dash.docset.puppet": {
           "type": "array",
           "items": {
             "type": "string"
@@ -360,7 +374,7 @@
             "puppet"
           ]
         },
-        "docset.python": {
+        "dash.docset.python": {
           "type": "array",
           "items": {
             "type": "string"
@@ -381,7 +395,7 @@
             "cvp"
           ]
         },
-        "docset.r": {
+        "dash.docset.r": {
           "type": "array",
           "items": {
             "type": "string"
@@ -390,7 +404,7 @@
             "r"
           ]
         },
-        "docset.ruby": {
+        "dash.docset.ruby": {
           "type": "array",
           "items": {
             "type": "string"
@@ -401,7 +415,7 @@
             "rails"
           ]
         },
-        "docset.rust": {
+        "dash.docset.rust": {
           "type": "array",
           "items": {
             "type": "string"
@@ -410,7 +424,7 @@
             "rust"
           ]
         },
-        "docset.sass": {
+        "dash.docset.sass": {
           "type": "array",
           "items": {
             "type": "string"
@@ -424,7 +438,7 @@
             "css"
           ]
         },
-        "docset.scala": {
+        "dash.docset.scala": {
           "type": "array",
           "items": {
             "type": "string"
@@ -435,7 +449,7 @@
             "playscala"
           ]
         },
-        "docset.sql": {
+        "dash.docset.sql": {
           "type": "array",
           "items": {
             "type": "string"
@@ -446,7 +460,7 @@
             "psql"
           ]
         },
-        "docset.swift": {
+        "dash.docset.swift": {
           "type": "array",
           "items": {
             "type": "string"
@@ -460,7 +474,7 @@
             "appledoc"
           ]
         },
-        "docset.typescript": {
+        "dash.docset.typescript": {
           "type": "array",
           "items": {
             "type": "string"
@@ -469,7 +483,7 @@
             "typescript"
           ]
         },
-        "docset.yaml": {
+        "dash.docset.yaml": {
           "type": "array",
           "items": {
             "type": "string"

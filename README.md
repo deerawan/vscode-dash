@@ -8,13 +8,20 @@ Type `cmd-shift-p` to launch command palette and choose `Extensions: Install Ext
 ## Usage
 Get the text under your cursor or selected first.
 
-- Pressing `cmd+h`. It will search for current specific documentation depends on language.
-- Pressing `cmd+shift+h`. It will search for all documentation.
+- Pressing `cmd-h`. It will search for current specific documentation depends on language.
+- Pressing `cmd-shift-h`. It will search for all documentation.
 
-## Configuration
+## Docset Configuration
+You can add or change docset in `settings.json` or pressing `cmd-,`.
+Every configuration start with "dash.docset" following with language like below:
 
-### Docset
-You can change docset configuration in `settings.json`.
+```
+"dash.docset.dart": [
+    "dartlang",
+    "polymerdart",
+    "angulardart"
+]
+```
 
 ## License
 MIT
