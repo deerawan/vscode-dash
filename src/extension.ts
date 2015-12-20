@@ -1,4 +1,3 @@
-
 import {window, workspace, commands, ExtensionContext, TextEditor} from 'vscode';
 import {exec} from 'child_process';
 
@@ -13,9 +12,6 @@ export function activate(context: ExtensionContext) {
     context.subscriptions.push(commands.registerCommand('extension.dash.all', () => {
         dash.searchAll();
 	}));
-}
-
-export function deactivate() {
 }
 
 export class Dash {

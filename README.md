@@ -1,13 +1,20 @@
-# README
-## This is the README for your extension "vscode-test" 
-You can author your README using Visual Studio Code.  Here are some useful editor keyboard shortcuts:
+# Visual Studio Code Dash
 
-* Split the editor (`Cmd+\` on OSX or `Ctrl+\` on Windows and Linux)
-* Toggle preview (`Shift+CMD+V` on OSX or `Shift+Ctrl+V` on Windows and Linux)
-* Press `Ctrl+Space` (Windows, Linux) or `Cmd+Space` (OSX) to see a list of Markdown snippets
+[Dash](https://kapeli.com/dash) documentation integration for [Visual Studio Code](https://code.visualstudio.com/)
 
-### For more information
-* [Visual Studio Code's Markdown Support](http://code.visualstudio.com/docs/languages/markdown)
-* [Markdown Syntax Reference](https://help.github.com/articles/markdown-basics/)
+## Installation
+Type `cmd-shift-p` to launch command palette and choose `Extensions: Install Extension`. Search this package and install.
 
-** Enjoy!**
+## Usage
+Get the text under your cursor or selected first.
+
+- Pressing `cmd+h`. It will search for current specific documentation depends on language.
+- Pressing `cmd+shift+h`. It will search for all documentation.
+
+## Configuration
+
+### Docset
+You can change docset configuration in `settings.json`.
+
+## License
+MIT
