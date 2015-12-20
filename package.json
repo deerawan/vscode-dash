@@ -2,11 +2,11 @@
   "name": "vscode-dash",
   "displayName": "Dash",
   "description": "Dash integration in Visual Studio Code",
-  "version": "1.0.0",
+  "version": "1.0.1",
   "publisher": "deerawan",
   "icon": "images/dash.png",
   "galleryBanner": {
-    "color": "#0000FF",
+    "color": "#7171AD",
     "theme": "dark"
   },
   "engines": {
