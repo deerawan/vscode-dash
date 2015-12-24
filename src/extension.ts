@@ -99,7 +99,10 @@ export class Dash {
 
         if (languageId) {
             let keys = this._getKeys(languageId);
-            uri += '&keys=' + keys;
+
+            if (keys) {
+                uri += '&keys=' + keys;
+            }
         }
 
         return uri;
@@ -109,11 +112,15 @@ export class Dash {
      * Get docset for keys parameter to dash
      *
      * @param {string} languageId - language id e.g. javascript, css, yaml
-     * @return {array} array of docset for keys parameter
+     * @return {string} joined array in string e.g. "ruby,css,dimas" or empty string
      */
     public _getKeys(languageId: string): string {
         let config = workspace.getConfiguration('dash.docset');
 
-        return config[languageId].join(',');
+        if (config[languageId]) {
+            return config[languageId].join(',');
+        }
+
+        return '';
     }
 }
