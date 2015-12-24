@@ -2,6 +2,8 @@
 
 [Dash](https://kapeli.com/dash) documentation integration for [Visual Studio Code](https://code.visualstudio.com/)
 
+![vscode dash](https://github.com/deerawan/vscode-dash/blob/master/images/vscode-dash.gif)
+
 ## Installation
 Type `cmd-shift-p` to launch command palette and choose `Extensions: Install Extension`. Search this package and install.
 
