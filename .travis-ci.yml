@@ -1,6 +1,6 @@
 language: node_js
 node_js:
-  - "4.2"
+  - '4.2'
 install:
   - 'npm install -g typescript@1.6.2'
   - 'npm install'
