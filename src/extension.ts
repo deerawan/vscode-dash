@@ -55,6 +55,7 @@ function getEditor(): TextEditor {
 /**
  * Get selected text by selection or by cursor position
  *
+ * @param {TextEditor} active editor
  * @return {string}
  */
 function getSelectedText(editor: TextEditor) {
@@ -72,6 +73,7 @@ function getSelectedText(editor: TextEditor) {
 /**
  * Get docset configuration
  *
+ * @param {string} languageId e.g javascript, ruby
  * @return {Array<string>}
  */
 function getDocsets(languageId: string): Array<string> {

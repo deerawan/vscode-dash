@@ -499,9 +499,13 @@
   "scripts": {
     "vscode:prepublish": "node ./node_modules/vscode/bin/compile",
     "compile": "node ./node_modules/vscode/bin/compile -watch -p ./",
-    "test": "node ./node_modules/vscode/bin/test"
+    "test": "./node_modules/istanbul/lib/cli.js cover ./node_modules/mocha/bin/_mocha -- -R spec --ui tdd ./out/test/extension.test.js",
+    "test-local": "istanbul cover ./node_modules/mocha/bin/_mocha -- -R spec --ui tdd ./out/test/extension.test.js"
   },
   "devDependencies": {
+    "coveralls": "^2.11.4",
+    "istanbul": "^0.4.1",
+    "mocha": "^2.3.4",
     "typescript": "^1.6.2",
     "vscode": "0.10.x"
   }
