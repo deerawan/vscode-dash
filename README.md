@@ -2,6 +2,8 @@
 
 [Dash](https://kapeli.com/dash) documentation integration for [Visual Studio Code](https://code.visualstudio.com/)
 
+[![Build Status](https://travis-ci.org/deerawan/vscode-dash.svg?branch=master)](https://travis-ci.org/deerawan/vscode-dash)
+
 ![vscode dash](https://github.com/deerawan/vscode-dash/blob/master/images/vscode-dash.gif)
 
 ## Installation
