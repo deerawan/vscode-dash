@@ -1,0 +1,10 @@
+language: node_js
+node_js:
+  - '4.2'
+install:
+  - 'npm install -g typescript@1.6.2'
+  - 'npm install'
+script:
+  - 'tsc && node ./node_modules/vscode/bin/compile'
+  - 'npm test'
+after_script: 'cat ./coverage/lcov.info | ./node_modules/coveralls/bin/coveralls.js'
