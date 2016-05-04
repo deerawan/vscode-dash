@@ -2,7 +2,7 @@
   "name": "vscode-dash",
   "displayName": "Dash",
   "description": "Dash integration in Visual Studio Code",
-  "version": "1.0.3",
+  "version": "1.1.0",
   "publisher": "deerawan",
   "icon": "images/dash.png",
   "galleryBanner": {
@@ -44,13 +44,13 @@
       {
         "command": "extension.dash.specific",
         "key": "ctrl+h",
-        "mac": "cmd+h",
+        "mac": "ctrl+h",
         "when": "editorTextFocus"
       },
       {
         "command": "extension.dash.all",
-        "key": "shift+ctrl+h",
-        "mac": "shift+cmd+h",
+        "key": "ctrl+alt+h",
+        "mac": "ctrl+alt+h",
         "when": "editorTextFocus"
       }
     ],
