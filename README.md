@@ -4,7 +4,7 @@
 
 [![Build Status](https://travis-ci.org/deerawan/vscode-dash.svg?branch=master)](https://travis-ci.org/deerawan/vscode-dash) [![Coverage Status](https://coveralls.io/repos/deerawan/vscode-dash/badge.svg?branch=master&service=github)](https://coveralls.io/github/deerawan/vscode-dash?branch=master)
 
-![vscode dash](https://github.com/deerawan/vscode-dash/blob/master/images/vscode-dash.gif)
+![vscode dash](https://raw.githubusercontent.com/deerawan/vscode-dash/master/images/vscode-dash.gif)
 
 ## Installation
 Type `cmd-shift-p` to launch command palette and choose `Extensions: Install Extension`. Search this package and install.
