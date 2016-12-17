@@ -375,6 +375,15 @@
             "redis"
           ]
         },
+        "dash.docset.pde": {
+          "type": "array",
+          "items": {
+            "type": "string"
+          },
+          "default": [
+            "processing"
+          ]
+        },
         "dash.docset.puppet": {
           "type": "array",
           "items": {
