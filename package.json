@@ -236,6 +236,7 @@
             "jquery",
             "jqueryui",
             "jquerym",
+            "react",
             "angularjs",
             "backbone",
             "marionette",
@@ -274,6 +275,15 @@
             "cordova",
             "phonegap",
             "unity3d"
+          ]
+        },
+        "dash.docset.javascriptreact": {
+          "type": "array",
+          "items": {
+            "type": "string"
+          },
+          "default": [
+            "react"
           ]
         },
         "dash.docset.less": {
