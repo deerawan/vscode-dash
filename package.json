@@ -484,6 +484,15 @@
             "appledoc"
           ]
         },
+        "dash.docset.tcl": {
+          "type": "array",
+          "items": {
+            "type": "string"
+          },
+          "default": [
+            "tcl"
+          ]
+        },
         "dash.docset.typescript": {
           "type": "array",
           "items": {
