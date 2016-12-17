@@ -7,16 +7,16 @@
 ![vscode dash](https://raw.githubusercontent.com/deerawan/vscode-dash/master/images/vscode-dash.gif)
 
 ## Installation
-Type `cmd-shift-p` to launch command palette and choose `Extensions: Install Extension`. Search this package and install.
+Type `cmd + shift + p` to launch command palette and choose `Extensions: Install Extension`. Search this package and install.
 
 ## Usage
 Get the text under your cursor or selected first.
 
-- Pressing `ctrl-h`. It will search for current specific documentation depends on language.
-- Pressing `ctrl-alt-h`. It will search for all documentation.
+- Pressing `ctrl + h`. It will search for current specific documentation depends on language.
+- Pressing `ctrl + alt + h`. It will search for all documentation.
 
 ## Docset Configuration
-You can add or change docset in `settings.json` or pressing `cmd-,`.
+You can add or change docset in `settings.json` or pressing `cmd + ,`.
 Every configuration start with "dash.docset" following with language like below:
 
 ```
