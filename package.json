@@ -459,6 +459,16 @@
             "playscala"
           ]
         },
+        "dash.docset.shellscript": {
+          "type": "array",
+          "items": {
+            "type": "string"
+          },
+          "default": [
+            "bash",
+            "manpages"
+          ]
+        },
         "dash.docset.sql": {
           "type": "array",
           "items": {
