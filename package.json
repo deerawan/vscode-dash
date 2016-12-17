@@ -470,6 +470,15 @@
             "psql"
           ]
         },
+        "dash.docset.stylus": {
+          "type": "array",
+          "items": {
+            "type": "string"
+          },
+          "default": [
+            "stylus"
+          ]
+        },
         "dash.docset.swift": {
           "type": "array",
           "items": {
