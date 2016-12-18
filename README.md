@@ -32,16 +32,16 @@ Elixir | elixir | dash.docset.elixir
 Erlang | erlang | dash.docset.erlang
 Go | go,godoc | dash.docset.go
 Haskell | haskell | dash.docset.haskell
-HTML | html,svg,css,bootstrap,foundation,awesome,statamic,<br>javascript,jquery,jqueryui,jquerym,angularjs,backbone,marionette,meteor,moo,prototype,ember,lodash,underscore,sencha,extjs,knockout,zepto,cordova,phonegap,yui | dash.docset.html
+HTML | html,svg,css,bootstrap,foundation,awesome,statamic,<br>javascript,jquery,jqueryui,jquerym,angularjs,backbone,<br>marionette,meteor,moo,prototype,ember,lodash,underscore,<br>sencha,extjs,knockout,zepto,cordova,phonegap,yui | dash.docset.html
 Jade | jade | dash.docset.jade
 Java | java,javafx,grails,groovy,playjava,spring,cvj,processing | dash.docset.java
-JavaScript | javascript,jquery,jqueryui,jquerym,react,angularjs,<br>backbone,marionette,meteor,sproutcore,moo,prototype,bootstrap,foundation,lodash,underscore,ember,sencha,extjs,titanium,knockout,zepto,yui,d3,svg,dojo,coffee,nodejs,express,grunt,mongoose,moment,require,awsjs,jasmine,sails,sinon,chai,html,css,cordova,phonegap,unity3d | dash.docset.javascript
+JavaScript | javascript,jquery,jqueryui,jquerym,react,angularjs,<br>backbone,marionette,meteor,sproutcore,moo,<br>prototype,bootstrap,foundation,lodash,underscore,<br>ember,sencha,extjs,titanium,knockout,zepto,yui,d3,<br>svg,dojo,coffee,nodejs,express,grunt,mongoose,<br>moment,require,awsjs,jasmine,sails,sinon,chai,<br>html,css,cordova,phonegap,unity3d | dash.docset.javascript
 Less | less | dash.docset.less
 Lua | lua,corona | dash.docset.lua
 Markdown | markdown | dash.docset.markdown
 Objective-C | iphoneos,macosx,watchos,tvos,appledoc,cocos2d,<br>cocos3d,kobold2d,sparrow,c,manpages | dash.docset.objective-c
 Perl | perl,manpages | dash.docset.perl
-PHP | php,wordpress,drupal,zend,laravel,yii,joomla,ee,<br>codeigniter,cakephp,phpunit,symfony,typo3,twig,smarty,craft,phpp,html,statamic,mysql,sqlite,mongodb,psql,redis | dash.docset.php
+PHP | php,wordpress,drupal,zend,laravel,yii,joomla,ee,<br>codeigniter,cakephp,phpunit,symfony,typo3,<br>twig,smarty,craft,phpp,html,statamic,mysql,<br>sqlite,mongodb,psql,redis | dash.docset.php
 Processing | processing | dash.docset.pde
 Puppet | puppet | dash.docset.puppet
 Python | python,django,twisted,sphinx,flask,tornado,<br>sqlalchemy,numpy,scipy,salt,pandas,matplotlib,cvp | dash.docset.python
@@ -70,14 +70,18 @@ You can find dash docset key in Dash application.
 
 ## Change Docset Configuration
 You can change docset in `settings.json` or pressing `cmd + ,`.
-Every configuration start with `dash.docset.xxx`. See Supported Docset table above to find Docset Plugin setting.
+Every configuration start with `dash.docset`. See `Docset Plugin Setting` in Supported Docset table above.
 
-Let's we change typescript docset by adding new docset "javascript". So, whenever we search from typescript files, it will search in typescript and javascript docset.
+### Example Case:
+Based on default docset configuration, if we search in typescript files (.ts), it will search in typescript docset.
+But now we want to make it to search in javascript docset too.
+
+Type `cmd + ,` then we change typescript docset by adding new docset "javascript". So, whenever we search from typescript files, it will search in typescript and javascript docset.
 
 The result will look like below:
 
 ```
-// settings.json
+// settings.json, add lines below
 "dash.docset.typescript": [
     "typescript",
     "javascript", // we add new docset here
