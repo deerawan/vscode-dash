@@ -1,0 +1,7 @@
+## 1.2.0
+- Add React support
+- Add Processing support
+- Add Shell Script support
+- Add Stylus support
+- Add TCL support
+- Improve README
