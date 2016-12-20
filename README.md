@@ -18,30 +18,34 @@ Get the text under your cursor or selected first.
 - Pressing `ctrl + alt + h`. It will search for all documentation.
 
 ## Supported Docsets
-This plugin supports almost all docset configuration based on [https://kapeli.com/dash_plugins](Dash Mapping)
+This plugin supports almost all docset configuration based on [Dash Mapping](https://kapeli.com/dash_plugins)
 
-For other languages that are not supported by default by VS Code, you probably need to install [https://marketplace.visualstudio.com/search?target=VSCode&category=Languages&sortBy=Downloads](language plugins).
+**NOTE**
+
+For other languages that are not supported by default in VS Code,
+you probably need to install [language plugins](https://marketplace.visualstudio.com/search?target=VSCode&category=Languages&sortBy=Downloads)
+first in order to allow VS Code to detect the language.
 
 Language | Dash Docset Keys | Docset Setting | VS Code Plugin |
------------- | ------------- | ------------- | ------------- |
+------------ | ------------- | ------------- | :-------------: |
 C++ | cpp,net,boost,qt,cvcpp,cocos2dx,c,manpages | dash.docset.cpp | [link](https://marketplace.visualstudio.com/items?itemName=ms-vscode.cpptools)
 C# | net,mono,unity3d | dash.docset.csharp
 Clojure | clojure | dash.docset.clojure
 CoffeeScript | coffee | dash.docset.coffee
-CSS | css,bootstrap,foundation,less,awesome,cordova,phonegap | dash.docset.css
+CSS | css,bootstrap,foundation,less,awesome,<br>cordova,phonegap | dash.docset.css
 Dart | dartlang,polymerdart,angulardart | dash.docset.dart | [link](https://marketplace.visualstudio.com/items?itemName=DanTup.dart-code)
 Elixir | elixir | dash.docset.elixir | [link](https://marketplace.visualstudio.com/items?itemName=mjmcloug.vscode-elixir)
 Erlang | erlang | dash.docset.erlang
 Go | go,godoc | dash.docset.go | [link](https://marketplace.visualstudio.com/items?itemName=lukehoban.Go)
 Haskell | haskell | dash.docset.haskell
-HTML | html,svg,css,bootstrap,foundation,awesome,statamic,<br>javascript,jquery,jqueryui,jquerym,angularjs,backbone,<br>marionette,meteor,moo,prototype,ember,lodash,underscore,<br>sencha,extjs,knockout,zepto,cordova,phonegap,yui | dash.docset.html
+HTML | html,svg,css,bootstrap,foundation,<br>awesome,statamic,javascript,jquery,jqueryui,<br>jquerym,angularjs,backbone,marionette,<br>meteor,moo,prototype,ember,lodash,<br>underscore,sencha,extjs,knockout,<br>zepto,cordova,phonegap,yui | dash.docset.html
 Jade | jade | dash.docset.jade
-Java | java,javafx,grails,groovy,playjava,spring,cvj,processing | dash.docset.java | [link](https://marketplace.visualstudio.com/items?itemName=redhat.java)
-JavaScript | javascript,jquery,jqueryui,jquerym,react,angularjs,<br>backbone,marionette,meteor,sproutcore,moo,<br>prototype,bootstrap,foundation,lodash,underscore,<br>ember,sencha,extjs,titanium,knockout,zepto,yui,d3,<br>svg,dojo,coffee,nodejs,express,grunt,mongoose,<br>moment,require,awsjs,jasmine,sails,sinon,chai,<br>html,css,cordova,phonegap,unity3d | dash.docset.javascript
+Java | java,javafx,grails,groovy,playjava,spring,<br>cvj,processing | dash.docset.java | [link](https://marketplace.visualstudio.com/items?itemName=redhat.java)
+JavaScript | javascript,jquery,jqueryui,jquerym,react,<br>angularjs,backbone,marionette,meteor,<br>sproutcore,moo,prototype,bootstrap,<br>foundation,lodash,underscore,ember,<br>sencha,extjs,titanium,knockout,zepto,<br>yui,d3,svg,dojo,coffee,nodejs,express,<br>grunt,mongoose,moment,require,<br>awsjs,jasmine,sails,sinon,chai,<br>html,css,cordova,phonegap,unity3d | dash.docset.javascript
 Less | less | dash.docset.less
 Lua | lua,corona | dash.docset.lua | [link](https://marketplace.visualstudio.com/items?itemName=gccfeli.vscode-lua)
 Markdown | markdown | dash.docset.markdown
-Objective-C | iphoneos,macosx,watchos,tvos,appledoc,cocos2d,<br>cocos3d,kobold2d,sparrow,c,manpages | dash.docset.objective-c
+Objective-C | iphoneos,macosx,watchos,tvos,<br>appledoc,cocos2d,cocos3d,<br>kobold2d,sparrow,c,manpages | dash.docset.objective-c
 Perl | perl,manpages | dash.docset.perl
 PHP | php,wordpress,drupal,zend,laravel,yii,joomla,ee,<br>codeigniter,cakephp,phpunit,symfony,typo3,<br>twig,smarty,craft,phpp,html,statamic,mysql,<br>sqlite,mongodb,psql,redis | dash.docset.php
 Processing | processing | dash.docset.pde | [link](https://marketplace.visualstudio.com/items?itemName=Tobiah.language-pde)
@@ -62,7 +66,7 @@ YAML | chef,ansible | dash.docset.yaml
 
 ### Added docset in this plugin
 Language | Dash Docset Keys | Docset Setting | VS Code Plugin
------------- | ------------- | ------------- | -------------
+------------ | ------------- | ------------- | :-------------:
 Elm | elm | dash.docset.elm | [link](https://marketplace.visualstudio.com/items?itemName=sbrink.elm)
 React | react | dash.docset.javascriptreact | [link](https://marketplace.visualstudio.com/items?itemName=TwentyChung.jsx)
 
