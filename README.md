@@ -61,6 +61,7 @@ YAML | chef,ansible | dash.docset.yaml
 ### Added docset in this plugin
 Language | Dash Docset Keys | Plugin Setting
 ------------ | ------------- | -------------
+Elm | elm | dash.docset.elm
 React | react | dash.docset.javascriptreact
 
 ### What is `Dash Docset Keys`?
@@ -76,7 +77,7 @@ Every configuration start with `dash.docset`. See `Docset Plugin Setting` in Sup
 Based on default docset configuration, if we search in typescript files (.ts), it will search in typescript docset.
 But now we want to make it to search in javascript docset too.
 
-Type `cmd + ,` then we change typescript docset by adding new docset "javascript". So, whenever we search from typescript files, it will search in typescript and javascript docset.
+Type `cmd + ,` then we change typescript docset by adding new docset key "javascript". So, whenever we search from typescript files, it will search in typescript and javascript docset.
 
 The result will look like below:
 

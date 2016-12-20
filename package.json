@@ -138,6 +138,15 @@
             "elixir"
           ]
         },
+        "dash.docset.elm": {
+          "type": "array",
+          "items": {
+            "type": "string"
+          },
+          "default": [
+            "elm"
+          ]
+        },
         "dash.docset.erlang": {
           "type": "array",
           "items": {
