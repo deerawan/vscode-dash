@@ -87,13 +87,25 @@ Type `cmd + ,` then we change typescript docset by adding new dash docset key "j
 
 The result will look like below:
 
-```
+```json
 // settings.json, add lines below
 "dash.docset.typescript": [
     "typescript",
     "javascript", // we add new dash docset key here
 ]
 ```
+
+## Change Keyboard Shortcut
+You can bind default shortcut to another shortcut keys
+
+Choose in top menu `Code -> Preferences -> Keyboard Shortcuts` or using shortcuts `cmd + K, cmd + S`
+
+Add one or two lines below
+```json
+{ "key": "your_shortcut", "command": "extension.dash.specific" }, // search in specific docset
+{ "key": "your_shortcut", "command": "extension.dash.all" } // search in all docset
+```
+
 
 ## License
 MIT
