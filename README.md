@@ -26,7 +26,7 @@ For other languages that are not supported by default in VS Code,
 you probably need to install [language plugins](https://marketplace.visualstudio.com/search?target=VSCode&category=Languages&sortBy=Downloads)
 first in order to allow VS Code to detect the language.
 
-Language | Dash Docset Keys | Docset Setting | VS Code Plugin |
+Language | Dash Docset Keys | Docset Setting | Language Plugin |
 ------------ | ------------- | ------------- | :-------------: |
 C++ | cpp,net,boost,qt,cvcpp,cocos2dx,c,manpages | dash.docset.cpp | [link](https://marketplace.visualstudio.com/items?itemName=ms-vscode.cpptools)
 C# | net,mono,unity3d | dash.docset.csharp
@@ -65,7 +65,7 @@ TypeScript | typescript | dash.docset.typescript
 YAML | chef,ansible | dash.docset.yaml
 
 ### Added docset in this plugin
-Language | Dash Docset Keys | Docset Setting | VS Code Plugin
+Language | Dash Docset Keys | Docset Setting | Language Plugin
 ------------ | ------------- | ------------- | :-------------:
 Elm | elm | dash.docset.elm | [link](https://marketplace.visualstudio.com/items?itemName=sbrink.elm)
 React | react | dash.docset.javascriptreact | [link](https://marketplace.visualstudio.com/items?itemName=TwentyChung.jsx)
@@ -91,7 +91,7 @@ The result will look like below:
 // settings.json, add lines below
 "dash.docset.typescript": [
     "typescript",
-    "javascript", // we add new dash docset key here
+    "javascript" // we add new dash docset key here
 ]
 ```
 
