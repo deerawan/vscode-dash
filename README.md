@@ -87,7 +87,7 @@ Type `cmd + ,` then we change typescript docset by adding new dash docset key "j
 
 The result will look like below:
 
-```json
+```
 // settings.json, add lines below
 "dash.docset.typescript": [
     "typescript",
