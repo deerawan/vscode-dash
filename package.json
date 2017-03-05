@@ -548,6 +548,15 @@
             "chef",
             "ansible"
           ]
+        },
+        "dash.docset.haxe": {
+          "type": "array",
+          "items": {
+            "type": "string"
+          },
+          "default": [
+            "haxe"
+          ]
         }
       }
     }
