@@ -1,3 +1,6 @@
+## 1.4.0
+- Add Haxe support
+
 ## 1.3.0
 - Add Elm support
 - Add Change Keyboard Shortcut in README
