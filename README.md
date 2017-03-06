@@ -78,11 +78,11 @@ You can find dash docset key in Dash application.
 
 ## Change Docset Configuration
 You can change docset in `settings.json` or pressing `cmd + ,`.
-Every configuration start with `dash.docset`. See `Docset Setting` in Supported Docset table above.
+Every configuration start with `dash.docset`. See `Docset Setting` column in Supported Docset table above.
 
 ### Example Case:
 Based on default docset configuration, if we search in typescript files (.ts), it will search in typescript docset.
-But now we want to make it to search in javascript docset too.
+But now we want to make it able to search in javascript docset too.
 
 Type `cmd + ,` then we change typescript docset by adding new dash docset key "javascript". So, whenever we search from typescript files, it will search in typescript and javascript docset.
 
