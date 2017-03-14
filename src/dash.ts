@@ -1,3 +1,5 @@
+import {platform} from 'os';
+
 export class Dash {
 
     /**
@@ -16,7 +18,7 @@ export class Dash {
             uri += '&keys=' + keys;
         }
 
-        return 'open -g "' + uri + '"';
+        return `${this.getPlatformCommand()} "${uri}"`;
     }
 
     /**
@@ -32,5 +34,30 @@ export class Dash {
         }
 
         return '';
+    }
+
+    /**
+     * Get platform specific command to run/execute query on Dash, Zeal or Velocity
+     *
+     * @return {string} the command that will be run to 
+     */
+    getPlatformCommand() {
+        // Inspired by the Dash plugin for Atom
+        // (see https://github.com/blakeembrey/atom-dash/blob/master/lib/dash.coffee)
+        let command = '';
+        switch (platform().toLowerCase()) {
+            case 'win32':
+                command = 'cmd /c start ""';
+                break;
+            case 'linux':
+            case 'freebsd':
+            case 'sunos':
+                command = 'xdg-open';
+                break;
+            case 'darwin':
+            default:
+                command = 'open -g';
+        }
+        return command;
     }
 }
