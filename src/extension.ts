@@ -23,7 +23,7 @@ function searchSpecific() {
     var docsets = getDocsets(languageId);
 
     var dash = new Dash();
-    handleZeal(dash);
+
     exec(dash.getCommand(query, docsets));
 }
 
@@ -35,7 +35,7 @@ function searchAll() {
     var query = getSelectedText(editor);
 
     var dash = new Dash();
-    handleZeal(dash);
+
     exec(dash.getCommand(query));
 }
 
@@ -85,17 +85,4 @@ function getDocsets(languageId: string): Array<string> {
     }
 
     return [];
-}
-
-/**
- * Handle weird Zeal bug where it does not start up correctly
- *
- * @param {Dash} dash dash object
- * @return {void}
- */
-function handleZeal(dash: Dash): void {
-    if (dash.usingZeal()) {
-        exec('zeal');
-        // not sure why but the other command does not open zeal correctly sometimes, there's an error in Qt
-    }
 }
