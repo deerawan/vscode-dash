@@ -1,3 +1,4 @@
+import { workspace, WorkspaceConfiguration } from 'vscode';
 export class Dash {
 
     /**
@@ -16,6 +17,10 @@ export class Dash {
             uri += '&keys=' + keys;
         }
 
+        if (this.usingZeal()) {
+            return 'zeal "' + uri + '"';
+        }
+
         return 'open -g "' + uri + '"';
     }
 
@@ -32,5 +37,14 @@ export class Dash {
         }
 
         return '';
+    }
+
+    /**
+     * Check if dash.zeal is set
+     *
+     * @return {WorkspaceConfiguration} if dash.zeal
+     */
+    usingZeal(): WorkspaceConfiguration {
+        return workspace.getConfiguration("dash.zeal");
     }
 }

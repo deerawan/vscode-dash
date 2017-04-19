@@ -58,6 +58,11 @@
       "type": "object",
       "title": "Dash Configuration",
       "properties": {
+        "dash.zeal": {
+          "type": "boolean",
+          "default": false,
+          "description": "Specify if you're using Zeal because it handles the Dash URI differently."
+        },
         "dash.docset.css": {
           "type": "array",
           "items": {
