@@ -5,56 +5,56 @@ import {Dash} from '../src/dash';
 suite("Dash Tests", () => {
 
     test('Get command with keys for macOS', () => {
-        let dash = new Dash();
-        var uri = dash.getCommand('size', 'darwin', ['css','less']);
+        let dash = new Dash('darwin');
+        var uri = dash.getCommand('size', ['css','less']);
 
         assert.equal(uri, 'open -g "dash-plugin://query=size&keys=css,less"');
     });
 
     test('Get command with no keys for macOS', () => {
-        let dash = new Dash();
-        var uri = dash.getCommand('size', 'darwin');
+        let dash = new Dash('darwin');
+        var uri = dash.getCommand('size');
 
         assert.equal(uri, 'open -g "dash-plugin://query=size"');
     });
 
     test('Get command with keys for Windows', () => {
-        let dash = new Dash();
-        var uri = dash.getCommand('size', 'win32', ['css','less']);
+        let dash = new Dash('win32');
+        var uri = dash.getCommand('size', ['css','less']);
 
         assert.equal(uri, 'start dash-plugin:// && start dash-plugin://query=size^&keys=css,less');
     });
 
     test('Get command with no keys for Windows', () => {
-        let dash = new Dash();
-        var uri = dash.getCommand('size', 'win32');
+        let dash = new Dash('win32');
+        var uri = dash.getCommand('size');
 
         assert.equal(uri, 'start dash-plugin:// && start dash-plugin://query=size');
     });
 
     test('Get command with keys for Linux', () => {
-        let dash = new Dash();
-        var uri = dash.getCommand('size', 'linux', ['css','less']);
+        let dash = new Dash('linux');
+        var uri = dash.getCommand('size', ['css','less']);
 
         assert.equal(uri, 'zeal "dash-plugin://query=size&keys=css,less"');
     });
 
     test('Get command with no keys for Linux', () => {
-        let dash = new Dash();
-        var uri = dash.getCommand('size', 'linux');
+        let dash = new Dash('linux');
+        var uri = dash.getCommand('size');
 
         assert.equal(uri, 'zeal "dash-plugin://query=size"');
     });
 
     test('Get keys with exist docset', () => {
-        let dash = new Dash();
+        let dash = new Dash('darwin');
         var keys = dash.getKeys(['css', 'less']);
 
         assert.equal(keys, 'css,less');
     });
 
     test('Get keys with empty docset', () => {
-        let dash = new Dash();
+        let dash = new Dash('darwin');
         var keys = dash.getKeys([]);
 
         assert.equal(keys, '');

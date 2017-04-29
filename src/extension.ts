@@ -3,6 +3,8 @@ import {exec} from 'child_process';
 import {Dash} from './dash';
 import {platform} from 'os';
 
+const OS: string = platform();
+
 export function activate(context: ExtensionContext) {
 
 	context.subscriptions.push(commands.registerCommand('extension.dash.specific', () => {
@@ -23,10 +25,9 @@ function searchSpecific() {
     var languageId = editor.document.languageId;
     var docsets = getDocsets(languageId);
 
-    var dash = new Dash();
-    var OS = platform();
+    var dash = new Dash(OS);
 
-    exec(dash.getCommand(query, OS, docsets));
+    exec(dash.getCommand(query, docsets));
 }
 
 /**
@@ -36,10 +37,9 @@ function searchAll() {
     var editor = getEditor();
     var query = getSelectedText(editor);
 
-    var dash = new Dash();
-    var OS = platform();
+    var dash = new Dash(OS);
 
-    exec(dash.getCommand(query, OS));
+    exec(dash.getCommand(query));
 }
 
 /**
