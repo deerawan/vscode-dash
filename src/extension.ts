@@ -1,6 +1,9 @@
 import {window, workspace, commands, ExtensionContext, TextEditor, Selection} from 'vscode';
 import {exec} from 'child_process';
 import {Dash} from './dash';
+import {platform} from 'os';
+
+const OS: string = platform();
 
 export function activate(context: ExtensionContext) {
 
@@ -22,7 +25,7 @@ function searchSpecific() {
     var languageId = editor.document.languageId;
     var docsets = getDocsets(languageId);
 
-    var dash = new Dash();
+    var dash = new Dash(OS);
 
     exec(dash.getCommand(query, docsets));
 }
@@ -34,7 +37,8 @@ function searchAll() {
     var editor = getEditor();
     var query = getSelectedText(editor);
 
-    var dash = new Dash();
+    var dash = new Dash(OS);
+
     exec(dash.getCommand(query));
 }
 
