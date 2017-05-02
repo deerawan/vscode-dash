@@ -4,6 +4,8 @@
 
 > Dash is an API Documentation Browser and Code Snippet Manager for MacOS
 
+Also support [Zeal](https://zealdocs.org/) for Windows and Linux.
+
 [![Build Status](https://travis-ci.org/deerawan/vscode-dash.svg?branch=master)](https://travis-ci.org/deerawan/vscode-dash) [![Coverage Status](https://coveralls.io/repos/deerawan/vscode-dash/badge.svg?branch=master&service=github)](https://coveralls.io/github/deerawan/vscode-dash?branch=master)
 
 ![vscode dash](https://raw.githubusercontent.com/deerawan/vscode-dash/master/images/vscode-dash.gif)
