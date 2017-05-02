@@ -1,3 +1,7 @@
+## 1.5.0
+- Add Zeal Support (thx to [szhongren](https://github.com/szhongren)!)
+- Add javascript to typescript mapping
+
 ## 1.4.0
 - Add Haxe support
 
