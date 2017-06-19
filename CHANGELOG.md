@@ -1,3 +1,6 @@
+## 1.6.0
+- Add haml support
+
 ## 1.5.0
 - Add Zeal Support (thx to [szhongren](https://github.com/szhongren)!)
 - Add javascript to typescript mapping

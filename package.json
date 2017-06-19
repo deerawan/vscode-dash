@@ -175,6 +175,15 @@
             "haskell"
           ]
         },
+        "dash.docset.haml": {
+          "type": "array",
+          "items": {
+            "type": "string"
+          },
+          "default": [
+            "haml"
+          ]
+        },
         "dash.docset.html": {
           "type": "array",
           "items": {
