@@ -40,6 +40,7 @@ Elixir | elixir | dash.docset.elixir | [link](https://marketplace.visualstudio.c
 Erlang | erlang | dash.docset.erlang
 Go | go,godoc | dash.docset.go | [link](https://marketplace.visualstudio.com/items?itemName=lukehoban.Go)
 Haskell | haskell | dash.docset.haskell
+Haml | haml | dash.docset.haml | [link](https://marketplace.visualstudio.com/items?itemName=karunamurti.haml)
 Haxe | haxe | dash.docset.haxe | [link](https://marketplace.visualstudio.com/items?itemName=nadako.vshaxe)
 HTML | html,svg,css,bootstrap,foundation,<br>awesome,statamic,javascript,jquery,jqueryui,<br>jquerym,angularjs,backbone,marionette,<br>meteor,moo,prototype,ember,lodash,<br>underscore,sencha,extjs,knockout,<br>zepto,cordova,phonegap,yui | dash.docset.html
 Jade | jade | dash.docset.jade
@@ -109,6 +110,5 @@ Add one or two lines below
 { "key": "your_shortcut", "command": "extension.dash.all" } // search in all docset
 ```
 
-
 ## License
-MIT
+MIT © [Budi Irawan](https://budiirawan.com)
