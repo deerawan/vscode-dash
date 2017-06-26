@@ -106,8 +106,9 @@ Choose in top menu `Code -> Preferences -> Keyboard Shortcuts` or using shortcut
 
 Add one or two lines below
 ```json
-{ "key": "your_shortcut", "command": "extension.dash.specific" }, // search in specific docset
+{ "key": "your_shortcut", "command": "extension.dash.selection" }, // search selection in corresponding docset
 { "key": "your_shortcut", "command": "extension.dash.all" } // search in all docset
+{ "key": "your_shortcut", "command": "extension.dash.specific" } // open dash with current file's docset open
 ```
 
 ## License

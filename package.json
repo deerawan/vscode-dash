@@ -25,24 +25,29 @@
     "Other"
   ],
   "activationEvents": [
-    "onCommand:extension.dash.specific",
-    "onCommand:extension.dash.all"
+    "onCommand:extension.dash.selection",
+    "onCommand:extension.dash.all",
+    "onCommand:extension.dash.syntax"
   ],
   "main": "./out/src/extension",
   "contributes": {
     "commands": [
       {
-        "command": "extension.dash.specific",
-        "title": "Search in Dash for current syntax"
+        "command": "extension.dash.selection",
+        "title": "Search in Dash for current selection"
       },
       {
         "command": "extension.dash.all",
         "title": "Search in Dash for all documentation"
+      },
+      {
+        "command": "extension.dash.syntax",
+        "title": "Search in Dash for current syntax"
       }
     ],
     "keybindings": [
       {
-        "command": "extension.dash.specific",
+        "command": "extension.dash.selection",
         "key": "ctrl+h",
         "mac": "ctrl+h",
         "when": "editorTextFocus"
@@ -51,6 +56,12 @@
         "command": "extension.dash.all",
         "key": "ctrl+alt+h",
         "mac": "ctrl+alt+h",
+        "when": "editorTextFocus"
+      },
+      {
+        "command": "extension.dash.syntax",
+        "key": "ctrl+shift+h",
+        "mac": "ctrl+shift+h",
         "when": "editorTextFocus"
       }
     ],

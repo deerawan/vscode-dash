@@ -7,13 +7,17 @@ const OS: string = platform();
 
 export function activate(context: ExtensionContext) {
 
-	context.subscriptions.push(commands.registerCommand('extension.dash.specific', () => {
+	context.subscriptions.push(commands.registerCommand('extension.dash.selection', () => {
         searchSpecific();
 	}));
 
-    context.subscriptions.push(commands.registerCommand('extension.dash.all', () => {
+  context.subscriptions.push(commands.registerCommand('extension.dash.all', () => {
         searchAll();
-	}));
+  }));
+
+  context.subscriptions.push(commands.registerCommand('extension.dash.syntax', () => {
+    searchSyntax();
+  }));
 }
 
 /**
@@ -40,6 +44,17 @@ function searchAll() {
     var dash = new Dash(OS);
 
     exec(dash.getCommand(query));
+}
+
+function searchSyntax() {
+
+  var editor = getEditor();
+  var query = "";
+  var languageId = editor.document.languageId;
+  var docsets = getDocsets(languageId);
+  var dash = new Dash(OS);
+
+  exec(dash.getCommand(query, docsets));
 }
 
 /**
