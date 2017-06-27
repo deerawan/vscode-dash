@@ -72,7 +72,7 @@
       {
         "command": "extension.dash.customWithSyntax",
         "key": "shift+alt+h",
-        "mac": "shift+alt+h",
+        "mac": "shift+cmd+h",
         "when": "editorTextFocus"
       }
     ],
