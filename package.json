@@ -27,7 +27,8 @@
   "activationEvents": [
     "onCommand:extension.dash.selection",
     "onCommand:extension.dash.all",
-    "onCommand:extension.dash.syntax"
+    "onCommand:extension.dash.syntax",
+    "onCommand:extension.dash.customWithSyntax"
   ],
   "main": "./out/src/extension",
   "contributes": {
@@ -43,6 +44,10 @@
       {
         "command": "extension.dash.syntax",
         "title": "Search in Dash for current syntax"
+      },
+      {
+        "command": "extension.dash.customWithSyntax",
+        "title": "Search a custom string in Dash"
       }
     ],
     "keybindings": [
@@ -62,6 +67,12 @@
         "command": "extension.dash.syntax",
         "key": "ctrl+shift+h",
         "mac": "ctrl+shift+h",
+        "when": "editorTextFocus"
+      },
+      {
+        "command": "extension.dash.customWithSyntax",
+        "key": "shift+alt+h",
+        "mac": "shift+alt+h",
         "when": "editorTextFocus"
       }
     ],
