@@ -81,7 +81,7 @@ function customWithSyntax() {
 
   window.showInputBox(inputOptions)
     .then(function (query: string) {
-      if(query) //If they actually input code
+      if (query) //If they actually input code
         exec(dash.getCommand(query, docsets)); //Open it in dash
     }, function (noQuery: any) {
       //Only happens on VSCode error
