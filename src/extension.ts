@@ -21,7 +21,7 @@ export function activate(context: ExtensionContext) {
 }
 
 /**
- * Search in dash for specific syntax documentation
+ * Search in dash for selection syntax documentation
  */
 function searchSpecific() {
     var editor = getEditor();
@@ -46,6 +46,9 @@ function searchAll() {
     exec(dash.getCommand(query));
 }
 
+/**
+ * Search in dash for editor syntax documentation
+ */
 function searchSyntax() {
 
   var editor = getEditor();
