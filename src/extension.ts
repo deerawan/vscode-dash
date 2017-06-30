@@ -27,6 +27,7 @@ export function activate(context: ExtensionContext) {
 /**
  * Search in dash for selection syntax documentation
  */
+
 function searchSelectionSyntax() {
   var editor = getEditor();
   var query = getSelectedText(editor);
@@ -44,7 +45,6 @@ function searchSelectionSyntax() {
 function searchAll() {
   var editor = getEditor();
   var query = getSelectedText(editor);
-
   var dash = new Dash(OS);
 
   exec(dash.getCommand(query));
@@ -85,7 +85,6 @@ function searchCustomWithSyntax() {
       if (query) //If they actually input code
         exec(dash.getCommand(query, docsets)); //Open it in dash
     })
-
 }
 
 /**
