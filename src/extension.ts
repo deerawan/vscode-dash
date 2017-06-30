@@ -8,7 +8,7 @@ const OS: string = platform();
 export function activate(context: ExtensionContext) {
 
   context.subscriptions.push(commands.registerCommand('extension.dash.syntax', () => {
-    searchSpecific();
+    searchSelectionSyntax();
   }));
 
   context.subscriptions.push(commands.registerCommand('extension.dash.all', () => {
@@ -16,7 +16,7 @@ export function activate(context: ExtensionContext) {
   }));
 
   context.subscriptions.push(commands.registerCommand('extension.dash.emptySyntax', () => {
-    searchSyntax();
+    searchEmptySyntax();
   }));
 
   context.subscriptions.push(commands.registerCommand('extension.dash.customSyntax', () => {
@@ -27,7 +27,7 @@ export function activate(context: ExtensionContext) {
 /**
  * Search in dash for selection syntax documentation
  */
-function searchSpecific() {
+function searchSelectionSyntax() {
   var editor = getEditor();
   var query = getSelectedText(editor);
   var languageId = editor.document.languageId;
@@ -53,7 +53,7 @@ function searchAll() {
 /**
  * Search in dash for editor syntax documentation
  */
-function searchSyntax() {
+function searchEmptySyntax() {
 
   var editor = getEditor();
   var query = "";
