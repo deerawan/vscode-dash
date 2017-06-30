@@ -7,7 +7,7 @@ const OS: string = platform();
 
 export function activate(context: ExtensionContext) {
 
-  context.subscriptions.push(commands.registerCommand('extension.dash.selection', () => {
+  context.subscriptions.push(commands.registerCommand('extension.dash.syntax', () => {
     searchSpecific();
   }));
 
@@ -15,12 +15,12 @@ export function activate(context: ExtensionContext) {
     searchAll();
   }));
 
-  context.subscriptions.push(commands.registerCommand('extension.dash.syntax', () => {
+  context.subscriptions.push(commands.registerCommand('extension.dash.emptySyntax', () => {
     searchSyntax();
   }));
 
-  context.subscriptions.push(commands.registerCommand('extension.dash.customWithSyntax', () => {
-    customWithSyntax();
+  context.subscriptions.push(commands.registerCommand('extension.dash.customSyntax', () => {
+    searchCustomWithSyntax();
   }));
 }
 
@@ -67,7 +67,7 @@ function searchSyntax() {
 /**
  * Search in dash for editor syntax documentation with a custom query
  */
-function customWithSyntax() {
+function searchCustomWithSyntax() {
 
   var editor = getEditor();
   var languageId = editor.document.languageId;
@@ -75,16 +75,15 @@ function customWithSyntax() {
   var dash = new Dash(OS);
 
   var inputOptions: InputBoxOptions = {
-    placeHolder: "Something to search in dash.",
-    prompt: "Enter something to search for in dash."
+    placeHolder: "Something to search in Dash.",
+    prompt: "Enter something to search for in Dash."
   }
 
   window.showInputBox(inputOptions)
-    .then(function (query: string) {
+    .then((query: string) => {
+      console.log(query);
       if (query) //If they actually input code
         exec(dash.getCommand(query, docsets)); //Open it in dash
-    }, function (noQuery: any) {
-      //Only happens on VSCode error
     })
 
 }

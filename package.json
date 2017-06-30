@@ -34,7 +34,7 @@
   "contributes": {
     "commands": [
       {
-        "command": "extension.dash.selection",
+        "command": "extension.dash.syntax",
         "title": "Search in Dash for current selection"
       },
       {
@@ -42,17 +42,17 @@
         "title": "Search in Dash for all documentation"
       },
       {
-        "command": "extension.dash.syntax",
+        "command": "extension.dash.emptySyntax",
         "title": "Search in Dash for current syntax"
       },
       {
-        "command": "extension.dash.customWithSyntax",
+        "command": "extension.dash.customSyntax",
         "title": "Search a custom string in Dash"
       }
     ],
     "keybindings": [
       {
-        "command": "extension.dash.selection",
+        "command": "extension.dash.syntax",
         "key": "ctrl+h",
         "mac": "ctrl+h",
         "when": "editorTextFocus"
@@ -64,15 +64,15 @@
         "when": "editorTextFocus"
       },
       {
-        "command": "extension.dash.syntax",
+        "command": "extension.dash.emptySyntax",
         "key": "ctrl+shift+h",
         "mac": "ctrl+shift+h",
         "when": "editorTextFocus"
       },
       {
-        "command": "extension.dash.customWithSyntax",
-        "key": "shift+alt+h",
-        "mac": "shift+cmd+h",
+        "command": "extension.dash.customSyntax",
+        "key": "alt+h",
+        "mac": "alt+h",
         "when": "editorTextFocus"
       }
     ],
