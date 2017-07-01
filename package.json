@@ -25,16 +25,16 @@
     "Other"
   ],
   "activationEvents": [
-    "onCommand:extension.dash.selection",
     "onCommand:extension.dash.all",
-    "onCommand:extension.dash.syntax",
-    "onCommand:extension.dash.customWithSyntax"
+    "onCommand:extension.dash.specific",
+    "onCommand:extension.dash.customSyntax",
+    "onCommand:extension.dash.emptySyntax"
   ],
   "main": "./out/src/extension",
   "contributes": {
     "commands": [
       {
-        "command": "extension.dash.syntax",
+        "command": "extension.dash.specific",
         "title": "Search in Dash for current selection"
       },
       {
@@ -43,16 +43,16 @@
       },
       {
         "command": "extension.dash.emptySyntax",
-        "title": "Search in Dash for current syntax"
+        "title": "Search in Dash for current language documentation"
       },
       {
         "command": "extension.dash.customSyntax",
-        "title": "Search a custom string in Dash"
+        "title": "Search in Dash for a custom string"
       }
     ],
     "keybindings": [
       {
-        "command": "extension.dash.syntax",
+        "command": "extension.dash.specific",
         "key": "ctrl+h",
         "mac": "ctrl+h",
         "when": "editorTextFocus"

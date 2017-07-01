@@ -7,8 +7,8 @@ const OS: string = platform();
 
 export function activate(context: ExtensionContext) {
 
-  context.subscriptions.push(commands.registerCommand('extension.dash.syntax', () => {
-    searchSelectionSyntax();
+  context.subscriptions.push(commands.registerCommand('extension.dash.specific', () => {
+    searchSpecific();
   }));
 
   context.subscriptions.push(commands.registerCommand('extension.dash.all', () => {
@@ -27,7 +27,7 @@ export function activate(context: ExtensionContext) {
 /**
  * Search in dash for selection syntax documentation
  */
-function searchSelectionSyntax() {
+function searchSpecific() {
   var editor = getEditor();
   var query = getSelectedText(editor);
   var languageId = editor.document.languageId;
@@ -81,9 +81,9 @@ function searchCustomWithSyntax() {
 
   window.showInputBox(inputOptions)
     .then((query: string) => {
-      console.log(query);
-      if (query) //If they actually input code
+      if (query) {//If they actually input code
         exec(dash.getCommand(query, docsets)); //Open it in dash
+      }
     })
 
 }
