@@ -44,7 +44,6 @@ function searchSpecific() {
 function searchAll() {
   var editor = getEditor();
   var query = getSelectedText(editor);
-
   var dash = new Dash(OS);
 
   exec(dash.getCommand(query));
@@ -85,7 +84,6 @@ function searchCustomWithSyntax() {
         exec(dash.getCommand(query, docsets)); //Open it in dash
       }
     })
-
 }
 
 /**
