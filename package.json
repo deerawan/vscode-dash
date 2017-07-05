@@ -25,19 +25,29 @@
     "Other"
   ],
   "activationEvents": [
+    "onCommand:extension.dash.all",
     "onCommand:extension.dash.specific",
-    "onCommand:extension.dash.all"
+    "onCommand:extension.dash.customSyntax",
+    "onCommand:extension.dash.emptySyntax"
   ],
   "main": "./out/src/extension",
   "contributes": {
     "commands": [
       {
         "command": "extension.dash.specific",
-        "title": "Search in Dash for current syntax"
+        "title": "Search in Dash for current selection"
       },
       {
         "command": "extension.dash.all",
         "title": "Search in Dash for all documentation"
+      },
+      {
+        "command": "extension.dash.emptySyntax",
+        "title": "Search in Dash for current language documentation"
+      },
+      {
+        "command": "extension.dash.customSyntax",
+        "title": "Search in Dash for a custom string"
       }
     ],
     "keybindings": [
@@ -51,6 +61,18 @@
         "command": "extension.dash.all",
         "key": "ctrl+alt+h",
         "mac": "ctrl+alt+h",
+        "when": "editorTextFocus"
+      },
+      {
+        "command": "extension.dash.emptySyntax",
+        "key": "ctrl+shift+h",
+        "mac": "ctrl+shift+h",
+        "when": "editorTextFocus"
+      },
+      {
+        "command": "extension.dash.customSyntax",
+        "key": "alt+h",
+        "mac": "alt+h",
         "when": "editorTextFocus"
       }
     ],

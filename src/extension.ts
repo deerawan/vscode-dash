@@ -1,4 +1,4 @@
-import { window, workspace, commands, ExtensionContext, TextEditor, Selection } from 'vscode';
+import { window, workspace, commands, ExtensionContext, TextEditor, Selection, InputBoxOptions } from 'vscode';
 import { exec } from 'child_process';
 import { Dash } from './dash';
 import { platform } from 'os';
@@ -14,10 +14,18 @@ export function activate(context: ExtensionContext) {
   context.subscriptions.push(commands.registerCommand('extension.dash.all', () => {
     searchAll();
   }));
+
+  context.subscriptions.push(commands.registerCommand('extension.dash.emptySyntax', () => {
+    searchEmptySyntax();
+  }));
+
+  context.subscriptions.push(commands.registerCommand('extension.dash.customSyntax', () => {
+    searchCustomWithSyntax();
+  }));
 }
 
 /**
- * Search in dash for specific syntax documentation
+ * Search in dash for selection syntax documentation
  */
 function searchSpecific() {
   var editor = getEditor();
@@ -36,10 +44,46 @@ function searchSpecific() {
 function searchAll() {
   var editor = getEditor();
   var query = getSelectedText(editor);
-
   var dash = new Dash(OS);
 
   exec(dash.getCommand(query));
+}
+
+/**
+ * Search in dash for editor syntax documentation
+ */
+function searchEmptySyntax() {
+
+  var editor = getEditor();
+  var query = "";
+  var languageId = editor.document.languageId;
+  var docsets = getDocsets(languageId);
+  var dash = new Dash(OS);
+
+  exec(dash.getCommand(query, docsets));
+}
+
+/**
+ * Search in dash for editor syntax documentation with a custom query
+ */
+function searchCustomWithSyntax() {
+
+  var editor = getEditor();
+  var languageId = editor.document.languageId;
+  var docsets = getDocsets(languageId);
+  var dash = new Dash(OS);
+
+  var inputOptions: InputBoxOptions = {
+    placeHolder: "Something to search in Dash.",
+    prompt: "Enter something to search for in Dash."
+  }
+
+  window.showInputBox(inputOptions)
+    .then((query: string) => {
+      if (query) {//If they actually input code
+        exec(dash.getCommand(query, docsets)); //Open it in dash
+      }
+    })
 }
 
 /**
