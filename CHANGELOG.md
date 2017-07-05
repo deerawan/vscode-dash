@@ -1,3 +1,6 @@
+## 1.7.0
+- Add two new commands! (thx to [Logan Saso](https://github.com/HazardDev))
+
 ## 1.6.0
 - Add haml support
 

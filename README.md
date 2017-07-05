@@ -14,10 +14,15 @@ Also support [Zeal](https://zealdocs.org/) for Windows and Linux.
 Type `cmd + shift + p` to launch command palette and choose `Extensions: Install Extension`. Search this package and install.
 
 ## Usage
-Get the text under your cursor or selected first.
+Get the text under your cursor or selected first:
 
 - Pressing `ctrl + h`. It will search for current specific documentation depends on language.
 - Pressing `ctrl + alt + h`. It will search for all documentation.
+
+No need to select the text:
+
+- Pressing `ctrl + shift + h`. It will open dash with current file's docset.
+- Pressing `alt + h`. It will open dash with custom string and current file's docset.
 
 ## Supported Docsets
 This plugin supports almost all docset configuration based on [Dash Mapping](https://kapeli.com/dash_plugins)
@@ -111,6 +116,13 @@ Add one or two lines below
 { "key": "your_shortcut", "command": "extension.dash.emptySyntax" } // open dash with current file's docset open
 { "key": "your_shortcut", "command": "extension.dash.searchSyntax" } // open dash with custom string and current file's docset
 ```
+
+## Contributors
+Thank you for these awesome contributors
+
+<!-- ALL-CONTRIBUTORS-LIST:START - Do not remove or modify this section -->
+| [<img src="https://avatars.githubusercontent.com/u/1243921?v=3" width="100px;"/><br /><sub>Budi Irawan</sub>](https://budiirawan.com) | [<img src="https://avatars.githubusercontent.com/u/8567599?v=3" width="100px;"/><br /><sub>Zhongren Shao</sub>](https://github.com/szhongren) | [<img src="https://avatars.githubusercontent.com/u/6226408?v=3" width="100px;"/><br /><sub>Logan Saso</sub>](https://github.com/HazardDev) |
+| :---         |     :---:      |          ---: |
 
 ## License
 MIT © [Budi Irawan](https://budiirawan.com)
