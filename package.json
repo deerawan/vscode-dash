@@ -43,7 +43,7 @@
       },
       {
         "command": "extension.dash.emptySyntax",
-        "title": "Search in Dash for current language documentation"
+        "title": "Open Dash for current language documentation"
       },
       {
         "command": "extension.dash.customSyntax",
