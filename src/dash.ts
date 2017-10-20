@@ -4,13 +4,14 @@ export class Dash {
 
   constructor(OS: string) {
     this.OS = OS;
-    this.URIHandler = {
-      'darwin': 'open -g',
-      'linux': 'zeal',
-      // start Zeal before we pass it a URI so it works whether Zeal is running in background or not.
-      // Why is this needed? I have no idea, but I think Qt has to start up a listener on cmd before it will work.
-      'win32': 'start dash-plugin:// && start'
-    }[this.OS] || 'zeal';
+    this.URIHandler =
+      {
+        darwin: 'open -g',
+        linux: 'zeal',
+        // start Zeal before we pass it a URI so it works whether Zeal is running in background or not.
+        // Why is this needed? I have no idea, but I think Qt has to start up a listener on cmd before it will work.
+        win32: 'start dash-plugin:// && start',
+      }[this.OS] || 'zeal';
   }
 
   /**
@@ -20,10 +21,9 @@ export class Dash {
    * @param {string} docsets - array of docset e.g. [css, less]
    * @return {string} dash handler and uri
    */
-  getCommand(query: string, docsets: Array<string> = []): string {
-
-    var uri = 'dash-plugin://query=' + encodeURIComponent(query);
-    var keys = this.getKeys(docsets);
+  getCommand(query: string, docsets: string[] = []): string {
+    let uri = 'dash-plugin://query=' + encodeURIComponent(query);
+    let keys = this.getKeys(docsets);
 
     if (keys) {
       uri += '&keys=' + keys;
@@ -38,8 +38,7 @@ export class Dash {
    * @param {Array<string>} docsets - array of docset e.g [css, less]
    * @return {string} joined array in string e.g. "ruby,css,dimas" or empty string
    */
-  getKeys(docsets: Array<string>): string {
-
+  getKeys(docsets: string[]): string {
     if (docsets.length > 0) {
       return docsets.join(',');
     }
@@ -54,9 +53,11 @@ export class Dash {
    * @return {string} OS-specific URI to pass to handler, mainly because of Windows
    */
   getOSSpecificURI(uri: string): string {
-    return {
-      // on Windows, start can't deal with the double quotes, and & needs to be escaped with ^
-      'win32': uri.replace('&', '^&')
-    }[this.OS] || '"' + uri + '"';
+    return (
+      {
+        // on Windows, start can't deal with the double quotes, and & needs to be escaped with ^
+        win32: uri.replace('&', '^&'),
+      }[this.OS] || '"' + uri + '"'
+    );
   }
 }

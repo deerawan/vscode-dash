@@ -1,4 +1,12 @@
-import { window, workspace, commands, ExtensionContext, TextEditor, Selection, InputBoxOptions } from 'vscode';
+import {
+  window,
+  workspace,
+  commands,
+  ExtensionContext,
+  TextEditor,
+  Selection,
+  InputBoxOptions,
+} from 'vscode';
 import { exec } from 'child_process';
 import { Dash } from './dash';
 import { platform } from 'os';
@@ -6,34 +14,41 @@ import { platform } from 'os';
 const OS: string = platform();
 
 export function activate(context: ExtensionContext) {
+  context.subscriptions.push(
+    commands.registerCommand('extension.dash.specific', () => {
+      searchSpecific();
+    }),
+  );
 
-  context.subscriptions.push(commands.registerCommand('extension.dash.specific', () => {
-    searchSpecific();
-  }));
+  context.subscriptions.push(
+    commands.registerCommand('extension.dash.all', () => {
+      searchAll();
+    }),
+  );
 
-  context.subscriptions.push(commands.registerCommand('extension.dash.all', () => {
-    searchAll();
-  }));
+  context.subscriptions.push(
+    commands.registerCommand('extension.dash.emptySyntax', () => {
+      searchEmptySyntax();
+    }),
+  );
 
-  context.subscriptions.push(commands.registerCommand('extension.dash.emptySyntax', () => {
-    searchEmptySyntax();
-  }));
-
-  context.subscriptions.push(commands.registerCommand('extension.dash.customSyntax', () => {
-    searchCustomWithSyntax();
-  }));
+  context.subscriptions.push(
+    commands.registerCommand('extension.dash.customSyntax', () => {
+      searchCustomWithSyntax();
+    }),
+  );
 }
 
 /**
  * Search in dash for selection syntax documentation
  */
 function searchSpecific() {
-  var editor = getEditor();
-  var query = getSelectedText(editor);
-  var languageId = editor.document.languageId;
-  var docsets = getDocsets(languageId);
+  let editor = getEditor();
+  let query = getSelectedText(editor);
+  let languageId = editor.document.languageId;
+  let docsets = getDocsets(languageId);
 
-  var dash = new Dash(OS);
+  let dash = new Dash(OS);
 
   exec(dash.getCommand(query, docsets));
 }
@@ -42,9 +57,9 @@ function searchSpecific() {
  * Search in dash for all documentation
  */
 function searchAll() {
-  var editor = getEditor();
-  var query = getSelectedText(editor);
-  var dash = new Dash(OS);
+  let editor = getEditor();
+  let query = getSelectedText(editor);
+  let dash = new Dash(OS);
 
   exec(dash.getCommand(query));
 }
@@ -53,12 +68,11 @@ function searchAll() {
  * Search in dash for editor syntax documentation
  */
 function searchEmptySyntax() {
-
-  var editor = getEditor();
-  var query = "";
-  var languageId = editor.document.languageId;
-  var docsets = getDocsets(languageId);
-  var dash = new Dash(OS);
+  let editor = getEditor();
+  let query = '';
+  let languageId = editor.document.languageId;
+  let docsets = getDocsets(languageId);
+  let dash = new Dash(OS);
 
   exec(dash.getCommand(query, docsets));
 }
@@ -67,23 +81,22 @@ function searchEmptySyntax() {
  * Search in dash for editor syntax documentation with a custom query
  */
 function searchCustomWithSyntax() {
+  let editor = getEditor();
+  let languageId = editor.document.languageId;
+  let docsets = getDocsets(languageId);
+  let dash = new Dash(OS);
 
-  var editor = getEditor();
-  var languageId = editor.document.languageId;
-  var docsets = getDocsets(languageId);
-  var dash = new Dash(OS);
+  let inputOptions: InputBoxOptions = {
+    placeHolder: 'Something to search in Dash.',
+    prompt: 'Enter something to search for in Dash.',
+  };
 
-  var inputOptions: InputBoxOptions = {
-    placeHolder: "Something to search in Dash.",
-    prompt: "Enter something to search for in Dash."
-  }
-
-  window.showInputBox(inputOptions)
-    .then((query: string) => {
-      if (query) {//If they actually input code
-        exec(dash.getCommand(query, docsets)); //Open it in dash
-      }
-    })
+  window.showInputBox(inputOptions).then((query: string) => {
+    if (query) {
+      // If they actually input code
+      exec(dash.getCommand(query, docsets)); // Open it in dash
+    }
+  });
 }
 
 /**
@@ -92,7 +105,7 @@ function searchCustomWithSyntax() {
  * @return {TextEditor}
  */
 function getEditor(): TextEditor {
-  var editor = window.activeTextEditor;
+  let editor = window.activeTextEditor;
   if (!editor) {
     return;
   }
@@ -107,11 +120,11 @@ function getEditor(): TextEditor {
  * @return {string}
  */
 function getSelectedText(editor: TextEditor) {
-  var selection = editor.selection;
-  var text = editor.document.getText(selection);
+  let selection = editor.selection;
+  let text = editor.document.getText(selection);
 
   if (!text) {
-    var range = editor.document.getWordRangeAtPosition(selection.active);
+    let range = editor.document.getWordRangeAtPosition(selection.active);
     text = editor.document.getText(range);
   }
 
