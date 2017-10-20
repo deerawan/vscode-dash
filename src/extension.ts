@@ -17,25 +17,25 @@ export function activate(context: ExtensionContext) {
   context.subscriptions.push(
     commands.registerCommand('extension.dash.specific', () => {
       searchSpecific();
-    }),
+    })
   );
 
   context.subscriptions.push(
     commands.registerCommand('extension.dash.all', () => {
       searchAll();
-    }),
+    })
   );
 
   context.subscriptions.push(
     commands.registerCommand('extension.dash.emptySyntax', () => {
       searchEmptySyntax();
-    }),
+    })
   );
 
   context.subscriptions.push(
     commands.registerCommand('extension.dash.customSyntax', () => {
       searchCustomWithSyntax();
-    }),
+    })
   );
 }
 

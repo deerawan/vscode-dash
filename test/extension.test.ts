@@ -22,7 +22,7 @@ suite('Dash Tests', () => {
 
     assert.equal(
       uri,
-      'start dash-plugin:// && start dash-plugin://query=size^&keys=css,less',
+      'start dash-plugin:// && start dash-plugin://query=size^&keys=css,less'
     );
   });
 
