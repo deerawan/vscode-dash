@@ -597,13 +597,31 @@
     "vscode:prepublish": "node ./node_modules/vscode/bin/compile",
     "compile": "node ./node_modules/vscode/bin/compile -watch -p ./",
     "test": "./node_modules/istanbul/lib/cli.js cover ./node_modules/mocha/bin/_mocha -- -R spec --ui tdd ./out/test/extension.test.js",
-    "test-local": "istanbul cover ./node_modules/mocha/bin/_mocha -- -R spec --ui tdd ./out/test/extension.test.js"
+    "test-local": "istanbul cover ./node_modules/mocha/bin/_mocha -- -R spec --ui tdd ./out/test/extension.test.js",
+    "precommit": "lint-staged",
+    "format": "prettier --write \"{src,test}/**/*.ts\"",
+    "lint": "tslint -c tslint.json 'src/**/*.ts' 'test/**/*.ts' --fix"
   },
   "devDependencies": {
     "coveralls": "^2.11.4",
+    "husky": "^0.14.3",
     "istanbul": "^0.4.1",
+    "lint-staged": "^4.3.0",
     "mocha": "^2.3.4",
-    "typescript": "^1.6.2",
+    "prettier": "^1.7.4",
+    "tslint": "^5.7.0",
+    "tslint-config-prettier": "^1.6.0",
+    "typescript": "^2.5.3",
     "vscode": "0.10.x"
+  },
+  "lint-staged": {
+    "*.{ts,json}": [
+      "prettier",
+      "git add"
+    ],
+    "*.ts": [
+      "tslint --fix",
+      "tslint"
+    ]
   }
 }
