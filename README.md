@@ -122,7 +122,7 @@ Thank you for these awesome contributors
 
 <!-- ALL-CONTRIBUTORS-LIST:START - Do not remove or modify this section -->
 | [<img src="https://avatars.githubusercontent.com/u/1243921?v=3" width="100px;"/><br /><sub>Budi Irawan</sub>](https://budiirawan.com) | [<img src="https://avatars.githubusercontent.com/u/8567599?v=3" width="100px;"/><br /><sub>Zhongren Shao</sub>](https://github.com/szhongren) | [<img src="https://avatars.githubusercontent.com/u/6226408?v=3" width="100px;"/><br /><sub>Logan Saso</sub>](https://github.com/HazardDev) | [<img src="https://avatars2.githubusercontent.com/u/5329046?v=4" width="100px;"/><br /><sub>Weifding</sub>](https://github.com/weifding)
-| :---         |     :---:      |          ---: |
+| :---:         |     :---:      |    :---:    |          :---: |
 
 ## License
 MIT © [Budi Irawan](https://budiirawan.com)
