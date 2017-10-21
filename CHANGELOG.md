@@ -1,3 +1,7 @@
+## 1.7.1
+- Configure prettier and TSLint
+- Improve typo (thx to [Weifding](https://github.com/weifding))
+
 ## 1.7.0
 - Add two new commands! (thx to [Logan Saso](https://github.com/HazardDev))
 
