@@ -326,6 +326,15 @@
             "react"
           ]
         },
+        "dash.docset.julia": {
+          "type": "array",
+          "items": {
+            "type": "string"
+          },
+          "default": [
+            "julia"
+          ]
+        },
         "dash.docset.less": {
           "type": "array",
           "items": {
