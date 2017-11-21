@@ -51,6 +51,7 @@ HTML | html,svg,css,bootstrap,foundation,<br>awesome,statamic,javascript,jquery,
 Jade | jade | dash.docset.jade
 Java | java,javafx,grails,groovy,playjava,spring,<br>cvj,processing | dash.docset.java | [link](https://marketplace.visualstudio.com/items?itemName=redhat.java)
 JavaScript | javascript,jquery,jqueryui,jquerym,react,<br>angularjs,backbone,marionette,meteor,<br>sproutcore,moo,prototype,bootstrap,<br>foundation,lodash,underscore,ember,<br>sencha,extjs,titanium,knockout,zepto,<br>yui,d3,svg,dojo,coffee,nodejs,express,<br>grunt,mongoose,moment,require,<br>awsjs,jasmine,sails,sinon,chai,<br>html,css,cordova,phonegap,unity3d | dash.docset.javascript
+Julia | julia | dash.docset.julia | [link](https://marketplace.visualstudio.com/items?itemName=julialang.language-julia)
 Less | less | dash.docset.less
 Lua | lua,corona | dash.docset.lua | [link](https://marketplace.visualstudio.com/items?itemName=gccfeli.vscode-lua)
 Markdown | markdown | dash.docset.markdown
