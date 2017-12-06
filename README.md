@@ -1,5 +1,4 @@
 # Visual Studio Code Dash
-
 [Dash](https://kapeli.com/dash) documentation integration for [Visual Studio Code](https://code.visualstudio.com/)
 
 > Dash is an API Documentation Browser and Code Snippet Manager for MacOS
@@ -7,6 +6,7 @@
 Also support [Zeal](https://zealdocs.org/) for Windows and Linux.
 
 [![Build Status](https://travis-ci.org/deerawan/vscode-dash.svg?branch=master)](https://travis-ci.org/deerawan/vscode-dash) [![Coverage Status](https://coveralls.io/repos/deerawan/vscode-dash/badge.svg?branch=master&service=github)](https://coveralls.io/github/deerawan/vscode-dash?branch=master)
+[![All Contributors](https://img.shields.io/badge/all_contributors-6-orange.svg?style=flat-square)](#contributors)
 
 ![vscode dash](https://raw.githubusercontent.com/deerawan/vscode-dash/master/images/vscode-dash.gif)
 
@@ -120,10 +120,12 @@ Add one or two lines below
 
 ## Contributors
 Thank you for these awesome contributors
-
 <!-- ALL-CONTRIBUTORS-LIST:START - Do not remove or modify this section -->
-| [<img src="https://avatars.githubusercontent.com/u/1243921?v=3" width="100px;"/><br /><sub>Budi Irawan</sub>](https://budiirawan.com) | [<img src="https://avatars.githubusercontent.com/u/8567599?v=3" width="100px;"/><br /><sub>Zhongren Shao</sub>](https://github.com/szhongren) | [<img src="https://avatars.githubusercontent.com/u/6226408?v=3" width="100px;"/><br /><sub>Logan Saso</sub>](https://github.com/HazardDev) | [<img src="https://avatars2.githubusercontent.com/u/5329046?v=4" width="100px;"/><br /><sub>Weifding</sub>](https://github.com/weifding)
-| :---:         |     :---:      |    :---:    |          :---: |
+<!-- prettier-ignore -->
+| [<img src="https://avatars1.githubusercontent.com/u/1243921?v=4" width="100px;"/><br /><sub><b>Budi Irawan</b></sub>](http://budiirawan.com)<br />[💻](https://github.com/deerawan/vscode-dash/commits?author=deerawan "Code") [📖](https://github.com/deerawan/vscode-dash/commits?author=deerawan "Documentation") | [<img src="https://avatars0.githubusercontent.com/u/250935?v=4" width="100px;"/><br /><sub><b>Dima Granetchi</b></sub>](https://github.com/profelis)<br />[💻](https://github.com/deerawan/vscode-dash/commits?author=profelis "Code") [📖](https://github.com/deerawan/vscode-dash/commits?author=profelis "Documentation") | [<img src="https://avatars2.githubusercontent.com/u/6226408?v=4" width="100px;"/><br /><sub><b>Logan Saso</b></sub>](https://github.com/HazardDev)<br />[💻](https://github.com/deerawan/vscode-dash/commits?author=HazardDev "Code") [📖](https://github.com/deerawan/vscode-dash/commits?author=HazardDev "Documentation") | [<img src="https://avatars3.githubusercontent.com/u/8567599?v=4" width="100px;"/><br /><sub><b>Zhongren Shao</b></sub>](https://github.com/szhongren)<br />[💻](https://github.com/deerawan/vscode-dash/commits?author=szhongren "Code") [📖](https://github.com/deerawan/vscode-dash/commits?author=szhongren "Documentation") | [<img src="https://avatars1.githubusercontent.com/u/5329046?v=4" width="100px;"/><br /><sub><b>dingweifeng</b></sub>](https://github.com/weifding)<br />[📖](https://github.com/deerawan/vscode-dash/commits?author=weifding "Documentation") | [<img src="https://avatars0.githubusercontent.com/u/941359?v=4" width="100px;"/><br /><sub><b>Seth Bromberger</b></sub>](http://www.bromberger.com)<br />[💻](https://github.com/deerawan/vscode-dash/commits?author=sbromberger "Code") [📖](https://github.com/deerawan/vscode-dash/commits?author=sbromberger "Documentation") |
+| :---: | :---: | :---: | :---: | :---: | :---: |
+<!-- ALL-CONTRIBUTORS-LIST:END -->
+
 
 ## License
 MIT © [Budi Irawan](https://budiirawan.com)
