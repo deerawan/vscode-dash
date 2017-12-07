@@ -1,0 +1,70 @@
+{
+  "projectName": "vscode-dash",
+  "projectOwner": "deerawan",
+  "files": [
+    "README.md"
+  ],
+  "imageSize": 100,
+  "commit": true,
+  "contributors": [
+    {
+      "login": "deerawan",
+      "name": "Budi Irawan",
+      "avatar_url": "https://avatars1.githubusercontent.com/u/1243921?v=4",
+      "profile": "http://budiirawan.com",
+      "contributions": [
+        "code",
+        "doc"
+      ]
+    },
+    {
+      "login": "profelis",
+      "name": "Dima Granetchi",
+      "avatar_url": "https://avatars0.githubusercontent.com/u/250935?v=4",
+      "profile": "https://github.com/profelis",
+      "contributions": [
+        "code",
+        "doc"
+      ]
+    },
+    {
+      "login": "HazardDev",
+      "name": "Logan Saso",
+      "avatar_url": "https://avatars2.githubusercontent.com/u/6226408?v=4",
+      "profile": "https://github.com/HazardDev",
+      "contributions": [
+        "code",
+        "doc"
+      ]
+    },
+    {
+      "login": "szhongren",
+      "name": "Zhongren Shao",
+      "avatar_url": "https://avatars3.githubusercontent.com/u/8567599?v=4",
+      "profile": "https://github.com/szhongren",
+      "contributions": [
+        "code",
+        "doc"
+      ]
+    },
+    {
+      "login": "weifding",
+      "name": "dingweifeng",
+      "avatar_url": "https://avatars1.githubusercontent.com/u/5329046?v=4",
+      "profile": "https://github.com/weifding",
+      "contributions": [
+        "doc"
+      ]
+    },
+    {
+      "login": "sbromberger",
+      "name": "Seth Bromberger",
+      "avatar_url": "https://avatars0.githubusercontent.com/u/941359?v=4",
+      "profile": "http://www.bromberger.com",
+      "contributions": [
+        "code",
+        "doc"
+      ]
+    }
+  ]
+}
