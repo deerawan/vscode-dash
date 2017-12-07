@@ -1,3 +1,6 @@
+## 1.8.0
+- Add julia support (txh to [sbromberger](https://github.com/sbromberger))
+
 ## 1.7.1
 - Configure prettier and TSLint
 - Improve typo (thx to [Weifding](https://github.com/weifding))
