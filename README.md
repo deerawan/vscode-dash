@@ -71,6 +71,7 @@ SQL | mysql,sqlite,psql | dash.docset.sql
 Stylus | stylus | dash.docset.stylus | [link](https://marketplace.visualstudio.com/items?itemName=sysoev.language-stylus)
 Swift | swift,iphoneos,macosx,watchos,tvos,appledoc | dash.docset.swift | [link](https://marketplace.visualstudio.com/items?itemName=rlovelett.vscode-swift-language)
 Tcl | tcl | dash.docset.tcl | [link](https://marketplace.visualstudio.com/items?itemName=rashwell.tcl)
+Terraform | terraform | dash.docset.terraform | [link](https://marketplace.visualstudio.com/items?itemName=mauve.terraform)
 TypeScript | typescript | dash.docset.typescript
 YAML | chef,ansible | dash.docset.yaml
 

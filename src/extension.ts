@@ -43,12 +43,12 @@ export function activate(context: ExtensionContext) {
  * Search in dash for selection syntax documentation
  */
 function searchSpecific() {
-  let editor = getEditor();
-  let query = getSelectedText(editor);
-  let languageId = editor.document.languageId;
-  let docsets = getDocsets(languageId);
+  const editor = getEditor();
+  const query = getSelectedText(editor);
+  const languageId = editor.document.languageId;
+  const docsets = getDocsets(languageId);
 
-  let dash = new Dash(OS);
+  const dash = new Dash(OS);
 
   exec(dash.getCommand(query, docsets));
 }
@@ -57,9 +57,9 @@ function searchSpecific() {
  * Search in dash for all documentation
  */
 function searchAll() {
-  let editor = getEditor();
-  let query = getSelectedText(editor);
-  let dash = new Dash(OS);
+  const editor = getEditor();
+  const query = getSelectedText(editor);
+  const dash = new Dash(OS);
 
   exec(dash.getCommand(query));
 }
@@ -68,11 +68,11 @@ function searchAll() {
  * Search in dash for editor syntax documentation
  */
 function searchEmptySyntax() {
-  let editor = getEditor();
-  let query = '';
-  let languageId = editor.document.languageId;
-  let docsets = getDocsets(languageId);
-  let dash = new Dash(OS);
+  const editor = getEditor();
+  const query = '';
+  const languageId = editor.document.languageId;
+  const docsets = getDocsets(languageId);
+  const dash = new Dash(OS);
 
   exec(dash.getCommand(query, docsets));
 }
@@ -81,12 +81,12 @@ function searchEmptySyntax() {
  * Search in dash for editor syntax documentation with a custom query
  */
 function searchCustomWithSyntax() {
-  let editor = getEditor();
-  let languageId = editor.document.languageId;
-  let docsets = getDocsets(languageId);
-  let dash = new Dash(OS);
+  const editor = getEditor();
+  const languageId = editor.document.languageId;
+  const docsets = getDocsets(languageId);
+  const dash = new Dash(OS);
 
-  let inputOptions: InputBoxOptions = {
+  const inputOptions: InputBoxOptions = {
     placeHolder: 'Something to search in Dash.',
     prompt: 'Enter something to search for in Dash.',
   };
@@ -105,7 +105,7 @@ function searchCustomWithSyntax() {
  * @return {TextEditor}
  */
 function getEditor(): TextEditor {
-  let editor = window.activeTextEditor;
+  const editor = window.activeTextEditor;
   if (!editor) {
     return;
   }
@@ -120,11 +120,11 @@ function getEditor(): TextEditor {
  * @return {string}
  */
 function getSelectedText(editor: TextEditor) {
-  let selection = editor.selection;
+  const selection = editor.selection;
   let text = editor.document.getText(selection);
 
   if (!text) {
-    let range = editor.document.getWordRangeAtPosition(selection.active);
+    const range = editor.document.getWordRangeAtPosition(selection.active);
     text = editor.document.getText(range);
   }
 
@@ -138,7 +138,7 @@ function getSelectedText(editor: TextEditor) {
  * @return {Array<string>}
  */
 function getDocsets(languageId: string): Array<string> {
-  let config = workspace.getConfiguration('dash.docset');
+  const config = workspace.getConfiguration('dash.docset');
 
   if (config[languageId]) {
     return config[languageId];

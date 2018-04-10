@@ -21,9 +21,7 @@
     "type": "git",
     "url": "https://github.com/deerawan/vscode-dash"
   },
-  "categories": [
-    "Other"
-  ],
+  "categories": ["Other"],
   "activationEvents": [
     "onCommand:extension.dash.all",
     "onCommand:extension.dash.specific",
@@ -32,8 +30,7 @@
   ],
   "main": "./out/src/extension",
   "contributes": {
-    "commands": [
-      {
+    "commands": [{
         "command": "extension.dash.specific",
         "title": "Search in Dash for current selection"
       },
@@ -50,8 +47,7 @@
         "title": "Search in Dash for a custom string"
       }
     ],
-    "keybindings": [
-      {
+    "keybindings": [{
         "command": "extension.dash.specific",
         "key": "ctrl+h",
         "mac": "ctrl+h",
@@ -100,18 +96,14 @@
           "items": {
             "type": "string"
           },
-          "default": [
-            "clojure"
-          ]
+          "default": ["clojure"]
         },
         "dash.docset.coffee": {
           "type": "array",
           "items": {
             "type": "string"
           },
-          "default": [
-            "coffee"
-          ]
+          "default": ["coffee"]
         },
         "dash.docset.cpp": {
           "type": "array",
@@ -134,77 +126,56 @@
           "items": {
             "type": "string"
           },
-          "default": [
-            "net",
-            "mono",
-            "unity3d"
-          ]
+          "default": ["net", "mono", "unity3d"]
         },
         "dash.docset.dart": {
           "type": "array",
           "items": {
             "type": "string"
           },
-          "default": [
-            "dartlang",
-            "polymerdart",
-            "angulardart"
-          ]
+          "default": ["dartlang", "polymerdart", "angulardart"]
         },
         "dash.docset.elixir": {
           "type": "array",
           "items": {
             "type": "string"
           },
-          "default": [
-            "elixir"
-          ]
+          "default": ["elixir"]
         },
         "dash.docset.elm": {
           "type": "array",
           "items": {
             "type": "string"
           },
-          "default": [
-            "elm"
-          ]
+          "default": ["elm"]
         },
         "dash.docset.erlang": {
           "type": "array",
           "items": {
             "type": "string"
           },
-          "default": [
-            "erlang"
-          ]
+          "default": ["erlang"]
         },
         "dash.docset.go": {
           "type": "array",
           "items": {
             "type": "string"
           },
-          "default": [
-            "go",
-            "godoc"
-          ]
+          "default": ["go", "godoc"]
         },
         "dash.docset.haskell": {
           "type": "array",
           "items": {
             "type": "string"
           },
-          "default": [
-            "haskell"
-          ]
+          "default": ["haskell"]
         },
         "dash.docset.haml": {
           "type": "array",
           "items": {
             "type": "string"
           },
-          "default": [
-            "haml"
-          ]
+          "default": ["haml"]
         },
         "dash.docset.html": {
           "type": "array",
@@ -246,9 +217,7 @@
           "items": {
             "type": "string"
           },
-          "default": [
-            "jade"
-          ]
+          "default": ["jade"]
         },
         "dash.docset.java": {
           "type": "array",
@@ -322,9 +291,7 @@
           "items": {
             "type": "string"
           },
-          "default": [
-            "react"
-          ]
+          "default": ["react"]
         },
         "dash.docset.julia": {
           "type": "array",
@@ -340,28 +307,21 @@
           "items": {
             "type": "string"
           },
-          "default": [
-            "less"
-          ]
+          "default": ["less"]
         },
         "dash.docset.lua": {
           "type": "array",
           "items": {
             "type": "string"
           },
-          "default": [
-            "lua",
-            "corona"
-          ]
+          "default": ["lua", "corona"]
         },
         "dash.docset.markdown": {
           "type": "array",
           "items": {
             "type": "string"
           },
-          "default": [
-            "markdown"
-          ]
+          "default": ["markdown"]
         },
         "dash.docset.objective-c": {
           "type": "array",
@@ -387,10 +347,7 @@
           "items": {
             "type": "string"
           },
-          "default": [
-            "perl",
-            "manpages"
-          ]
+          "default": ["perl", "manpages"]
         },
         "dash.docset.php": {
           "type": "array",
@@ -429,18 +386,14 @@
           "items": {
             "type": "string"
           },
-          "default": [
-            "processing"
-          ]
+          "default": ["processing"]
         },
         "dash.docset.puppet": {
           "type": "array",
           "items": {
             "type": "string"
           },
-          "default": [
-            "puppet"
-          ]
+          "default": ["puppet"]
         },
         "dash.docset.python": {
           "type": "array",
@@ -468,84 +421,56 @@
           "items": {
             "type": "string"
           },
-          "default": [
-            "r"
-          ]
+          "default": ["r"]
         },
         "dash.docset.ruby": {
           "type": "array",
           "items": {
             "type": "string"
           },
-          "default": [
-            "ruby",
-            "rubygems",
-            "rails"
-          ]
+          "default": ["ruby", "rubygems", "rails"]
         },
         "dash.docset.rust": {
           "type": "array",
           "items": {
             "type": "string"
           },
-          "default": [
-            "rust"
-          ]
+          "default": ["rust"]
         },
         "dash.docset.sass": {
           "type": "array",
           "items": {
             "type": "string"
           },
-          "default": [
-            "sass",
-            "compass",
-            "bourbon",
-            "neat",
-            "susy",
-            "css"
-          ]
+          "default": ["sass", "compass", "bourbon", "neat", "susy", "css"]
         },
         "dash.docset.scala": {
           "type": "array",
           "items": {
             "type": "string"
           },
-          "default": [
-            "scala",
-            "akka",
-            "playscala"
-          ]
+          "default": ["scala", "akka", "playscala"]
         },
         "dash.docset.shellscript": {
           "type": "array",
           "items": {
             "type": "string"
           },
-          "default": [
-            "bash",
-            "manpages"
-          ]
+          "default": ["bash", "manpages"]
         },
         "dash.docset.sql": {
           "type": "array",
           "items": {
             "type": "string"
           },
-          "default": [
-            "mysql",
-            "sqlite",
-            "psql"
-          ]
+          "default": ["mysql", "sqlite", "psql"]
         },
         "dash.docset.stylus": {
           "type": "array",
           "items": {
             "type": "string"
           },
-          "default": [
-            "stylus"
-          ]
+          "default": ["stylus"]
         },
         "dash.docset.swift": {
           "type": "array",
@@ -566,38 +491,35 @@
           "items": {
             "type": "string"
           },
-          "default": [
-            "tcl"
-          ]
+          "default": ["tcl"]
         },
         "dash.docset.typescript": {
           "type": "array",
           "items": {
             "type": "string"
           },
-          "default": [
-            "typescript",
-            "javascript"
-          ]
+          "default": ["typescript", "javascript"]
         },
         "dash.docset.yaml": {
           "type": "array",
           "items": {
             "type": "string"
           },
-          "default": [
-            "chef",
-            "ansible"
-          ]
+          "default": ["chef", "ansible"]
         },
         "dash.docset.haxe": {
           "type": "array",
           "items": {
             "type": "string"
           },
-          "default": [
-            "haxe"
-          ]
+          "default": ["haxe"]
+        },
+        "dash.docset.terraform": {
+          "type": "array",
+          "items": {
+            "type": "string"
+          },
+          "default": ["terraform"]
         }
       }
     }
@@ -628,13 +550,7 @@
     "vscode": "0.10.x"
   },
   "lint-staged": {
-    "*.{ts,json}": [
-      "prettier",
-      "git add"
-    ],
-    "*.ts": [
-      "tslint --fix",
-      "tslint"
-    ]
+    "*.{ts,json}": ["prettier", "git add"],
+    "*.ts": ["tslint --fix", "tslint"]
   }
 }
