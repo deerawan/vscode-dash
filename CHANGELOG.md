@@ -1,3 +1,6 @@
+## 1.9.0
+- Add Terraform support
+
 ## 1.8.0
 - Add julia support (txh to [sbromberger](https://github.com/sbromberger))
 
