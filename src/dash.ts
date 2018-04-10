@@ -23,7 +23,7 @@ export class Dash {
    */
   getCommand(query: string, docsets: string[] = []): string {
     let uri = 'dash-plugin://query=' + encodeURIComponent(query);
-    let keys = this.getKeys(docsets);
+    const keys = this.getKeys(docsets);
 
     if (keys) {
       uri += '&keys=' + keys;
