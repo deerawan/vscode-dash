@@ -2,7 +2,7 @@
   "name": "vscode-dash",
   "displayName": "Dash",
   "description": "Dash and Zeal integration in Visual Studio Code",
-  "version": "1.9.0",
+  "version": "1.10.0",
   "publisher": "deerawan",
   "icon": "images/dash.png",
   "galleryBanner": {
@@ -80,6 +80,24 @@
       "type": "object",
       "title": "Dash Configuration",
       "properties": {
+        "dash.docset.ansible": {
+          "type": "array",
+          "items": {
+            "type": "string"
+          },
+          "default": [
+            "ansible"
+          ]
+        },
+        "dash.docset.ansible-advanced": {
+          "type": "array",
+          "items": {
+            "type": "string"
+          },
+          "default": [
+            "ansible"
+          ]
+        },
         "dash.docset.css": {
           "type": "array",
           "items": {

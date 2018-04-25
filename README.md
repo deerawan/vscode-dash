@@ -35,6 +35,7 @@ first in order to allow VS Code to detect the language.
 
 Language | Dash Docset Keys | Docset Setting | Language Plugin |
 ------------ | ------------- | ------------- | :-------------: |
+Ansible | ansible | dash.docset.ansible, dash.docset.ansible-advanced | [link](https://marketplace.visualstudio.com/items?itemName=haaaad.ansible)
 C++ | cpp,net,boost,qt,cvcpp,cocos2dx,c,manpages | dash.docset.cpp | [link](https://marketplace.visualstudio.com/items?itemName=ms-vscode.cpptools)
 C# | net,mono,unity3d | dash.docset.csharp
 Clojure | clojure | dash.docset.clojure

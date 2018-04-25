@@ -1,3 +1,6 @@
+## 1.10.0
+- Add Ansible support
+
 ## 1.9.0
 - Add Terraform support
 
