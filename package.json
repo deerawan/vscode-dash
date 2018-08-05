@@ -642,12 +642,12 @@
     "lint": "tslint -c tslint.json 'src/**/*.ts' 'test/**/*.ts' --fix"
   },
   "devDependencies": {
-    "all-contributors-cli": "^4.10.0",
+    "all-contributors-cli": "^5.4.0",
     "coveralls": "^2.11.4",
     "husky": "^0.14.3",
     "istanbul": "^0.4.1",
     "lint-staged": "^4.3.0",
-    "mocha": "^2.3.4",
+    "mocha": "^5.2.0",
     "prettier": "^1.7.4",
     "tslint": "^5.7.0",
     "tslint-config-prettier": "^1.6.0",
