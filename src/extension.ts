@@ -6,6 +6,7 @@ import {
   TextEditor,
   Selection,
   InputBoxOptions,
+  ConfigurationTarget,
 } from 'vscode';
 import { exec } from 'child_process';
 import { Dash } from './dash';
@@ -138,10 +139,30 @@ function getSelectedText(editor: TextEditor) {
  * @return {Array<string>}
  */
 function getDocsets(languageId: string): Array<string> {
-  const config = workspace.getConfiguration('dash.docset');
+  const config = workspace.getConfiguration('dash');
 
-  if (config[languageId]) {
-    return config[languageId];
+  const customLang = config.get('custom_docsets')[languageId];
+  if (customLang) {
+    if (typeof (customLang) === 'string')
+      return [customLang];
+    else if (customLang instanceof Array)
+      return customLang;
+  }
+
+  const docsets = config.get('docset');
+
+  if (docsets[languageId]) {
+    return docsets[languageId];
+  }
+
+  const showWarning = config.get('custom_docsets_warning');
+
+  if (showWarning) {
+    window.showInformationMessage(
+      `Unknown language id. You may add '${languageId}' to dash.custom_docsets setting`,
+      'Never show again').then((s) => {
+        config.update('custom_docsets_warning', false, ConfigurationTarget.Global);
+      });
   }
 
   return [];

@@ -10,7 +10,7 @@
     "theme": "dark"
   },
   "engines": {
-    "vscode": "^0.10.1"
+    "vscode": "^1.22.0"
   },
   "bugs": {
     "url": "https://github.com/deerawan/vscode-dash/issues",
@@ -80,6 +80,17 @@
       "type": "object",
       "title": "Dash Configuration",
       "properties": {
+        "dash.custom_docsets": {
+          "type": "object",
+          "items": {
+            "type": "array"
+          },
+          "default": {}
+        },
+        "dash.custom_docsets_warning": {
+          "type": "boolean",
+          "default": true
+        },
         "dash.docset.ansible": {
           "type": "array",
           "items": {
@@ -630,14 +641,15 @@
     }
   },
   "scripts": {
-    "vscode:prepublish": "node ./node_modules/vscode/bin/compile",
-    "compile": "node ./node_modules/vscode/bin/compile -watch -p ./",
+    "vscode:prepublish": "node ./node_modules/typescript/bin/tsc -p ./",
+    "compile": "node ./node_modules/typescript/bin/tsc -watch -p ./",
     "contributor:add": "all-contributors add",
     "contributor:generate": "all-contributors generate",
     "contributor:check": "all-contributors check",
     "test": "./node_modules/istanbul/lib/cli.js cover ./node_modules/mocha/bin/_mocha -- -R spec --ui tdd ./out/test/extension.test.js",
     "test-local": "istanbul cover ./node_modules/mocha/bin/_mocha -- -R spec --ui tdd ./out/test/extension.test.js",
     "precommit": "lint-staged",
+    "postinstall": "node ./node_modules/vscode/bin/install",
     "format": "prettier --write \"{src,test}/**/*.ts\"",
     "lint": "tslint -c tslint.json 'src/**/*.ts' 'test/**/*.ts' --fix"
   },
@@ -652,7 +664,9 @@
     "tslint": "^5.7.0",
     "tslint-config-prettier": "^1.6.0",
     "typescript": "^2.5.3",
-    "vscode": "0.10.x"
+    "vscode": "1.1.18",
+    "@types/node": "^6.0.40",
+    "@types/mocha": "^2.2.32"
   },
   "lint-staged": {
     "*.{ts,json}": [
