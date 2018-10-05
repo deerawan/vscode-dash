@@ -2,7 +2,7 @@
   "name": "vscode-dash",
   "displayName": "Dash",
   "description": "Dash and Zeal integration in Visual Studio Code",
-  "version": "1.10.0",
+  "version": "2.0.0",
   "publisher": "deerawan",
   "icon": "images/dash.png",
   "galleryBanner": {
@@ -80,551 +80,317 @@
       "type": "object",
       "title": "Dash Configuration",
       "properties": {
-        "dash.docset.ansible": {
-          "type": "array",
-          "items": {
-            "type": "string"
-          },
-          "default": [
-            "ansible"
-          ]
+        "dash.languageIdToDocsetMap": {
+          "type": "object",
+          "description": "Set mapping of languageId to dash docset.",
+          "default": {
+            "ansible": [
+              "ansible"
+            ],
+            "ansible-advanced": [
+              "ansible"
+            ],
+            "css": [
+              "css",
+              "bootstrap",
+              "foundation",
+              "less",
+              "awesome",
+              "cordova",
+              "phonegap"
+            ],
+            "clojure": [
+              "clojure"
+            ],
+            "coffee": [
+              "coffee"
+            ],
+            "cpp": [
+              "cpp",
+              "net",
+              "boost",
+              "qt",
+              "cvcpp",
+              "cocos2dx",
+              "c",
+              "manpages"
+            ],
+            "csharp": [
+              "net",
+              "mono",
+              "unity3d"
+            ],
+            "dart": [
+              "dartlang",
+              "polymerdart",
+              "angulardart"
+            ],
+            "elixir": [
+              "elixir"
+            ],
+            "elm": [
+              "elm"
+            ],
+            "erlang": [
+              "erlang"
+            ],
+            "go": [
+              "go",
+              "godoc"
+            ],
+            "haskell": [
+              "haskell"
+            ],
+            "haml": [
+              "haml"
+            ],
+            "html": [
+              "html",
+              "svg",
+              "css",
+              "bootstrap",
+              "foundation",
+              "awesome",
+              "statamic",
+              "javascript",
+              "jquery",
+              "jqueryui",
+              "jquerym",
+              "angularjs",
+              "backbone",
+              "marionette",
+              "meteor",
+              "moo",
+              "prototype",
+              "ember",
+              "lodash",
+              "underscore",
+              "sencha",
+              "extjs",
+              "knockout",
+              "zepto",
+              "cordova",
+              "phonegap",
+              "yui"
+            ],
+            "jade": [
+              "jade"
+            ],
+            "java": [
+              "java",
+              "javafx",
+              "grails",
+              "groovy",
+              "playjava",
+              "spring",
+              "cvj",
+              "processing"
+            ],
+            "javascript": [
+              "javascript",
+              "jquery",
+              "jqueryui",
+              "jquerym",
+              "react",
+              "angularjs",
+              "backbone",
+              "marionette",
+              "meteor",
+              "sproutcore",
+              "moo",
+              "prototype",
+              "bootstrap",
+              "foundation",
+              "lodash",
+              "underscore",
+              "ember",
+              "sencha",
+              "extjs",
+              "titanium",
+              "knockout",
+              "zepto",
+              "yui",
+              "d3",
+              "svg",
+              "dojo",
+              "coffee",
+              "nodejs",
+              "express",
+              "grunt",
+              "mongoose",
+              "moment",
+              "require",
+              "awsjs",
+              "jasmine",
+              "sails",
+              "sinon",
+              "chai",
+              "html",
+              "css",
+              "cordova",
+              "phonegap",
+              "unity3d"
+            ],
+            "javascriptreact": [
+              "react"
+            ],
+            "julia": [
+              "julia"
+            ],
+            "less": [
+              "less"
+            ],
+            "lua": [
+              "lua",
+              "corona"
+            ],
+            "markdown": [
+              "markdown"
+            ],
+            "objective-c": [
+              "iphoneos",
+              "macosx",
+              "watchos",
+              "tvos",
+              "appledoc",
+              "cocos2d",
+              "cocos3d",
+              "kobold2d",
+              "sparrow",
+              "c",
+              "manpages"
+            ],
+            "perl": [
+              "perl",
+              "manpages"
+            ],
+            "php": [
+              "php",
+              "wordpress",
+              "drupal",
+              "zend",
+              "laravel",
+              "yii",
+              "joomla",
+              "ee",
+              "codeigniter",
+              "cakephp",
+              "phpunit",
+              "symfony",
+              "typo3",
+              "twig",
+              "smarty",
+              "craft",
+              "phpp",
+              "html",
+              "statamic",
+              "mysql",
+              "sqlite",
+              "mongodb",
+              "psql",
+              "redis"
+            ],
+            "pde": [
+              "processing"
+            ],
+            "puppet": [
+              "puppet"
+            ],
+            "python": [
+              "python",
+              "django",
+              "twisted",
+              "sphinx",
+              "flask",
+              "tornado",
+              "sqlalchemy",
+              "numpy",
+              "scipy",
+              "salt",
+              "pandas",
+              "matplotlib",
+              "cvp"
+            ],
+            "r": [
+              "r"
+            ],
+            "ruby": [
+              "ruby",
+              "rubygems",
+              "rails"
+            ],
+            "rust": [
+              "rust"
+            ],
+            "sass": [
+              "sass",
+              "compass",
+              "bourbon",
+              "neat",
+              "susy",
+              "css"
+            ],
+            "scala": [
+              "scala",
+              "akka",
+              "playscala"
+            ],
+            "shellscript": [
+              "bash",
+              "manpages"
+            ],
+            "sql": [
+              "mysql",
+              "sqlite",
+              "psql"
+            ],
+            "stylus": [
+              "stylus"
+            ],
+            "swift": [
+              "swift",
+              "iphoneos",
+              "macosx",
+              "watchos",
+              "tvos",
+              "appledoc"
+            ],
+            "tcl": [
+              "tcl"
+            ],
+            "typescript": [
+              "typescript",
+              "javascript"
+            ],
+            "yaml": [
+              "chef",
+              "ansible"
+            ],
+            "haxe": [
+              "haxe"
+            ],
+            "terraform": [
+              "terraform"
+            ]
+          }
         },
-        "dash.docset.ansible-advanced": {
-          "type": "array",
-          "items": {
-            "type": "string"
-          },
-          "default": [
-            "ansible"
-          ]
-        },
-        "dash.docset.css": {
-          "type": "array",
-          "items": {
-            "type": "string"
-          },
-          "default": [
-            "css",
-            "bootstrap",
-            "foundation",
-            "less",
-            "awesome",
-            "cordova",
-            "phonegap"
-          ]
-        },
-        "dash.docset.clojure": {
-          "type": "array",
-          "items": {
-            "type": "string"
-          },
-          "default": [
-            "clojure"
-          ]
-        },
-        "dash.docset.coffee": {
-          "type": "array",
-          "items": {
-            "type": "string"
-          },
-          "default": [
-            "coffee"
-          ]
-        },
-        "dash.docset.cpp": {
-          "type": "array",
-          "items": {
-            "type": "string"
-          },
-          "default": [
-            "cpp",
-            "net",
-            "boost",
-            "qt",
-            "cvcpp",
-            "cocos2dx",
-            "c",
-            "manpages"
-          ]
-        },
-        "dash.docset.csharp": {
-          "type": "array",
-          "items": {
-            "type": "string"
-          },
-          "default": [
-            "net",
-            "mono",
-            "unity3d"
-          ]
-        },
-        "dash.docset.dart": {
-          "type": "array",
-          "items": {
-            "type": "string"
-          },
-          "default": [
-            "dartlang",
-            "polymerdart",
-            "angulardart"
-          ]
-        },
-        "dash.docset.elixir": {
-          "type": "array",
-          "items": {
-            "type": "string"
-          },
-          "default": [
-            "elixir"
-          ]
-        },
-        "dash.docset.elm": {
-          "type": "array",
-          "items": {
-            "type": "string"
-          },
-          "default": [
-            "elm"
-          ]
-        },
-        "dash.docset.erlang": {
-          "type": "array",
-          "items": {
-            "type": "string"
-          },
-          "default": [
-            "erlang"
-          ]
-        },
-        "dash.docset.go": {
-          "type": "array",
-          "items": {
-            "type": "string"
-          },
-          "default": [
-            "go",
-            "godoc"
-          ]
-        },
-        "dash.docset.haskell": {
-          "type": "array",
-          "items": {
-            "type": "string"
-          },
-          "default": [
-            "haskell"
-          ]
-        },
-        "dash.docset.haml": {
-          "type": "array",
-          "items": {
-            "type": "string"
-          },
-          "default": [
-            "haml"
-          ]
-        },
-        "dash.docset.html": {
-          "type": "array",
-          "items": {
-            "type": "string"
-          },
-          "default": [
-            "html",
-            "svg",
-            "css",
-            "bootstrap",
-            "foundation",
-            "awesome",
-            "statamic",
-            "javascript",
-            "jquery",
-            "jqueryui",
-            "jquerym",
-            "angularjs",
-            "backbone",
-            "marionette",
-            "meteor",
-            "moo",
-            "prototype",
-            "ember",
-            "lodash",
-            "underscore",
-            "sencha",
-            "extjs",
-            "knockout",
-            "zepto",
-            "cordova",
-            "phonegap",
-            "yui"
-          ]
-        },
-        "dash.docset.jade": {
-          "type": "array",
-          "items": {
-            "type": "string"
-          },
-          "default": [
-            "jade"
-          ]
-        },
-        "dash.docset.java": {
-          "type": "array",
-          "items": {
-            "type": "string"
-          },
-          "default": [
-            "java",
-            "javafx",
-            "grails",
-            "groovy",
-            "playjava",
-            "spring",
-            "cvj",
-            "processing"
-          ]
-        },
-        "dash.docset.javascript": {
-          "type": "array",
-          "items": {
-            "type": "string"
-          },
-          "default": [
-            "javascript",
-            "jquery",
-            "jqueryui",
-            "jquerym",
-            "react",
-            "angularjs",
-            "backbone",
-            "marionette",
-            "meteor",
-            "sproutcore",
-            "moo",
-            "prototype",
-            "bootstrap",
-            "foundation",
-            "lodash",
-            "underscore",
-            "ember",
-            "sencha",
-            "extjs",
-            "titanium",
-            "knockout",
-            "zepto",
-            "yui",
-            "d3",
-            "svg",
-            "dojo",
-            "coffee",
-            "nodejs",
-            "express",
-            "grunt",
-            "mongoose",
-            "moment",
-            "require",
-            "awsjs",
-            "jasmine",
-            "sails",
-            "sinon",
-            "chai",
-            "html",
-            "css",
-            "cordova",
-            "phonegap",
-            "unity3d"
-          ]
-        },
-        "dash.docset.javascriptreact": {
-          "type": "array",
-          "items": {
-            "type": "string"
-          },
-          "default": [
-            "react"
-          ]
-        },
-        "dash.docset.julia": {
-          "type": "array",
-          "items": {
-            "type": "string"
-          },
-          "default": [
-            "julia"
-          ]
-        },
-        "dash.docset.less": {
-          "type": "array",
-          "items": {
-            "type": "string"
-          },
-          "default": [
-            "less"
-          ]
-        },
-        "dash.docset.lua": {
-          "type": "array",
-          "items": {
-            "type": "string"
-          },
-          "default": [
-            "lua",
-            "corona"
-          ]
-        },
-        "dash.docset.markdown": {
-          "type": "array",
-          "items": {
-            "type": "string"
-          },
-          "default": [
-            "markdown"
-          ]
-        },
-        "dash.docset.objective-c": {
-          "type": "array",
-          "items": {
-            "type": "string"
-          },
-          "default": [
-            "iphoneos",
-            "macosx",
-            "watchos",
-            "tvos",
-            "appledoc",
-            "cocos2d",
-            "cocos3d",
-            "kobold2d",
-            "sparrow",
-            "c",
-            "manpages"
-          ]
-        },
-        "dash.docset.perl": {
-          "type": "array",
-          "items": {
-            "type": "string"
-          },
-          "default": [
-            "perl",
-            "manpages"
-          ]
-        },
-        "dash.docset.php": {
-          "type": "array",
-          "items": {
-            "type": "string"
-          },
-          "default": [
-            "php",
-            "wordpress",
-            "drupal",
-            "zend",
-            "laravel",
-            "yii",
-            "joomla",
-            "ee",
-            "codeigniter",
-            "cakephp",
-            "phpunit",
-            "symfony",
-            "typo3",
-            "twig",
-            "smarty",
-            "craft",
-            "phpp",
-            "html",
-            "statamic",
-            "mysql",
-            "sqlite",
-            "mongodb",
-            "psql",
-            "redis"
-          ]
-        },
-        "dash.docset.pde": {
-          "type": "array",
-          "items": {
-            "type": "string"
-          },
-          "default": [
-            "processing"
-          ]
-        },
-        "dash.docset.puppet": {
-          "type": "array",
-          "items": {
-            "type": "string"
-          },
-          "default": [
-            "puppet"
-          ]
-        },
-        "dash.docset.python": {
-          "type": "array",
-          "items": {
-            "type": "string"
-          },
-          "default": [
-            "python",
-            "django",
-            "twisted",
-            "sphinx",
-            "flask",
-            "tornado",
-            "sqlalchemy",
-            "numpy",
-            "scipy",
-            "salt",
-            "pandas",
-            "matplotlib",
-            "cvp"
-          ]
-        },
-        "dash.docset.r": {
-          "type": "array",
-          "items": {
-            "type": "string"
-          },
-          "default": [
-            "r"
-          ]
-        },
-        "dash.docset.ruby": {
-          "type": "array",
-          "items": {
-            "type": "string"
-          },
-          "default": [
-            "ruby",
-            "rubygems",
-            "rails"
-          ]
-        },
-        "dash.docset.rust": {
-          "type": "array",
-          "items": {
-            "type": "string"
-          },
-          "default": [
-            "rust"
-          ]
-        },
-        "dash.docset.sass": {
-          "type": "array",
-          "items": {
-            "type": "string"
-          },
-          "default": [
-            "sass",
-            "compass",
-            "bourbon",
-            "neat",
-            "susy",
-            "css"
-          ]
-        },
-        "dash.docset.scala": {
-          "type": "array",
-          "items": {
-            "type": "string"
-          },
-          "default": [
-            "scala",
-            "akka",
-            "playscala"
-          ]
-        },
-        "dash.docset.shellscript": {
-          "type": "array",
-          "items": {
-            "type": "string"
-          },
-          "default": [
-            "bash",
-            "manpages"
-          ]
-        },
-        "dash.docset.sql": {
-          "type": "array",
-          "items": {
-            "type": "string"
-          },
-          "default": [
-            "mysql",
-            "sqlite",
-            "psql"
-          ]
-        },
-        "dash.docset.stylus": {
-          "type": "array",
-          "items": {
-            "type": "string"
-          },
-          "default": [
-            "stylus"
-          ]
-        },
-        "dash.docset.swift": {
-          "type": "array",
-          "items": {
-            "type": "string"
-          },
-          "default": [
-            "swift",
-            "iphoneos",
-            "macosx",
-            "watchos",
-            "tvos",
-            "appledoc"
-          ]
-        },
-        "dash.docset.tcl": {
-          "type": "array",
-          "items": {
-            "type": "string"
-          },
-          "default": [
-            "tcl"
-          ]
-        },
-        "dash.docset.typescript": {
-          "type": "array",
-          "items": {
-            "type": "string"
-          },
-          "default": [
-            "typescript",
-            "javascript"
-          ]
-        },
-        "dash.docset.yaml": {
-          "type": "array",
-          "items": {
-            "type": "string"
-          },
-          "default": [
-            "chef",
-            "ansible"
-          ]
-        },
-        "dash.docset.haxe": {
-          "type": "array",
-          "items": {
-            "type": "string"
-          },
-          "default": [
-            "haxe"
-          ]
-        },
-        "dash.docset.terraform": {
-          "type": "array",
-          "items": {
-            "type": "string"
-          },
-          "default": [
-            "terraform"
-          ]
+        "dash.fileNameToDocsetMap": {
+          "type": "object",
+          "description": "Set mapping of file name to dash docset.",
+          "default": {
+            "docker*.yml": [
+              "docker"
+            ],
+            "Vagrantfile": [
+              "vagrant"
+            ],
+            "gruntfile.js": [
+              "grunt"
+            ],
+            "gulpfile.js": [
+              "gulp"
+            ]
+          }
         }
       }
     }
@@ -641,6 +407,9 @@
     "format": "prettier --write \"{src,test}/**/*.ts\"",
     "lint": "tslint -c tslint.json 'src/**/*.ts' 'test/**/*.ts' --fix"
   },
+  "dependencies": {
+    "micromatch": "^3.1.10"
+  },
   "devDependencies": {
     "all-contributors-cli": "^5.4.0",
     "coveralls": "^2.11.4",
@@ -651,7 +420,7 @@
     "prettier": "^1.7.4",
     "tslint": "^5.7.0",
     "tslint-config-prettier": "^1.6.0",
-    "typescript": "^2.5.3",
+    "typescript": "^2.9.0",
     "vscode": "0.10.x"
   },
   "lint-staged": {
