@@ -7,6 +7,8 @@ import {
   Selection,
   InputBoxOptions,
 } from 'vscode';
+import * as path from 'path';
+import * as micromatch from 'micromatch';
 import { exec } from 'child_process';
 import { Dash } from './dash';
 import { platform } from 'os';
@@ -45,8 +47,7 @@ export function activate(context: ExtensionContext) {
 function searchSpecific() {
   const editor = getEditor();
   const query = getSelectedText(editor);
-  const languageId = editor.document.languageId;
-  const docsets = getDocsets(languageId);
+  const docsets = getDocsets();
 
   const dash = new Dash(OS);
 
@@ -68,10 +69,8 @@ function searchAll() {
  * Search in dash for editor syntax documentation
  */
 function searchEmptySyntax() {
-  const editor = getEditor();
   const query = '';
-  const languageId = editor.document.languageId;
-  const docsets = getDocsets(languageId);
+  const docsets = getDocsets();
   const dash = new Dash(OS);
 
   exec(dash.getCommand(query, docsets));
@@ -81,9 +80,7 @@ function searchEmptySyntax() {
  * Search in dash for editor syntax documentation with a custom query
  */
 function searchCustomWithSyntax() {
-  const editor = getEditor();
-  const languageId = editor.document.languageId;
-  const docsets = getDocsets(languageId);
+  const docsets = getDocsets();
   const dash = new Dash(OS);
 
   const inputOptions: InputBoxOptions = {
@@ -135,14 +132,45 @@ function getSelectedText(editor: TextEditor) {
  * Get docset configuration
  *
  * @param {string} languageId e.g javascript, ruby
- * @return {Array<string>}
+ * @return {string}
  */
-function getDocsets(languageId: string): Array<string> {
-  const config = workspace.getConfiguration('dash.docset');
+function getDocsets(): string[] {
+  const editor = getEditor();
+  const fileName = path.basename(editor.document.fileName);
+  const languageId = editor.document.languageId;
 
-  if (config[languageId]) {
-    return config[languageId];
-  }
+  const fileNameDocsets = getFileNameDocsets(fileName);
+  const languageIdDocsets = getLanguageIdDocsets(languageId);
 
-  return [];
+  // prioritize docset matching by file name then language id
+  return [...fileNameDocsets, ...languageIdDocsets];
+}
+
+/**
+ * Get docsets based on file name
+ * @param {string} fileName
+ * @return {string}
+ */
+function getFileNameDocsets(fileName: string) {
+  const fileNameConfig = workspace.getConfiguration('dash.fileNameToDocsetMap');
+  const matchedFileNameConfigKey = Object.keys(fileNameConfig).find(config =>
+    micromatch.isMatch(fileName, config)
+  );
+
+  return matchedFileNameConfigKey
+    ? fileNameConfig[matchedFileNameConfigKey]
+    : [];
+}
+
+/**
+ * Get docsets based on languge id
+ * @param languageId
+ * @return {string}
+ */
+function getLanguageIdDocsets(languageId: string) {
+  const languageIdConfig = workspace.getConfiguration(
+    'dash.languageIdToDocsetMap'
+  );
+
+  return languageIdConfig[languageId] || [];
 }
