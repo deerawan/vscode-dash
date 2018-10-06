@@ -32,8 +32,7 @@
   ],
   "main": "./out/src/extension",
   "contributes": {
-    "commands": [
-      {
+    "commands": [{
         "command": "extension.dash.specific",
         "title": "Search in Dash for current selection"
       },
@@ -50,8 +49,7 @@
         "title": "Search in Dash for a custom string"
       }
     ],
-    "keybindings": [
-      {
+    "keybindings": [{
         "command": "extension.dash.specific",
         "key": "ctrl+h",
         "mac": "ctrl+h",
@@ -376,9 +374,9 @@
         },
         "dash.fileNameToDocsetMap": {
           "type": "object",
-          "description": "Set mapping of file name to dash docset.",
+          "description": "Set mapping of file name to dash docset (supports glob pattern).",
           "default": {
-            "docker*.yml": [
+            "[dD]ocker*": [
               "docker"
             ],
             "Vagrantfile": [

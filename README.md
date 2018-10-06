@@ -91,14 +91,14 @@ React | react | dash.languageIdToDocsetMap.javascriptreact | [link](https://mark
 
 ### File name to docset matching
 
-This plugin supports file extension to docset matching, this is useful to target docset for any specific file name such as `docker.yml` or `vagrantfile`.
+This plugin supports file name matching to docset, this is useful to target docset for any specific file name such as `docker.yml` or `vagrantfile`.
 
 **NOTE: You can use glob pattern to define the file name**
 
 <!-- prettier-ignore -->
 File Name | Dash Docset Keys | Docset Setting
 ------------ | ------------- | -------------
-docker*.yml | docker | dash.fileNameToDocsetMap["docker.yml"]
+[dD]ocker* | docker | dash.fileNameToDocsetMap["docker.yml"]
 vagrantfile | vagrant | dash.fileNameToDocsetMap["vagrantfile"]
 gruntfile.js | grunt | dash.fileNameToDocsetMap["gruntfile.js"]
 gulpfile.js | gulp | dash.fileNameToDocsetMap["gulpfile.js"]
