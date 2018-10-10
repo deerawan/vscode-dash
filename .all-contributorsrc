@@ -28,10 +28,10 @@
       ]
     },
     {
-      "login": "HazardDev",
+      "login": "loganintech",
       "name": "Logan Saso",
       "avatar_url": "https://avatars2.githubusercontent.com/u/6226408?v=4",
-      "profile": "https://github.com/HazardDev",
+      "profile": "https://github.com/loganintech",
       "contributions": [
         "code",
         "doc"
@@ -65,6 +65,16 @@
         "code",
         "doc"
       ]
+    },
+    {
+      "login": "br1anchen",
+      "name": "br1anchen",
+      "avatar_url": "https://avatars2.githubusercontent.com/u/1086461?v=4",
+      "profile": "https://github.com/br1anchen",
+      "contributions": [
+        "code"
+      ]
     }
-  ]
+  ],
+  "repoType": "github"
 }
