@@ -6,7 +6,7 @@ suite('Dash Tests', () => {
     const dash = new Dash('darwin');
     const uri = dash.getCommand('size', ['css', 'less']);
 
-    assert.equal(uri, 'open -g "dash-plugin://query=size&keys=css,less"');
+    assert.equal(uri, 'open -g "dash-plugin://query=size&keys=exact:css,exact:less"');
   });
 
   test('Get command with no keys for macOS', () => {
@@ -22,7 +22,7 @@ suite('Dash Tests', () => {
 
     assert.equal(
       uri,
-      'start dash-plugin:// && start dash-plugin://query=size^&keys=css,less'
+      'start dash-plugin:// && start dash-plugin://query=size^&keys=exact:css,exact:less'
     );
   });
 
@@ -37,7 +37,7 @@ suite('Dash Tests', () => {
     const dash = new Dash('linux');
     const uri = dash.getCommand('size', ['css', 'less']);
 
-    assert.equal(uri, 'zeal "dash-plugin://query=size&keys=css,less"');
+    assert.equal(uri, 'zeal "dash-plugin://query=size&keys=exact:css,exact:less"');
   });
 
   test('Get command with no keys for Linux', () => {
@@ -51,7 +51,7 @@ suite('Dash Tests', () => {
     const dash = new Dash('darwin');
     const keys = dash.getKeys(['css', 'less']);
 
-    assert.equal(keys, 'css,less');
+    assert.equal(keys, 'exact:css,exact:less');
   });
 
   test('Get keys with empty docset', () => {

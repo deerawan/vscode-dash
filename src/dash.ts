@@ -40,7 +40,11 @@ export class Dash {
    */
   getKeys(docsets: string[]): string {
     if (docsets.length > 0) {
-      return docsets.join(',');
+      // Dash has behaviour to search another docsets that have similarity with targeted docsets
+      // e.g search to typescript, will also search in vue
+      // Using exact to prevent that so it will search only in targeted docsets
+      const exactDocsets = docsets.map(docset => `exact:${docset}`);
+      return exactDocsets.join(',');
     }
 
     return '';
