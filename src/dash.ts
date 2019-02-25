@@ -8,9 +8,9 @@ export class Dash {
       {
         darwin: 'open -g',
         linux: 'zeal',
-        // start Zeal before we pass it a URI so it works whether Zeal is running in background or not.
-        // Why is this needed? I have no idea, but I think Qt has to start up a listener on cmd before it will work.
-        win32: 'start dash-plugin:// && start',
+        // Same technique as Silverlake Software's "Search Docsets" extension,
+        // which is written by Velocity's developer and is tested to work with current Velocity on W10.
+        win32: 'cmd.exe /c start "" ',
       }[this.OS] || 'zeal';
   }
 
@@ -53,11 +53,6 @@ export class Dash {
    * @return {string} OS-specific URI to pass to handler, mainly because of Windows
    */
   getOSSpecificURI(uri: string): string {
-    return (
-      {
-        // on Windows, start can't deal with the double quotes, and & needs to be escaped with ^
-        win32: uri.replace('&', '^&'),
-      }[this.OS] || '"' + uri + '"'
-    );
+    return ({}[this.OS] || '"' + uri + '"');
   }
 }
