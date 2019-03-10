@@ -22,28 +22,9 @@ export class Dash {
    * @return {string} dash handler and uri
    */
   getCommand(query: string, docsets: string[] = []): string {
-    let uri = 'dash-plugin://query=' + encodeURIComponent(query);
-    const keys = this.getKeys(docsets);
-
-    if (keys) {
-      uri += '&keys=' + keys;
-    }
-
-    return `${this.URIHandler} "${uri}"`;
-  }
-
-  /**
-   * Get docset keys parameter for dash
-   *
-   * @param {Array<string>} docsets - array of docset e.g [css, less]
-   * @return {string} joined array in string e.g. "ruby,css,dimas" or empty string
-   */
-  getKeys(docsets: string[]): string {
-    if (docsets.length > 0) {
-      return docsets.join(',');
-    }
-
-    return '';
+    const keys = (docsets || []).join(",");
+    const encodedQuery = encodeURIComponent(query);
+    return `${this.URIHandler} "dash-plugin://query=${encodedQuery}${keys?`&keys=${keys}`:``}"`;
   }
 
 }
