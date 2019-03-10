@@ -1,8 +1,9 @@
 export class Dash {
   private OS: string;
   private URIHandler: string;
+  private option: DashOption;
 
-  constructor(OS: string) {
+  constructor(OS: string, option: DashOption) {
     this.OS = OS;
     this.URIHandler =
       {
@@ -12,6 +13,8 @@ export class Dash {
         // Why is this needed? I have no idea, but I think Qt has to start up a listener on cmd before it will work.
         win32: 'start dash-plugin:// && start',
       }[this.OS] || 'zeal';
+
+    this.option = option;
   }
 
   /**
@@ -40,7 +43,13 @@ export class Dash {
    */
   getKeys(docsets: string[]): string {
     if (docsets.length > 0) {
-      return docsets.join(',');
+      // Dash has behaviour to search another docsets that have similarity with targeted docsets
+      // e.g search to typescript, will also search in vue
+      // Using exact to prevent that so it will search only in targeted docsets
+      const { exactDocset } = this.option;
+      const finalDocsets = docsets.map(docset => exactDocset ? `exact:${docset}` : docset);
+
+      return finalDocsets.join(',');
     }
 
     return '';
@@ -60,4 +69,8 @@ export class Dash {
       }[this.OS] || '"' + uri + '"'
     );
   }
+}
+
+export interface DashOption {
+  exactDocset: boolean;
 }

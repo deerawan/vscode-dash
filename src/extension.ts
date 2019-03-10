@@ -4,13 +4,12 @@ import {
   commands,
   ExtensionContext,
   TextEditor,
-  Selection,
   InputBoxOptions,
 } from 'vscode';
 import * as path from 'path';
 import * as micromatch from 'micromatch';
 import { exec } from 'child_process';
-import { Dash } from './dash';
+import { Dash, DashOption } from './dash';
 import { platform } from 'os';
 
 const OS: string = platform();
@@ -49,7 +48,7 @@ function searchSpecific() {
   const query = getSelectedText(editor);
   const docsets = getDocsets();
 
-  const dash = new Dash(OS);
+  const dash = new Dash(OS, getDashOption());
 
   exec(dash.getCommand(query, docsets));
 }
@@ -60,7 +59,7 @@ function searchSpecific() {
 function searchAll() {
   const editor = getEditor();
   const query = getSelectedText(editor);
-  const dash = new Dash(OS);
+  const dash = new Dash(OS, getDashOption());
 
   exec(dash.getCommand(query));
 }
@@ -71,7 +70,7 @@ function searchAll() {
 function searchEmptySyntax() {
   const query = '';
   const docsets = getDocsets();
-  const dash = new Dash(OS);
+  const dash = new Dash(OS, getDashOption());
 
   exec(dash.getCommand(query, docsets));
 }
@@ -81,7 +80,7 @@ function searchEmptySyntax() {
  */
 function searchCustomWithSyntax() {
   const docsets = getDocsets();
-  const dash = new Dash(OS);
+  const dash = new Dash(OS, getDashOption());
 
   const inputOptions: InputBoxOptions = {
     placeHolder: 'Something to search in Dash.',
@@ -173,4 +172,12 @@ function getLanguageIdDocsets(languageId: string) {
   );
 
   return languageIdConfig[languageId] || [];
+}
+
+function getDashOption(): DashOption {
+  const exactDocset = workspace.getConfiguration('dash').get('exactDocset') as boolean;
+
+  return {
+    exactDocset
+  };
 }
