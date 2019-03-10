@@ -1,8 +1,9 @@
 export class Dash {
   private OS: string;
   private URIHandler: string;
+  private option: DashOption;
 
-  constructor(OS: string) {
+  constructor(OS: string, option: DashOption) {
     this.OS = OS;
     this.URIHandler =
       {
@@ -12,6 +13,8 @@ export class Dash {
         // which is written by Velocity's developer and is tested to work with current Velocity on W10.
         win32: 'cmd.exe /c start "" ',
       }[this.OS] || 'zeal';
+
+     this.option = option;
   }
 
   /**
@@ -22,7 +25,7 @@ export class Dash {
    * @return {string} dash handler and uri
    */
   getCommand(query: string, docsets: string[] = []): string {
-    const keys = (docsets || []).join(",");
+    const keys = (docsets || []).join(",").map(docset => `${this.option.exactDocset && "exact:"}${docset}`);
     const encodedQuery = encodeURIComponent(query);
     return `${this.URIHandler} "dash-plugin://query=${encodedQuery}${keys?`&keys=${keys}`:``}"`;
   }
