@@ -29,7 +29,7 @@ export class Dash {
       uri += '&keys=' + keys;
     }
 
-    return this.URIHandler + ' ' + this.getOSSpecificURI(uri);
+    return this.URIHandler + ' ' + `"${uri}"`;
   }
 
   /**
@@ -46,13 +46,4 @@ export class Dash {
     return '';
   }
 
-  /**
-   * Returns the OS specific URI to be handled.
-   *
-   * @param {string} uri - original constructed URI
-   * @return {string} OS-specific URI to pass to handler, mainly because of Windows
-   */
-  getOSSpecificURI(uri: string): string {
-    return ({}[this.OS] || '"' + uri + '"');
-  }
 }
