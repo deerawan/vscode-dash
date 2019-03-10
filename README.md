@@ -7,7 +7,7 @@
 Also support [Zeal](https://zealdocs.org/) for Windows and Linux.
 
 [![Build Status](https://travis-ci.org/deerawan/vscode-dash.svg?branch=master)](https://travis-ci.org/deerawan/vscode-dash) [![Coverage Status](https://coveralls.io/repos/deerawan/vscode-dash/badge.svg?branch=master&service=github)](https://coveralls.io/github/deerawan/vscode-dash?branch=master)
-[![All Contributors](https://img.shields.io/badge/all_contributors-7-orange.svg?style=flat-square)](#contributors)
+[![All Contributors](https://img.shields.io/badge/all_contributors-8-orange.svg?style=flat-square)](#contributors)
 
 ![vscode dash](https://raw.githubusercontent.com/deerawan/vscode-dash/master/images/vscode-dash.gif)
 
@@ -160,6 +160,7 @@ Thank you for these awesome contributors
 <!-- prettier-ignore -->
 | [<img src="https://avatars1.githubusercontent.com/u/1243921?v=4" width="100px;"/><br /><sub><b>Budi Irawan</b></sub>](http://budiirawan.com)<br />[💻](https://github.com/deerawan/vscode-dash/commits?author=deerawan "Code") [📖](https://github.com/deerawan/vscode-dash/commits?author=deerawan "Documentation") | [<img src="https://avatars0.githubusercontent.com/u/250935?v=4" width="100px;"/><br /><sub><b>Dima Granetchi</b></sub>](https://github.com/profelis)<br />[💻](https://github.com/deerawan/vscode-dash/commits?author=profelis "Code") [📖](https://github.com/deerawan/vscode-dash/commits?author=profelis "Documentation") | [<img src="https://avatars2.githubusercontent.com/u/6226408?v=4" width="100px;"/><br /><sub><b>Logan Saso</b></sub>](https://github.com/loganintech)<br />[💻](https://github.com/deerawan/vscode-dash/commits?author=loganintech "Code") [📖](https://github.com/deerawan/vscode-dash/commits?author=loganintech "Documentation") | [<img src="https://avatars3.githubusercontent.com/u/8567599?v=4" width="100px;"/><br /><sub><b>Zhongren Shao</b></sub>](https://github.com/szhongren)<br />[💻](https://github.com/deerawan/vscode-dash/commits?author=szhongren "Code") [📖](https://github.com/deerawan/vscode-dash/commits?author=szhongren "Documentation") | [<img src="https://avatars1.githubusercontent.com/u/5329046?v=4" width="100px;"/><br /><sub><b>dingweifeng</b></sub>](https://github.com/weifding)<br />[📖](https://github.com/deerawan/vscode-dash/commits?author=weifding "Documentation") | [<img src="https://avatars0.githubusercontent.com/u/941359?v=4" width="100px;"/><br /><sub><b>Seth Bromberger</b></sub>](http://www.bromberger.com)<br />[💻](https://github.com/deerawan/vscode-dash/commits?author=sbromberger "Code") [📖](https://github.com/deerawan/vscode-dash/commits?author=sbromberger "Documentation") | [<img src="https://avatars2.githubusercontent.com/u/1086461?v=4" width="100px;"/><br /><sub><b>br1anchen</b></sub>](https://github.com/br1anchen)<br />[💻](https://github.com/deerawan/vscode-dash/commits?author=br1anchen "Code") |
 | :---: | :---: | :---: | :---: | :---: | :---: | :---: |
+| [<img src="https://avatars3.githubusercontent.com/u/26966551?v=4" width="100px;"/><br /><sub><b>Won Kim</b></sub>](https://medium.com/@cmygray)<br />[💻](https://github.com/deerawan/vscode-dash/commits?author=cmygray "Code") |
 <!-- ALL-CONTRIBUTORS-LIST:END -->
 
 ## License
