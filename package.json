@@ -394,7 +394,7 @@
         },
         "dash.exactDocset": {
           "type": "boolean",
-          "description": "Controls whether Dash should search the keyword in exact docsets.",
+          "description": "Controls whether Dash should search the keyword in exact docsets specified in docset setting.",
           "default": false
         }
       }
