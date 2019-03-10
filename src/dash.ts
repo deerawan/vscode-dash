@@ -29,7 +29,7 @@ export class Dash {
       uri += '&keys=' + keys;
     }
 
-    return this.URIHandler + ' ' + `"${uri}"`;
+    return this.URIHandler + ` "${uri}"`;
   }
 
   /**
