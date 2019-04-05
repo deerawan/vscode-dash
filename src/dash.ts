@@ -25,7 +25,7 @@ export class Dash {
    * @return {string} dash handler and uri
    */
   getCommand(query: string, docsets: string[] = []): string {
-    const keys = (docsets || "").join(",").map(docset => `${this.option.exactDocset && "exact:"}${docset}`);
+    const keys = (docsets || []).join(",").map(docset => `${this.option.exactDocset && "exact:"}${docset}`);
     const encodedQuery = encodeURIComponent(query);
     return `${this.URIHandler} "dash-plugin://query=${encodedQuery}${keys?`&keys=${keys}`:``}"`;
   }
