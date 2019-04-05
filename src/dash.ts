@@ -5,6 +5,7 @@ export class Dash {
 
   constructor(OS: string, option: DashOption) {
     this.OS = OS;
+    
     this.URIHandler = {
       darwin: 'open -g',
       linux: 'zeal',
@@ -29,4 +30,8 @@ export class Dash {
     return `${this.URIHandler} "dash-plugin://query=${encodedQuery}${keys?`&keys=${keys}`:``}"`;
   }
 
+}
+
+export interface DashOption {
+  exactDocset: boolean;
 }
