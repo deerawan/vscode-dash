@@ -412,7 +412,7 @@
     "lint": "tslint -c tslint.json 'src/**/*.ts' 'test/**/*.ts' --fix"
   },
   "dependencies": {
-    "micromatch": "^3.1.10"
+    "micromatch": "^4.0.0"
   },
   "devDependencies": {
     "all-contributors-cli": "^5.4.0",
