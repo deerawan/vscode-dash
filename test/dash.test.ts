@@ -27,7 +27,7 @@ suite('Dash Tests', () => {
 
     assert.equal(
       uri,
-      'cmd.exe /c start "" dash-plugin://query=size^&keys=exact:css,exact:less'
+      'cmd.exe /c start ""  "dash-plugin://query=size&keys=exact:css,exact:less"'
     );
   });
 
@@ -35,7 +35,7 @@ suite('Dash Tests', () => {
     const dash = new Dash('win32', dashOptionExactDocsetEnabled);
     const uri = dash.getCommand('size');
 
-    assert.equal(uri, 'cmd.exe /c start "" dash-plugin://query=size');
+    assert.equal(uri, 'cmd.exe /c start ""  "dash-plugin://query=size"');
   });
 
   test('Get command with keys for Linux', () => {
