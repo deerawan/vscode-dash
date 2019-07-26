@@ -8,7 +8,10 @@ suite('Dash Tests', () => {
     const dash = new Dash('darwin', dashOptionExactDocsetEnabled);
     const uri = dash.getCommand('size', ['css', 'less']);
 
-    assert.equal(uri, 'open -g "dash-plugin://query=size&keys=exact:css,exact:less"');
+    assert.equal(
+      uri,
+      'open -g "dash-plugin://query=size&keys=exact:css,exact:less"'
+    );
   });
 
   test('Get command with no keys for macOS', () => {
@@ -24,7 +27,7 @@ suite('Dash Tests', () => {
 
     assert.equal(
       uri,
-      'start dash-plugin:// && start dash-plugin://query=size^&keys=exact:css,exact:less'
+      'cmd.exe /c start ""  "dash-plugin://query=size&keys=exact:css,exact:less"'
     );
   });
 
@@ -32,14 +35,17 @@ suite('Dash Tests', () => {
     const dash = new Dash('win32', dashOptionExactDocsetEnabled);
     const uri = dash.getCommand('size');
 
-    assert.equal(uri, 'start dash-plugin:// && start dash-plugin://query=size');
+    assert.equal(uri, 'cmd.exe /c start ""  "dash-plugin://query=size"');
   });
 
   test('Get command with keys for Linux', () => {
     const dash = new Dash('linux', dashOptionExactDocsetEnabled);
     const uri = dash.getCommand('size', ['css', 'less']);
 
-    assert.equal(uri, 'zeal "dash-plugin://query=size&keys=exact:css,exact:less"');
+    assert.equal(
+      uri,
+      'zeal "dash-plugin://query=size&keys=exact:css,exact:less"'
+    );
   });
 
   test('Get command with no keys for Linux', () => {
@@ -47,20 +53,6 @@ suite('Dash Tests', () => {
     const uri = dash.getCommand('size');
 
     assert.equal(uri, 'zeal "dash-plugin://query=size"');
-  });
-
-  test('Get keys with exist docset', () => {
-    const dash = new Dash('darwin', dashOptionExactDocsetEnabled);
-    const keys = dash.getKeys(['css', 'less']);
-
-    assert.equal(keys, 'exact:css,exact:less');
-  });
-
-  test('Get keys with empty docset', () => {
-    const dash = new Dash('darwin', dashOptionExactDocsetEnabled);
-    const keys = dash.getKeys([]);
-
-    assert.equal(keys, '');
   });
 
   test('Exact docset disabled', () => {
