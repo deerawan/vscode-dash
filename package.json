@@ -5,6 +5,7 @@
   "version": "2.1.0",
   "publisher": "deerawan",
   "icon": "images/dash.png",
+  "extensionKind": "ui",
   "galleryBanner": {
     "color": "#7171AD",
     "theme": "dark"
