@@ -1,4 +1,10 @@
+## 2.2.0
+
+- Add Velocity support (thx to @salembeats)
+- Set extension type as UI to cater remote development
+
 ## 2.1.0
+
 - Add new exact docset option `dash.exactDocset`
 
 By default Dash will search the keyword in similar or related docsets outside of specified docset e.g. search a keyword in `.ts` file will also search into `vue` and `angular` docset even though only `typescript` and `javascript` specified in setting.

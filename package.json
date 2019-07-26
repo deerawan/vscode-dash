@@ -1,8 +1,8 @@
 {
   "name": "vscode-dash",
   "displayName": "Dash",
-  "description": "Dash and Zeal integration in Visual Studio Code",
-  "version": "2.1.0",
+  "description": "Dash, Zeal and Velocity integration in Visual Studio Code",
+  "version": "2.2.0",
   "publisher": "deerawan",
   "icon": "images/dash.png",
   "extensionKind": "ui",
