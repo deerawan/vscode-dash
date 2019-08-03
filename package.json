@@ -409,7 +409,7 @@
     "contributor:check": "all-contributors check",
     "test": "./node_modules/istanbul/lib/cli.js cover ./node_modules/mocha/bin/_mocha -- -R spec --ui tdd './out/test/**/*.test.js'",
     "test:local": "istanbul cover ./node_modules/mocha/bin/_mocha -- -R spec --ui tdd './out/test/**/*.test.js'",
-    "format": "prettier --write \"{src,test}/**/*.ts\"",
+    "format": "prettier --write \"{src,test}/**/*.{ts,md}\"",
     "lint": "tslint -c tslint.json 'src/**/*.ts' 'test/**/*.ts' --fix"
   },
   "dependencies": {
@@ -430,12 +430,13 @@
   },
   "husky": {
     "hooks": {
-      "pre-commit": "lint-staged"
+      "pre-commit": "lint-staged",
+      "pre-push": "npm run vscode:prepublish"
     }
   },
   "lint-staged": {
-    "*.{ts,json}": [
-      "prettier",
+    "*.{ts,json,md}": [
+      "prettier --write",
       "git add"
     ],
     "*.ts": [
