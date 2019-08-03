@@ -175,9 +175,11 @@ function getLanguageIdDocsets(languageId: string) {
 }
 
 function getDashOption(): DashOption {
-  const exactDocset = workspace.getConfiguration('dash').get('exactDocset') as boolean;
+  const exactDocset = workspace
+    .getConfiguration('dash')
+    .get('exactDocset') as boolean;
 
   return {
-    exactDocset
+    exactDocset,
   };
 }
