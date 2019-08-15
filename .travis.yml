@@ -1,10 +1,9 @@
 language: node_js
 node_js:
-  - '4.2'
+  - 8
 install:
-  - 'npm install -g typescript@2.5.3'
   - 'npm install'
 script:
-  - 'tsc && node ./node_modules/vscode/bin/compile'
+  - 'npx tsc && npx compile'
   - 'npm test'
-after_script: 'cat ./coverage/lcov.info | ./node_modules/coveralls/bin/coveralls.js'
+after_script: 'cat ./coverage/lcov.info | npx coveralls'
