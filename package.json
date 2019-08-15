@@ -410,21 +410,22 @@
     "test": "./node_modules/istanbul/lib/cli.js cover ./node_modules/mocha/bin/_mocha -- -R spec --ui tdd './out/test/**/*.test.js'",
     "test:local": "istanbul cover ./node_modules/mocha/bin/_mocha -- -R spec --ui tdd './out/test/**/*.test.js'",
     "format": "prettier --write \"{src,test}/**/*.{ts,md}\"",
-    "lint": "tslint -c tslint.json 'src/**/*.ts' 'test/**/*.ts' --fix"
+    "lint": "eslint 'src/**/*' 'test/**/*' --ext .ts --fix"
   },
   "dependencies": {
     "micromatch": "^4.0.0"
   },
   "devDependencies": {
+    "@typescript-eslint/eslint-plugin": "^2.0.0",
+    "@typescript-eslint/parser": "^2.0.0",
     "all-contributors-cli": "^5.4.0",
     "coveralls": "^2.11.4",
+    "eslint": "^6.1.0",
     "husky": "1.1.1",
     "istanbul": "^0.4.1",
     "lint-staged": "^4.3.0",
     "mocha": "^5.2.0",
     "prettier": "^1.7.4",
-    "tslint": "^5.7.0",
-    "tslint-config-prettier": "^1.6.0",
     "typescript": "^2.9.0",
     "vscode": "0.10.x"
   },
@@ -440,8 +441,21 @@
       "git add"
     ],
     "*.ts": [
-      "tslint --fix",
-      "tslint"
+      "eslint --fix",
+      "eslint"
+    ]
+  },
+  "eslintConfig": {
+    "env": {
+      "node": true
+    },
+    "parser": "@typescript-eslint/parser",
+    "plugins": [
+      "@typescript-eslint"
+    ],
+    "extends": [
+      "plugin:@typescript-eslint/eslint-recommended",
+      "plugin:@typescript-eslint/recommended"
     ]
   }
 }
