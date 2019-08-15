@@ -4,6 +4,6 @@ node_js:
 install:
   - 'npm install'
 script:
-  - 'npx tsc && npx compile'
+  - 'npx tsc && node ./node_modules/vscode/bin/compile'
   - 'npm test'
 after_script: 'cat ./coverage/lcov.info | npx coveralls'
