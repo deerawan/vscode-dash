@@ -19,7 +19,7 @@ const OS: string = platform();
  *
  * @return {TextEditor}
  */
-function getEditor(): TextEditor {
+function getEditor(): TextEditor | undefined {
   const editor = window.activeTextEditor;
   if (!editor) {
     return;
@@ -93,14 +93,14 @@ function getDashOption(): DashOption {
  */
 function getDocsets(): string[] {
   const editor = getEditor();
-  const fileName = path.basename(editor.document.fileName);
-  const languageId = editor.document.languageId;
+  const fileName = path.basename(editor!.document.fileName);
+  const languageId = editor!.document.languageId;
 
   const fileNameDocsets = getFileNameDocsets(fileName);
   const languageIdDocsets = getLanguageIdDocsets(languageId);
 
   // prioritize docset matching by file name then language id
-  return [...fileNameDocsets, ...languageIdDocsets];
+  return [...fileNameDocsets, ...languageIdDocsets] as string[];
 }
 
 /**
@@ -108,7 +108,7 @@ function getDocsets(): string[] {
  */
 function searchSpecific(): void {
   const editor = getEditor();
-  const query = getSelectedText(editor);
+  const query = getSelectedText(editor!);
   const docsets = getDocsets();
 
   const dash = new Dash(OS, getDashOption());
@@ -121,7 +121,7 @@ function searchSpecific(): void {
  */
 function searchAll(): void {
   const editor = getEditor();
-  const query = getSelectedText(editor);
+  const query = getSelectedText(editor!);
   const dash = new Dash(OS, getDashOption());
 
   exec(dash.getCommand(query));
@@ -150,7 +150,7 @@ function searchCustomWithSyntax(): void {
     prompt: 'Enter something to search for in Dash.',
   };
 
-  window.showInputBox(inputOptions).then((query: string) => {
+  window.showInputBox(inputOptions).then(query => {
     if (query) {
       // If they actually input code
       exec(dash.getCommand(query, docsets)); // Open it in dash
