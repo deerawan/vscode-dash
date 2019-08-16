@@ -1,12 +1,9 @@
 {
   "compilerOptions": {
     "baseUrl": ".",
-    "esModuleInterop": true,
     "lib": ["es5", "es2015", "es2017"],
     "module": "commonjs",
     "moduleResolution": "node",
-    "noImplicitAny": true,
-    "noImplicitThis": false,
     "outDir": "dist",
     "strict": true,
     "target": "es5"

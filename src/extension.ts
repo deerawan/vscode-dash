@@ -100,7 +100,7 @@ function getDocsets(): string[] {
   const languageIdDocsets = getLanguageIdDocsets(languageId);
 
   // prioritize docset matching by file name then language id
-  return [...fileNameDocsets, ...languageIdDocsets] as string[];
+  return [...fileNameDocsets, ...languageIdDocsets];
 }
 
 /**

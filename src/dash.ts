@@ -13,7 +13,7 @@ export class Dash {
 
   constructor(OS: string, option: DashOption) {
     this.OS = OS;
-    this.URIHandler = OSOptions[this.OS] || 'zeal';
+    this.URIHandler = OSOptions[this.OS as keyof OSOptions] || 'zeal';
     this.option = option;
   }
 
@@ -43,5 +43,4 @@ interface OSOptions {
   darwin: string;
   linux: string;
   win32: string;
-  [key: string]: string;
 }

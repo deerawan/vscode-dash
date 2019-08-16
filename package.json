@@ -408,8 +408,7 @@
     "contributor:add": "all-contributors add",
     "contributor:generate": "all-contributors generate",
     "contributor:check": "all-contributors check",
-    "test": "nyc mocha --require ts-node/register --require source-map-support/register -- -R spec --ui tdd './test/**/*.test.ts'",
-    "test:local": "nyc mocha --require ts-node/register --require source-map-support/register -- -R spec --ui tdd './test/**/*.test.ts'",
+    "test": "nyc mocha './test/**/*.test.ts'",
     "format": "prettier --write \"{src,test}/**/*.{ts,md}\"",
     "lint": "eslint 'src/**/*' 'test/**/*' --ext .ts --fix"
   },
