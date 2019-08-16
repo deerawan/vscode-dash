@@ -14,6 +14,87 @@ import { platform } from 'os';
 
 const OS: string = platform();
 
+export function activate(context: ExtensionContext): void {
+  context.subscriptions.push(
+    commands.registerCommand('extension.dash.specific', () => {
+      searchSpecific();
+    })
+  );
+
+  context.subscriptions.push(
+    commands.registerCommand('extension.dash.all', () => {
+      searchAll();
+    })
+  );
+
+  context.subscriptions.push(
+    commands.registerCommand('extension.dash.emptySyntax', () => {
+      searchEmptySyntax();
+    })
+  );
+
+  context.subscriptions.push(
+    commands.registerCommand('extension.dash.customSyntax', () => {
+      searchCustomWithSyntax();
+    })
+  );
+}
+
+/**
+ * Search in dash for selection syntax documentation
+ */
+function searchSpecific(): void {
+  const editor = getEditor() as TextEditor;
+  const query = getSelectedText(editor);
+  const docsets = getDocsets();
+
+  const dash = new Dash(OS, getDashOption());
+
+  exec(dash.getCommand(query, docsets));
+}
+
+/**
+ * Search in dash for all documentation
+ */
+function searchAll(): void {
+  const editor = getEditor() as TextEditor;
+  const query = getSelectedText(editor);
+  const dash = new Dash(OS, getDashOption());
+
+  exec(dash.getCommand(query));
+}
+
+/**
+ * Search in dash for editor syntax documentation
+ */
+function searchEmptySyntax(): void {
+  const query = '';
+  const docsets = getDocsets();
+  const dash = new Dash(OS, getDashOption());
+
+  exec(dash.getCommand(query, docsets));
+}
+
+/**
+ * Search in dash for editor syntax documentation with a custom query
+ */
+function searchCustomWithSyntax(): void {
+  const docsets = getDocsets();
+  const dash = new Dash(OS, getDashOption());
+
+  const inputOptions: InputBoxOptions = {
+    placeHolder: 'Something to search in Dash.',
+    prompt: 'Enter something to search for in Dash.',
+  };
+
+  window.showInputBox(inputOptions).then(query => {
+    if (query) {
+      // If they actually input code
+      exec(dash.getCommand(query, docsets)); // Open it in dash
+    }
+  });
+}
+
 /**
  * Get vscode active editor
  *
@@ -44,6 +125,24 @@ function getSelectedText(editor: TextEditor): string {
   }
 
   return text;
+}
+
+/**
+ * Get docset configuration
+ *
+ * @param {string} languageId e.g javascript, ruby
+ * @return {string}
+ */
+function getDocsets(): string[] {
+  const editor = getEditor() as TextEditor;
+  const fileName = path.basename(editor.document.fileName);
+  const languageId = editor.document.languageId;
+
+  const fileNameDocsets = getFileNameDocsets(fileName);
+  const languageIdDocsets = getLanguageIdDocsets(languageId);
+
+  // prioritize docset matching by file name then language id
+  return [...fileNameDocsets, ...languageIdDocsets];
 }
 
 /**
@@ -83,103 +182,4 @@ function getDashOption(): DashOption {
   return {
     exactDocset,
   };
-}
-
-/**
- * Get docset configuration
- *
- * @param {string} languageId e.g javascript, ruby
- * @return {string}
- */
-function getDocsets(): string[] {
-  const editor = getEditor();
-  const fileName = path.basename(editor!.document.fileName);
-  const languageId = editor!.document.languageId;
-
-  const fileNameDocsets = getFileNameDocsets(fileName);
-  const languageIdDocsets = getLanguageIdDocsets(languageId);
-
-  // prioritize docset matching by file name then language id
-  return [...fileNameDocsets, ...languageIdDocsets];
-}
-
-/**
- * Search in dash for selection syntax documentation
- */
-function searchSpecific(): void {
-  const editor = getEditor();
-  const query = getSelectedText(editor!);
-  const docsets = getDocsets();
-
-  const dash = new Dash(OS, getDashOption());
-
-  exec(dash.getCommand(query, docsets));
-}
-
-/**
- * Search in dash for all documentation
- */
-function searchAll(): void {
-  const editor = getEditor();
-  const query = getSelectedText(editor!);
-  const dash = new Dash(OS, getDashOption());
-
-  exec(dash.getCommand(query));
-}
-
-/**
- * Search in dash for editor syntax documentation
- */
-function searchEmptySyntax(): void {
-  const query = '';
-  const docsets = getDocsets();
-  const dash = new Dash(OS, getDashOption());
-
-  exec(dash.getCommand(query, docsets));
-}
-
-/**
- * Search in dash for editor syntax documentation with a custom query
- */
-function searchCustomWithSyntax(): void {
-  const docsets = getDocsets();
-  const dash = new Dash(OS, getDashOption());
-
-  const inputOptions: InputBoxOptions = {
-    placeHolder: 'Something to search in Dash.',
-    prompt: 'Enter something to search for in Dash.',
-  };
-
-  window.showInputBox(inputOptions).then(query => {
-    if (query) {
-      // If they actually input code
-      exec(dash.getCommand(query, docsets)); // Open it in dash
-    }
-  });
-}
-
-export function activate(context: ExtensionContext): void {
-  context.subscriptions.push(
-    commands.registerCommand('extension.dash.specific', () => {
-      searchSpecific();
-    })
-  );
-
-  context.subscriptions.push(
-    commands.registerCommand('extension.dash.all', () => {
-      searchAll();
-    })
-  );
-
-  context.subscriptions.push(
-    commands.registerCommand('extension.dash.emptySyntax', () => {
-      searchEmptySyntax();
-    })
-  );
-
-  context.subscriptions.push(
-    commands.registerCommand('extension.dash.customSyntax', () => {
-      searchCustomWithSyntax();
-    })
-  );
 }

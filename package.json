@@ -410,7 +410,7 @@
     "contributor:check": "all-contributors check",
     "test": "nyc mocha './test/**/*.test.ts'",
     "format": "prettier --write \"{src,test}/**/*.{ts,md}\"",
-    "lint": "eslint 'src/**/*' 'test/**/*' --ext .ts --fix"
+    "lint": "eslint 'src/**/*.ts' 'test/**/*.ts' --fix"
   },
   "dependencies": {
     "micromatch": "^4.0.2"
@@ -464,7 +464,10 @@
     "extends": [
       "plugin:@typescript-eslint/eslint-recommended",
       "plugin:@typescript-eslint/recommended"
-    ]
+    ],
+    "rules": {
+      "@typescript-eslint/no-use-before-define": 0
+    }
   },
   "nyc": {
     "extends": "@istanbuljs/nyc-config-typescript",
