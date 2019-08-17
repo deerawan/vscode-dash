@@ -14,7 +14,7 @@ import { platform } from 'os';
 
 const OS: string = platform();
 
-export function activate(context: ExtensionContext) {
+export function activate(context: ExtensionContext): void {
   context.subscriptions.push(
     commands.registerCommand('extension.dash.specific', () => {
       searchSpecific();
@@ -43,8 +43,8 @@ export function activate(context: ExtensionContext) {
 /**
  * Search in dash for selection syntax documentation
  */
-function searchSpecific() {
-  const editor = getEditor();
+function searchSpecific(): void {
+  const editor = getEditor() as TextEditor;
   const query = getSelectedText(editor);
   const docsets = getDocsets();
 
@@ -56,8 +56,8 @@ function searchSpecific() {
 /**
  * Search in dash for all documentation
  */
-function searchAll() {
-  const editor = getEditor();
+function searchAll(): void {
+  const editor = getEditor() as TextEditor;
   const query = getSelectedText(editor);
   const dash = new Dash(OS, getDashOption());
 
@@ -67,7 +67,7 @@ function searchAll() {
 /**
  * Search in dash for editor syntax documentation
  */
-function searchEmptySyntax() {
+function searchEmptySyntax(): void {
   const query = '';
   const docsets = getDocsets();
   const dash = new Dash(OS, getDashOption());
@@ -78,7 +78,7 @@ function searchEmptySyntax() {
 /**
  * Search in dash for editor syntax documentation with a custom query
  */
-function searchCustomWithSyntax() {
+function searchCustomWithSyntax(): void {
   const docsets = getDocsets();
   const dash = new Dash(OS, getDashOption());
 
@@ -87,7 +87,7 @@ function searchCustomWithSyntax() {
     prompt: 'Enter something to search for in Dash.',
   };
 
-  window.showInputBox(inputOptions).then((query: string) => {
+  window.showInputBox(inputOptions).then(query => {
     if (query) {
       // If they actually input code
       exec(dash.getCommand(query, docsets)); // Open it in dash
@@ -100,7 +100,7 @@ function searchCustomWithSyntax() {
  *
  * @return {TextEditor}
  */
-function getEditor(): TextEditor {
+function getEditor(): TextEditor | undefined {
   const editor = window.activeTextEditor;
   if (!editor) {
     return;
@@ -115,7 +115,7 @@ function getEditor(): TextEditor {
  * @param {TextEditor} active editor
  * @return {string}
  */
-function getSelectedText(editor: TextEditor) {
+function getSelectedText(editor: TextEditor): string {
   const selection = editor.selection;
   let text = editor.document.getText(selection);
 
@@ -134,7 +134,7 @@ function getSelectedText(editor: TextEditor) {
  * @return {string}
  */
 function getDocsets(): string[] {
-  const editor = getEditor();
+  const editor = getEditor() as TextEditor;
   const fileName = path.basename(editor.document.fileName);
   const languageId = editor.document.languageId;
 
@@ -150,7 +150,7 @@ function getDocsets(): string[] {
  * @param {string} fileName
  * @return {string}
  */
-function getFileNameDocsets(fileName: string) {
+function getFileNameDocsets(fileName: string): string[] {
   const fileNameConfig = workspace.getConfiguration('dash.fileNameToDocsetMap');
   const matchedFileNameConfigKey = Object.keys(fileNameConfig).find(config =>
     micromatch.isMatch(fileName, config)
@@ -166,7 +166,7 @@ function getFileNameDocsets(fileName: string) {
  * @param languageId
  * @return {string}
  */
-function getLanguageIdDocsets(languageId: string) {
+function getLanguageIdDocsets(languageId: string): string[] {
   const languageIdConfig = workspace.getConfiguration(
     'dash.languageIdToDocsetMap'
   );

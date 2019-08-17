@@ -92,7 +92,17 @@
       "contributions": [
         "code"
       ]
+    },
+    {
+      "login": "ozylog",
+      "name": "Cahya Pribadi",
+      "avatar_url": "https://avatars3.githubusercontent.com/u/534150?v=4",
+      "profile": "https://ozylog.com",
+      "contributions": [
+        "code"
+      ]
     }
   ],
-  "repoType": "github"
+  "repoType": "github",
+  "commitConvention": "none"
 }
