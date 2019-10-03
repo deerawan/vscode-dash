@@ -239,6 +239,10 @@
             "julia": [
               "julia"
             ],
+            "kotlin": [
+              "androidktx",
+              "kotlin"
+            ],
             "less": [
               "less"
             ],
