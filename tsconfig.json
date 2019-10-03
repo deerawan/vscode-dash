@@ -1,12 +1,12 @@
 {
   "compilerOptions": {
     "baseUrl": ".",
-    "lib": ["es5", "es2015", "es2017"],
+    "lib": ["es6", "es2017"],
     "module": "commonjs",
     "moduleResolution": "node",
     "outDir": "dist",
     "strict": true,
-    "target": "es5"
+    "target": "es6"
   },
   "include": ["src/**/*"],
   "exclude": ["./node_modules/*"]
