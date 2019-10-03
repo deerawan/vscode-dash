@@ -7,7 +7,7 @@
 Also support [Zeal](https://zealdocs.org/) and [Velocity](https://velocity.silverlakesoftware.com/).
 
 [![Build Status](https://travis-ci.org/deerawan/vscode-dash.svg?branch=master)](https://travis-ci.org/deerawan/vscode-dash) [![Coverage Status](https://coveralls.io/repos/deerawan/vscode-dash/badge.svg?branch=master&service=github)](https://coveralls.io/github/deerawan/vscode-dash?branch=master)
-[![All Contributors](https://img.shields.io/badge/all_contributors-10-orange.svg?style=flat-square)](#contributors-)
+[![All Contributors](https://img.shields.io/badge/all_contributors-11-orange.svg?style=flat-square)](#contributors-)
 
 ![vscode dash](https://raw.githubusercontent.com/deerawan/vscode-dash/master/images/vscode-dash.gif)
 
@@ -174,6 +174,7 @@ Thank you for these awesome contributors
     <td align="center"><a href="https://medium.com/@cmygray"><img src="https://avatars3.githubusercontent.com/u/26966551?v=4" width="100px;" alt="Won Kim"/><br /><sub><b>Won Kim</b></sub></a><br /><a href="https://github.com/deerawan/vscode-dash/commits?author=cmygray" title="Code">💻</a></td>
     <td align="center"><a href="https://www.upwork.com/fl/cuylerstuwe"><img src="https://avatars0.githubusercontent.com/u/20496944?v=4" width="100px;" alt="Cuyler Stuwe"/><br /><sub><b>Cuyler Stuwe</b></sub></a><br /><a href="https://github.com/deerawan/vscode-dash/commits?author=salembeats" title="Code">💻</a></td>
     <td align="center"><a href="https://ozylog.com"><img src="https://avatars3.githubusercontent.com/u/534150?v=4" width="100px;" alt="Cahya Pribadi"/><br /><sub><b>Cahya Pribadi</b></sub></a><br /><a href="https://github.com/deerawan/vscode-dash/commits?author=ozylog" title="Code">💻</a></td>
+    <td align="center"><a href="https://github.com/markokajzer"><img src="https://avatars3.githubusercontent.com/u/9379317?v=4" width="100px;" alt="Marko Kajzer"/><br /><sub><b>Marko Kajzer</b></sub></a><br /><a href="https://github.com/deerawan/vscode-dash/commits?author=markokajzer" title="Code">💻</a></td>
   </tr>
 </table>
 
