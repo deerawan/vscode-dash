@@ -104,9 +104,6 @@
             "clojure": [
               "clojure"
             ],
-            "cmake": [
-              "cmake"
-            ],
             "coffee": [
               "coffee"
             ],
