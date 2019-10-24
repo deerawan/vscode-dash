@@ -395,6 +395,9 @@
             ],
             "gulpfile.js": [
               "gulp"
+            ],
+            "*.ino": [
+              "arduino"
             ]
           }
         },
@@ -428,7 +431,7 @@
     "@types/vscode": "^1.37.0",
     "@typescript-eslint/eslint-plugin": "^2.0.0",
     "@typescript-eslint/parser": "^2.0.0",
-    "all-contributors-cli": "^6.9.1",
+    "all-contributors-cli": "^6.9.3",
     "coveralls": "^3.0.6",
     "eslint": "^6.1.0",
     "husky": "^3.0.3",
