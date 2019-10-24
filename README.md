@@ -46,7 +46,6 @@ Ansible | ansible | dash.languageIdToDocsetMap.ansible, dash.languageIdToDocsetM
 C++ | cpp,net,boost,qt,cvcpp,cocos2dx,c,manpages | dash.languageIdToDocsetMap.cpp | [link](https://marketplace.visualstudio.com/items?itemName=ms-vscode.cpptools)
 C# | net,mono,unity3d | dash.languageIdToDocsetMap.csharp
 Clojure | clojure | dash.languageIdToDocsetMap.clojure
-Cmake | cmake | dash.languageIdToDocsetMap.cmake | [link](https://marketplace.visualstudio.com/items?itemName=twxs.cmake)
 CoffeeScript | coffee | dash.languageIdToDocsetMap.coffee
 CSS | css,bootstrap,foundation,less,awesome,<br>cordova,phonegap | dash.languageIdToDocsetMap.css
 Dart | dartlang,polymerdart,angulardart | dash.languageIdToDocsetMap.dart | [link](https://marketplace.visualstudio.com/items?itemName=DanTup.dart-code)
