@@ -43,7 +43,6 @@ first in order to allow VS Code to detect the language.
 Language | Dash Docset Keys | Docset Setting | Language Plugin |
 ------------ | ------------- | ------------- | :-------------: |
 Ansible | ansible | dash.languageIdToDocsetMap.ansible, dash.languageIdToDocsetMap.ansible-advanced | [link](https://marketplace.visualstudio.com/items?itemName=haaaad.ansible)
-Arduino | arduino | dash.languageIdToDocsetMap.arduino | [link](https://marketplace.visualstudio.com/items?itemName=vsciot-vscode.vscode-arduino)
 C++ | cpp,net,boost,qt,cvcpp,cocos2dx,c,manpages | dash.languageIdToDocsetMap.cpp | [link](https://marketplace.visualstudio.com/items?itemName=ms-vscode.cpptools)
 C# | net,mono,unity3d | dash.languageIdToDocsetMap.csharp
 Clojure | clojure | dash.languageIdToDocsetMap.clojure
@@ -107,6 +106,7 @@ File Name | Dash Docset Keys | Docset Setting
 vagrantfile | vagrant | dash.fileNameToDocsetMap["vagrantfile"]
 gruntfile.js | grunt | dash.fileNameToDocsetMap["gruntfile.js"]
 gulpfile.js | gulp | dash.fileNameToDocsetMap["gulpfile.js"]
+*.ino | arduino | dash.fileNameToDocsetMap["*.ino"]
 
 ### What is `Dash Docset Keys`?
 
