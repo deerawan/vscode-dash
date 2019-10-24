@@ -7,7 +7,7 @@
 Also support [Zeal](https://zealdocs.org/) and [Velocity](https://velocity.silverlakesoftware.com/).
 
 [![Build Status](https://travis-ci.org/deerawan/vscode-dash.svg?branch=master)](https://travis-ci.org/deerawan/vscode-dash) [![Coverage Status](https://coveralls.io/repos/deerawan/vscode-dash/badge.svg?branch=master&service=github)](https://coveralls.io/github/deerawan/vscode-dash?branch=master)
-[![All Contributors](https://img.shields.io/badge/all_contributors-11-orange.svg?style=flat-square)](#contributors-)
+[![All Contributors](https://img.shields.io/badge/all_contributors-12-orange.svg?style=flat-square)](#contributors-)
 
 ![vscode dash](https://raw.githubusercontent.com/deerawan/vscode-dash/master/images/vscode-dash.gif)
 
@@ -43,6 +43,7 @@ first in order to allow VS Code to detect the language.
 Language | Dash Docset Keys | Docset Setting | Language Plugin |
 ------------ | ------------- | ------------- | :-------------: |
 Ansible | ansible | dash.languageIdToDocsetMap.ansible, dash.languageIdToDocsetMap.ansible-advanced | [link](https://marketplace.visualstudio.com/items?itemName=haaaad.ansible)
+Arduino | arduino | dash.languageIdToDocsetMap.arduino | [link](https://marketplace.visualstudio.com/items?itemName=vsciot-vscode.vscode-arduino)
 C++ | cpp,net,boost,qt,cvcpp,cocos2dx,c,manpages | dash.languageIdToDocsetMap.cpp | [link](https://marketplace.visualstudio.com/items?itemName=ms-vscode.cpptools)
 C# | net,mono,unity3d | dash.languageIdToDocsetMap.csharp
 Clojure | clojure | dash.languageIdToDocsetMap.clojure
@@ -175,6 +176,7 @@ Thank you for these awesome contributors
     <td align="center"><a href="https://www.upwork.com/fl/cuylerstuwe"><img src="https://avatars0.githubusercontent.com/u/20496944?v=4" width="100px;" alt="Cuyler Stuwe"/><br /><sub><b>Cuyler Stuwe</b></sub></a><br /><a href="https://github.com/deerawan/vscode-dash/commits?author=salembeats" title="Code">💻</a></td>
     <td align="center"><a href="https://ozylog.com"><img src="https://avatars3.githubusercontent.com/u/534150?v=4" width="100px;" alt="Cahya Pribadi"/><br /><sub><b>Cahya Pribadi</b></sub></a><br /><a href="https://github.com/deerawan/vscode-dash/commits?author=ozylog" title="Code">💻</a></td>
     <td align="center"><a href="https://github.com/markokajzer"><img src="https://avatars3.githubusercontent.com/u/9379317?v=4" width="100px;" alt="Marko Kajzer"/><br /><sub><b>Marko Kajzer</b></sub></a><br /><a href="https://github.com/deerawan/vscode-dash/commits?author=markokajzer" title="Code">💻</a></td>
+    <td align="center"><a href="https://github.com/akdir"><img src="https://avatars0.githubusercontent.com/u/19649463?v=4" width="100px;" alt="akdir"/><br /><sub><b>akdir</b></sub></a><br /><a href="https://github.com/deerawan/vscode-dash/commits?author=akdir" title="Code">💻</a></td>
   </tr>
 </table>
 
