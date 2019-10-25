@@ -246,6 +246,9 @@
               "androidktx",
               "kotlin"
             ],
+            "latex": [
+              "latex"
+            ],
             "less": [
               "less"
             ],

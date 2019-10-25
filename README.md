@@ -62,6 +62,7 @@ Java | java,javafx,grails,groovy,playjava,spring,<br>cvj,processing | dash.langu
 JavaScript | javascript,jquery,jqueryui,jquerym,react,<br>angularjs,backbone,marionette,meteor,<br>sproutcore,moo,prototype,bootstrap,<br>foundation,lodash,underscore,ember,<br>sencha,extjs,titanium,knockout,zepto,<br>yui,d3,svg,dojo,coffee,nodejs,express,<br>grunt,mongoose,moment,require,<br>awsjs,jasmine,sails,sinon,chai,<br>html,css,cordova,phonegap,unity3d | dash.languageIdToDocsetMap.javascript
 Julia | julia | dash.languageIdToDocsetMap.julia | [link](https://marketplace.visualstudio.com/items?itemName=julialang.language-julia)
 Kotlin | androidktx,kotlin | dash.languageIdToDocsetMap.kotlin | [link](https://marketplace.visualstudio.com/items?itemName=mathiasfrohlich.Kotlin)
+Latex | latex | dash.languageIdToDocsetMap.latex | [link](https://marketplace.visualstudio.com/items?itemName=James-Yu.latex-workshop)
 Less | less | dash.languageIdToDocsetMap.less
 Lua | lua,corona | dash.languageIdToDocsetMap.lua | [link](https://marketplace.visualstudio.com/items?itemName=gccfeli.vscode-lua)
 Markdown | markdown | dash.languageIdToDocsetMap.markdown
