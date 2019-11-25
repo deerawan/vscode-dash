@@ -6,13 +6,14 @@
   "publisher": "deerawan",
   "icon": "images/dash.png",
   "extensionKind": "ui",
+  "license": "MIT",
   "galleryBanner": {
     "color": "#7171AD",
     "theme": "dark"
   },
   "engines": {
     "node": ">8.12.0",
-    "vscode": "^0.10.1"
+    "vscode": "^1.0.0"
   },
   "bugs": {
     "url": "https://github.com/deerawan/vscode-dash/issues",
