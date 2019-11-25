@@ -1,3 +1,8 @@
+## 2.3.0
+
+- Add CMake and Latex support (thx to @akdir)
+- Add Kotlin support (thx to @markokajzer)
+
 ## 2.2.0
 
 - Add Velocity support (thx to @salembeats)
