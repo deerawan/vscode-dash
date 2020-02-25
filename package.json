@@ -144,6 +144,9 @@
               "go",
               "godoc"
             ],
+            "gradle": [
+              "gradle"
+            ],
             "haskell": [
               "haskell"
             ],
