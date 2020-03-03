@@ -53,6 +53,7 @@ Dart | dartlang,polymerdart,angulardart | dash.languageIdToDocsetMap.dart | [lin
 Elixir | elixir | dash.languageIdToDocsetMap.elixir | [link](https://marketplace.visualstudio.com/items?itemName=mjmcloug.vscode-elixir)
 Erlang | erlang | dash.languageIdToDocsetMap.erlang
 Go | go,godoc | dash.languageIdToDocsetMap.go | [link](https://marketplace.visualstudio.com/items?itemName=lukehoban.Go)
+Gradle | gradle | dash.languageIdToDocsetMap.gradle | [link](https://marketplace.visualstudio.com/items?itemName=naco-siren.gradle-language)
 Haskell | haskell | dash.languageIdToDocsetMap.haskell
 Haml | haml | dash.languageIdToDocsetMap.haml | [link](https://marketplace.visualstudio.com/items?itemName=karunamurti.haml)
 Haxe | haxe | dash.languageIdToDocsetMap.haxe | [link](https://marketplace.visualstudio.com/items?itemName=nadako.vshaxe)
