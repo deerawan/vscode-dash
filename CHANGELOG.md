@@ -1,3 +1,7 @@
+## 2.4.0
+
+- Add Gradle support
+
 ## 2.3.0
 
 - Add CMake and Latex support (thx to @akdir)
