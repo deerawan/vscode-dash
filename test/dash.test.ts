@@ -72,4 +72,17 @@ suite('Dash Tests', () => {
 
     assert.equal(uri, 'open -g "https://github.com/search?q=size&keys=exact:css,exact:less"');
   });
+
+  test('Exclude docsets in search query', () => {
+    const dashOptionExcludeDocsets: DashOption = {
+      ...dashOptionExactDocsetEnabled,
+      searchUri: "https://github.com/search?q=",
+      searchQueryExcludeDocsets: true,
+    };
+
+    const dash = new Dash('darwin', dashOptionExcludeDocsets);
+    const uri = dash.getCommand('size', ['css', 'less']);
+
+    assert.equal(uri, 'open -g "https://github.com/search?q=size"');
+  });
 });
