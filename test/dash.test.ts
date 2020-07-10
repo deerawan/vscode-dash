@@ -63,4 +63,13 @@ suite('Dash Tests', () => {
 
     assert.equal(uri, 'open -g "dash-plugin://query=size&keys=css,less"');
   });
+
+  test('Override search URI', () => {
+    const dashOptionSearchUriSet: DashOption = { ...dashOptionExactDocsetEnabled, searchUri: "https://github.com/search?q=" };
+
+    const dash = new Dash('darwin', dashOptionSearchUriSet);
+    const uri = dash.getCommand('size', ['css', 'less']);
+
+    assert.equal(uri, 'open -g "https://github.com/search?q=size&keys=exact:css,exact:less"');
+  });
 });

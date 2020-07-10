@@ -178,8 +178,12 @@ function getDashOption(): DashOption {
   const exactDocset = workspace
     .getConfiguration('dash')
     .get('exactDocset') as boolean;
+  const searchUri = workspace
+    .getConfiguration('dash')
+    .get('searchUri') as string;
 
   return {
     exactDocset,
+    searchUri,
   };
 }
