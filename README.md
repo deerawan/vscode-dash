@@ -180,12 +180,12 @@ Thank you for these awesome contributors
     <td align="center"><a href="https://ozylog.com"><img src="https://avatars3.githubusercontent.com/u/534150?v=4" width="100px;" alt="Cahya Pribadi"/><br /><sub><b>Cahya Pribadi</b></sub></a><br /><a href="https://github.com/deerawan/vscode-dash/commits?author=ozylog" title="Code">💻</a></td>
     <td align="center"><a href="https://github.com/markokajzer"><img src="https://avatars3.githubusercontent.com/u/9379317?v=4" width="100px;" alt="Marko Kajzer"/><br /><sub><b>Marko Kajzer</b></sub></a><br /><a href="https://github.com/deerawan/vscode-dash/commits?author=markokajzer" title="Code">💻</a></td>
     <td align="center"><a href="https://github.com/akdir"><img src="https://avatars0.githubusercontent.com/u/19649463?v=4" width="100px;" alt="akdir"/><br /><sub><b>akdir</b></sub></a><br /><a href="https://github.com/deerawan/vscode-dash/commits?author=akdir" title="Code">💻</a></td>
+    <td align="center"><a href="https://bitbucket.org/kneirinck/"><img src="https://avatars0.githubusercontent.com/u/3418790?v=4" width="100px;" alt="Klaas Neirinck"/><br /><sub><b>Klaas Neirinck</b></sub></a><br /><a href="https://github.com/deerawan/vscode-dash/commits?author=kneirinck" title="Code">💻</a></td>
   </tr>
 </table>
 
 <!-- markdownlint-enable -->
 <!-- prettier-ignore-end -->
-
 <!-- ALL-CONTRIBUTORS-LIST:END -->
 
 ## License

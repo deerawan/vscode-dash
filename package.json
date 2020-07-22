@@ -417,6 +417,16 @@
           "type": "boolean",
           "description": "Controls whether Dash should search the keyword in exact docsets specified in docset setting.",
           "default": false
+        },
+        "dash.searchUri": {
+          "type": "string",
+          "description": "Controls which search URI should be used to perform the search.",
+          "default": null
+        },
+        "dash.searchQueryExcludeDocsets": {
+          "type": "boolean",
+          "description": "Controls whether docsets will be excluded in the search query.",
+          "default": false
         }
       }
     }

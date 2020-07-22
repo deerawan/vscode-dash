@@ -178,8 +178,16 @@ function getDashOption(): DashOption {
   const exactDocset = workspace
     .getConfiguration('dash')
     .get('exactDocset') as boolean;
+  const searchUri = workspace
+    .getConfiguration('dash')
+    .get('searchUri') as string;
+  const searchQueryExcludeDocsets = workspace
+    .getConfiguration('dash')
+    .get('searchQueryExcludeDocsets') as boolean;
 
   return {
     exactDocset,
+    searchUri,
+    searchQueryExcludeDocsets,
   };
 }

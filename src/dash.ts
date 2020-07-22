@@ -29,14 +29,16 @@ export class Dash {
       .map(docset => `${this.option.exactDocset ? 'exact:' : ''}${docset}`)
       .join(',');
     const encodedQuery = encodeURIComponent(query);
-    return `${this.URIHandler} "dash-plugin://query=${encodedQuery}${
-      keys ? `&keys=${keys}` : ``
+    return `${this.URIHandler} "${this.option.searchUri ? this.option.searchUri : 'dash-plugin://query='}${encodedQuery}${
+      keys && !this.option.searchQueryExcludeDocsets ? `&keys=${keys}` : ``
     }"`;
   }
 }
 
 export interface DashOption {
   exactDocset: boolean;
+  searchUri?: string;
+  searchQueryExcludeDocsets?: boolean;
 }
 
 interface OSOptions {
