@@ -447,7 +447,7 @@
     "eslint": "^6.1.0",
     "husky": "^3.0.3",
     "lint-staged": "^9.2.1",
-    "mocha": "^6.2.0",
+    "mocha": "^10.2.0",
     "nyc": "^14.1.1",
     "prettier": "^1.18.2",
     "source-map-support": "^0.5.13",
