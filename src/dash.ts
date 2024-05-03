@@ -1,6 +1,7 @@
 const OSOptions: OSOptions = {
   darwin: 'open -g',
-  linux: 'zeal',
+  //Allows any dash compatible program to handle the request, even on flatpak.
+  linux: 'xdg-open',
   // Same technique as Silverlake Software's "Search Docsets" extension,
   // which is written by Velocity's developer and is tested to work with current Velocity on W10.
   win32: 'cmd.exe /c start "" ', // TODO: do we need extra space?
